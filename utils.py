@@ -120,7 +120,7 @@ def setup_cognito_user_pool() -> Dict[str, str]:
 
     # ── 5. Create Test User ──────────────────────────────────────────────
     username = 'mcpuser'
-    password = 'TempPass123!'
+    password = base64.b64encode(hashlib.sha256(str(ts).encode()).digest()).decode()[:16] + '!A1'
 
     try:
         cognito_client.admin_create_user(
