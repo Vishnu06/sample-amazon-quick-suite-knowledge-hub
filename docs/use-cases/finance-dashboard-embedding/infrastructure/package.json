@@ -1,0 +1,19 @@
+{
+  "name": "finance-dashboard-infrastructure",
+  "version": "1.0.0",
+  "description": "AWS CDK infrastructure for finance dashboard",
+  "main": "bin/app.js",
+  "scripts": {
+    "deploy": "cdk deploy",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.120.0",
+    "constructs": "^10.3.0"
+  },
+  "devDependencies": {
+    "aws-cdk": "^2.120.0"
+  }
+}
