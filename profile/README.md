@@ -32,7 +32,7 @@
 
 ### Community
 
-Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, MCP and A2A servers, API connector guides, prompt recipes, Amazon Quick Flow prompts, Quick Automate recipes, and third-party integration samples.
+Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, MCP and A2A servers, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
 
 Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
 
