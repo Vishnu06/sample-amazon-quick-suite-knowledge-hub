@@ -55,6 +55,7 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 | **[Agent Skills](https://github.com/Amazon-Quick/amazon-quick-skills)** | Packaged instructions that extend what Amazon Quick can do, invoked automatically or on demand across Desktop and Web |
 | **[Quick Web](https://github.com/Amazon-Quick/quick-web)** | Connector guides, flow templates, automate recipes, evals, observability, and embedded integration samples |
 | **[Quick Desktop](https://github.com/Amazon-Quick/quick-desktop)** | Samples and resources for the native Amazon Quick Desktop application |
+| **[Quick Admin](https://github.com/Amazon-Quick/quick-admin)** | Identity, governance, security, enterprise deployments, CI/CD, and IaC templates |
 | **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides with connectors, actions, MCP servers, and use cases |
 
 ---
