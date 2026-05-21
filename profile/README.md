@@ -24,17 +24,17 @@
 
 | | |
 |---|---|
-| **[Amazon Quick Web](https://aws.amazon.com/quick/)** | Browser-based access — Flows, Automate, Spaces, Research, Apps, and embedded analytics |
-| **[Amazon Quick Desktop](https://aws.amazon.com/quick/desktop/)** | Native desktop application — local file integration, meeting prep, and context-aware assistance |
+| **[Amazon Quick Web](https://aws.amazon.com/quick/)** | Browser-based access with Flows, Automate, Spaces, Research, Apps, and embedded analytics |
+| **[Amazon Quick Desktop](https://aws.amazon.com/quick/desktop/)** | Native desktop application with local file integration, meeting prep, and context-aware assistance |
 | **[Amazon Quick Mobile](https://community.amazonquicksight.com/t/amazon-quick-suite-mobile-is-now-available-on-ios-and-android/50765)** | On-the-go access to dashboards, alerts, and AI-powered insights on iOS and Android |
 
 ---
 
 ### Community
 
-Amazon Quick is built with the open-source community in mind. The community contributes MCP/API connector guides, prompt recipes, Amazon Quick Skills, Amazon Quick Flow prompts, Quick Automate recipes, and third-party integration samples.
+Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, MCP and A2A servers, API connector guides, prompt recipes, Amazon Quick Flow prompts, Quick Automate recipes, and third-party integration samples.
 
-Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/discussions) — ask questions, share what you've built, and suggest new features.
+Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
 
 ---
 
@@ -42,9 +42,9 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 
 | | |
 |---|---|
-| **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment of Amazon Quick with IAM Identity Center — up and running in ~15 minutes |
+| **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment of Amazon Quick with IAM Identity Center, up and running in ~15 minutes |
 | **[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | Official AWS documentation for Amazon Quick Suite |
-| **[Try Amazon Quick](https://quick.aws.com)** | Sign up free — no AWS account required |
+| **[Try Amazon Quick](https://quick.aws.com)** | Sign up free, no AWS account required |
 
 ---
 
@@ -52,16 +52,16 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 
 | | |
 |---|---|
-| **[Skills](https://github.com/Amazon-Quick/amazon-quick-skills)** | Amazon Quick Skills — reusable capabilities and extensions for Quick Desktop and Quick Web |
+| **[Agent Skills](https://github.com/Amazon-Quick/amazon-quick-skills)** | Packaged instructions that extend what Amazon Quick can do, invoked automatically or on demand across Desktop and Web |
 | **[Quick Web](https://github.com/Amazon-Quick/quick-web)** | Connector guides, flow templates, automate recipes, evals, observability, and embedded integration samples |
 | **[Quick Desktop](https://github.com/Amazon-Quick/quick-desktop)** | Samples and resources for the native Amazon Quick Desktop application |
-| **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides — connectors, actions, MCP servers, and use cases |
+| **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides with connectors, actions, MCP servers, and use cases |
 
 ---
 
 ### Contributing
 
-We welcome contributions of all kinds — connector guides, flow templates, automation recipes, documentation improvements, and code. See our [contributing guide](https://github.com/Amazon-Quick/.github/blob/master/CONTRIBUTING.md) to get started.
+We welcome contributions of all kinds: connector guides, flow templates, automation recipes, documentation improvements, and code. See our [contributing guide](https://github.com/Amazon-Quick/.github/blob/master/CONTRIBUTING.md) to get started.
 
 ---
 
