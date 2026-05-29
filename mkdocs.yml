@@ -1,9 +1,9 @@
-site_name: Amazon Quick Suite Knowledge Hub
+site_name: Amazon Quick Knowledge Hub
 theme:
   name: material
   custom_dir: static/overrides
-  logo: quicksuite.png
-  favicon: quicksuite.png
+  logo: amazonquick.png
+  favicon: amazonquick.png
   palette:
   - media: "(prefers-color-scheme: light)"
     scheme: default
@@ -27,6 +27,9 @@ exclude_docs: |
   use-cases/*/infrastructure/
   use-cases/*/fe/
   use-cases/*/tools/
+  amazon-quick-on-desktop/lib/
+  amazon-quick-on-desktop/lambda/
+  amazon-quick-on-desktop/scripts/
   integration/actions/MCP/*/cdk/
   integration/actions/MCP/*/tools/
   !use-cases/*/images/
@@ -63,12 +66,10 @@ nav:
   - Home: index.md
   - Infrastructure as a Code:
     - Terraform: infrastructure as code/Terraform/README.md
-  - Manage Quick Suite:
-    - Identity: manage quick/Identity.md
+  - Manage Quick:
     - Observability: manage quick/observability-agent/README.md
-    - Customization: manage quick/Customization.md
-    - Security:
-      - Guardrails: manage quick/Security/Guardrails.md
+  - Amazon Quick on desktop:
+    - Cognito OIDC Provider: amazon-quick-on-desktop/README.md
   - Integration:
     - Knowledge Base:
       - Confluence Cloud: integration/knowledge base/confluence-cloud-knowledge-only-setup-guide/README.md

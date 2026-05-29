@@ -1,12 +1,12 @@
 # Task 4: Flow Automation
 
-Automate daily reports using QuickSight Flows to send insights via email or Slack.
+Automate daily reports using Quick Sight Flows to send insights via email or Slack.
 
 **Duration:** 30-40 minutes
 
 ---
 
-## What are QuickSight Flows?
+## What are Quick Sight Flows?
 
 Flows enable you to automate analytics workflows:
 - Schedule recurring reports
@@ -41,7 +41,7 @@ After registration, you'll see the app overview page. Copy and save these values
 - **Application (client) ID** - Example: `12345678-1234-1234-1234-123456789abc`
 - **Directory (tenant) ID** - Example: `87654321-4321-4321-4321-cba987654321`
 
-**Important:** Keep these IDs handy - you'll need them when creating the QuickSight integration.
+**Important:** Keep these IDs handy - you'll need them when creating the Quick Sight integration.
 
 ### Step 3: Configure API Permissions
 
@@ -72,7 +72,7 @@ You should see green checkmarks next to each permission indicating admin consent
 
 ### Step 5: Construct Token URL
 
-You'll need to construct the token URL for QuickSight. The format is:
+You'll need to construct the token URL for Quick Sight. The format is:
 
 ```
 https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
@@ -87,9 +87,9 @@ https://login.microsoftonline.com/87654321-4321-4321-4321-cba987654321/oauth2/v2
 
 Save this URL - you'll need it in the next part.
 
-### Step 6: Create QuickSight Integration
+### Step 6: Create Quick Sight Integration
 
-1. Go to the **Amazon QuickSight Console**
+1. Go to the **Amazon Quick Sight Console**
 2. In the left navigation menu, expand **CONNECT APPS AND DATA**
 3. Click **Integrations**
 4. Click the **Actions** tab at the top
@@ -122,7 +122,7 @@ Fill in the integration form:
 ### Step 8: Create and Test
 
 1. Click **Create and continue**
-2. QuickSight will validate your credentials
+2. Quick Sight will validate your credentials
 3. If successful, you'll see a confirmation message
 
 ### Step 9: Share Integration (Optional)
@@ -139,13 +139,13 @@ If other users need to use this integration in their Flows:
 
 ### Step 1: Navigate to Flows
 
-1. Go to the **QuickSight Console**
+1. Go to the **Quick Sight Console**
 2. Click **Flows** in the left navigation menu
 3. Click **Create flow**
 
 ### Step 2: Generate Flow with Natural Language
 
-QuickSight will prompt you to describe your workflow in plain English.
+Quick Sight will prompt you to describe your workflow in plain English.
 
 **Enter this prompt:**
 
@@ -159,11 +159,11 @@ Create a daily report flow that:
 
 Click **Generate**
 
-**AI-Powered Automation:** QuickSight will automatically create a multi-step workflow based on your description!
+**AI-Powered Automation:** Quick Sight will automatically create a multi-step workflow based on your description!
 
 ### Step 3: Review Generated Flow
 
-QuickSight creates a flow with these steps:
+Quick Sight creates a flow with these steps:
 
 **Flow Steps:**
 1. **Enter Recipient Email Address** - Input step for email recipient
@@ -321,7 +321,7 @@ Track your flow's performance over time:
 - ✓ Admin consent granted (green checkmarks visible)
 - ✓ Client secret generated and saved
 - ✓ Token URL constructed correctly
-- ✓ QuickSight integration created with Service authentication
+- ✓ Quick Sight integration created with Service authentication
 - ✓ Integration validation successful
 - ✓ Flow generated with all required steps
 - ✓ Email input configured with default value
@@ -406,7 +406,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 
 ✅ Set up Azure app registration for email integration  
 ✅ Configured Microsoft Graph API permissions  
-✅ Created QuickSight Outlook integration with Service authentication  
+✅ Created Quick Sight Outlook integration with Service authentication  
 ✅ Generated automated workflow using natural language  
 ✅ Configured email recipient input  
 ✅ Customized AI agent analysis prompt  

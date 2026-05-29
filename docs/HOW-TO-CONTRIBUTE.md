@@ -1,25 +1,25 @@
 # How to Contribute
 
-Welcome to the Amazon Quick Suite Knowledge Hub! We're excited to have you contribute to our growing collection of integration guides, use cases, and documentation.
+This guide covers how to contribute to the Amazon Quick Knowledge Hub.
 
-This repository provides comprehensive setup guides and integration documentation for Amazon Quick Suite, helping you connect various third-party services and knowledge bases to enhance your Quick Suite experience.
+The repository contains setup guides, integration documentation, and use cases for Amazon Quick.
 
 ## How You Can Help
 
-We welcome contributions from our community! Here's how you can help improve the Knowledge Hub:
+
 
 ###  Add Guidance Documentation
 
-Share your expertise on Amazon Quick Suite best practices and administration:
+Amazon Quick best practices and administration:
 
 - **Governance**: Access control, user management, organizational policies
-- **Infrastructure as Code (IaC)**: CloudFormation, CDK, Terraform templates for Quick Suite deployments
+- **Infrastructure as Code (IaC)**: CloudFormation, CDK, Terraform templates for Quick deployments
 - **Administration**: Configuration management, monitoring, troubleshooting guides
 - **Best Practices**: Security guidelines, operational procedures, compliance frameworks
 
 ###  Add Integration Guides
 
-Have experience integrating a service with Amazon Quick Suite? Share your knowledge:
+Integration guides for connecting third-party services to Amazon Quick:
 
 - Step-by-step setup instructions
 - Configuration examples and screenshots
@@ -28,7 +28,7 @@ Have experience integrating a service with Amazon Quick Suite? Share your knowle
 
 ###  Share Use Cases
 
-Built something cool with Amazon Quick Suite? We'd love to feature it:
+Complete solutions demonstrating Amazon Quick integrations:
 
 - Complete end-to-end solutions
 - Real-world implementation examples
@@ -64,7 +64,7 @@ Need help with setup, troubleshooting, or missing integration guides? Please [as
 
 ##  Share Examples
 
-Created something cool with Amazon Quick Suite? We'd love to hear about your use cases:
+Created something cool with Amazon Quick? We'd love to hear about your use cases:
 
 - Open a "Show and Tell" discussion in our [Discussions forum](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/discussions)
 - Share your experience and learnings
@@ -150,8 +150,8 @@ For security vulnerabilities, please **DO NOT** open a public issue. Instead:
 ##  Questions and Support
 
 - **Documentation questions**: Use [GitHub Discussions](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/discussions)
-- **Technical support**: Contact AWS Support for Quick Suite issues
-- **Community support**: Join the [Amazon Quick Suite Community](https://community.amazonquicksight.com/)
+- **Technical support**: Contact AWS Support for Quick issues
+- **Community support**: Join the [Amazon Quick Community](https://community.amazonquicksight.com/)
 
 ##  Development Setup
 
@@ -377,14 +377,14 @@ This project has adopted the [Amazon Open Source Code of Conduct](https://aws.gi
 
 ##  Licensing
 
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+See the [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
 
-By contributing to this project, you agree that your contributions will be licensed under the Apache 2.0 License.
+By contributing to this project, you agree that your contributions will be licensed under the MIT-0 License.
 
 ##  Recognition
 
-Contributors who provide valuable content will be recognized in our project's Contributors section. We appreciate all forms of contribution, from small typo fixes to comprehensive integration guides!
+Contributors are recognized in the project's Contributors section.
 
 ##  Thank You
 
-Your contributions help make Amazon Quick Suite more accessible and easier to use for everyone. Whether you're fixing a typo, adding a new integration guide, or sharing a complete use case, every contribution matters and is greatly appreciated!
+All contributions are appreciated, from typo fixes to complete integration guides.

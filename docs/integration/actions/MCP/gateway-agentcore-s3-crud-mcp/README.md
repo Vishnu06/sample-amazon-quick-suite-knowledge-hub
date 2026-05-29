@@ -1,6 +1,6 @@
 # Bedrock Agent Gateway - S3 CRUD Operations
 
-The genesis of this project was wanting to perform CRUD operations against a S3 bucket from within Quick Suites Flow. Now using this remote MCP server, you can add this to Quick Suites integration, and then call upon the actions from within a Flow.
+The genesis of this project was wanting to perform CRUD operations against a S3 bucket from within Quicks Flow. Now using this remote MCP server, you can add this to Quicks integration, and then call upon the actions from within a Flow.
 
 This is a secure gateway to Amazon Bedrock AgentCore that provides CRUD operations on S3 buckets through a Lambda function. The system uses JWT authentication with Amazon Cognito and exposes MCP (Model Context Protocol) actions for client interactions.
 
@@ -182,7 +182,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ### Supported File Types
 
 - Text Files
-- Binary Files (See Quick Suite documentation for supported types)
+- Binary Files (See Quick documentation for supported types)
 
 ## Testing
 
@@ -333,7 +333,7 @@ aws cloudformation validate-template --template-body file://template.yaml
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) file for details.
 
 ## Authors and Acknowledgment
 

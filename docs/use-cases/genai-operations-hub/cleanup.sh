@@ -6,14 +6,14 @@ echo "🧹 Cleaning up GenAI Operations Hub..."
 ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
 REGION="us-east-1"
 
-# Delete QuickSight datasets
-echo "1. Deleting QuickSight datasets..."
+# Delete Quick Sight datasets
+echo "1. Deleting Quick Sight datasets..."
 aws quicksight delete-data-set --aws-account-id $ACCOUNT --data-set-id daily-bedrock-invocations --region $REGION 2>/dev/null || echo "  ✓ Dataset daily-bedrock-invocations already deleted"
 aws quicksight delete-data-set --aws-account-id $ACCOUNT --data-set-id model-performance-metrics --region $REGION 2>/dev/null || echo "  ✓ Dataset model-performance-metrics already deleted"
 aws quicksight delete-data-set --aws-account-id $ACCOUNT --data-set-id stop-reason-analysis --region $REGION 2>/dev/null || echo "  ✓ Dataset stop-reason-analysis already deleted"
 
-# Delete QuickSight data source
-echo "2. Deleting QuickSight data source..."
+# Delete Quick Sight data source
+echo "2. Deleting Quick Sight data source..."
 aws quicksight delete-data-source --aws-account-id $ACCOUNT --data-source-id genai-ops-athena-source --region $REGION 2>/dev/null || echo "  ✓ Data source already deleted"
 
 # Empty S3 buckets

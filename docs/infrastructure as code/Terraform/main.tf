@@ -1,5 +1,5 @@
-# Amazon Quick Suite Bootstrap - Terraform
-# This module sets up Amazon Quick Suite with IAM Identity Center integration
+# Amazon Quick Bootstrap - Terraform
+# This module sets up Amazon Quick with IAM Identity Center integration
 
 terraform {
   required_version = ">= 1.0.0"
@@ -38,7 +38,7 @@ locals {
 }
 
 # =============================================================================
-# Lambda Function for Quick Suite Setup
+# Lambda Function for Quick Setup
 # =============================================================================
 
 # Build Lambda package
@@ -92,7 +92,7 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-# QuickSight permissions
+# Quick Sight permissions
 resource "aws_iam_role_policy" "quicksight_policy" {
   name = "${local.resource_prefix}-QuickSightPolicy"
   role = aws_iam_role.lambda_execution_role.id
@@ -287,7 +287,7 @@ resource "aws_lambda_function" "quick_suite_setup" {
 }
 
 # =============================================================================
-# Custom Resource to trigger Quick Suite Setup
+# Custom Resource to trigger Quick Setup
 # =============================================================================
 
 # Lambda to handle custom resource lifecycle

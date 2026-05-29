@@ -10,15 +10,15 @@ AWS CDK infrastructure for GenAI Operations Hub.
 3. **Glue Database** - `genai_ops_db` for data catalog
 4. **Glue Table** - `bedrock_invocation_logs` with schema for Bedrock logs
 5. **Athena Workgroup** - `genai-ops-workgroup` for query execution
-6. **IAM Role** - QuickSight access to S3 and Athena
+6. **IAM Role** - Quick Sight access to S3 and Athena
 
-### QuickSight Resources (via boto3 script)
-7. **Data Source** - Athena connection for QuickSight
+### Quick Sight Resources (via boto3 script)
+7. **Data Source** - Athena connection for Quick Sight
 8. **Dataset** - Daily Bedrock Invocations (aggregated daily metrics)
 9. **Dataset** - Model Performance Metrics (latency and token analysis)
 10. **Dataset** - Stop Reason Analysis (completion patterns)
 
-**Note:** QuickSight resources are created via `create_quicksight_resources.py` script to bypass CloudFormation hooks.
+**Note:** Quick Sight resources are created via `create_quicksight_resources.py` script to bypass CloudFormation hooks.
 
 ## Prerequisites
 
@@ -57,12 +57,12 @@ cdk deploy GenAIOperationsStack --require-approval never
 
 **Time**: ~5 minutes
 
-### Step 3: Grant QuickSight Permissions
+### Step 3: Grant Quick Sight Permissions
 
-**CRITICAL: Do this before creating QuickSight resources**
+**CRITICAL: Do this before creating Quick Sight resources**
 
-1. Go to **QuickSight Console**
-2. Profile icon → **Manage QuickSight** → **Permissions**
+1. Go to **Quick Sight Console**
+2. Profile icon → **Manage Quick Sight** → **Permissions**
 3. **AWS Resources** → **Manage**
 4. Check **Amazon Athena** → **Enable write permission for Athena Workgroup**
 5. Check **Amazon S3** → Select buckets:
@@ -70,7 +70,7 @@ cdk deploy GenAIOperationsStack --require-approval never
    - `genai-ops-athena-results-<ACCOUNT_ID>`
 6. Click **Update**
 
-### Step 4: Create QuickSight Resources
+### Step 4: Create Quick Sight Resources
 
 ```bash
 pip install boto3
@@ -103,7 +103,7 @@ After deployment, note these outputs:
 - **DatabaseName** - Glue database name
 - **TableName** - Glue table name
 - **AthenaWorkGroup** - Athena workgroup name
-- **QuickSightRoleArn** - IAM role ARN for QuickSight
+- **Quick SightRoleArn** - IAM role ARN for Quick Sight
 
 ## Customization
 
@@ -144,11 +144,11 @@ logs_bucket = s3.Bucket(
 
 ## Troubleshooting
 
-### QuickSight Data Source Creation Failed
+### Quick Sight Data Source Creation Failed
 
 **Error**: `DataSource is in status CREATION_FAILED`
 
-**Cause**: QuickSight lacks permissions to access Athena/S3
+**Cause**: Quick Sight lacks permissions to access Athena/S3
 
 **Solution**:
 1. Delete failed data source:
@@ -158,12 +158,12 @@ logs_bucket = s3.Bucket(
      --data-source-id genai-ops-athena-source \
      --region us-east-1
    ```
-2. Grant QuickSight permissions (see Step 3 above)
+2. Grant Quick Sight permissions (see Step 3 above)
 3. Run script again
 
 ### CloudFormation Hook Errors
 
-**Error**: `AWS::EarlyValidation::PropertyValidation` blocks QuickSight resources
+**Error**: `AWS::EarlyValidation::PropertyValidation` blocks Quick Sight resources
 
 **Solution**: Use `create_quicksight_resources.py` script instead of CDK (bypasses hooks)
 
@@ -173,7 +173,7 @@ logs_bucket = s3.Bucket(
 
 **Causes**:
 - Data source doesn't exist or failed
-- QuickSight lacks permissions
+- Quick Sight lacks permissions
 - Athena workgroup doesn't exist
 
 **Solution**: Verify Steps 2-4 completed successfully
@@ -234,7 +234,7 @@ Resources created by this stack:
 | Athena Queries | $5/TB scanned |
 | IAM Roles | Free |
 
-**Estimated monthly cost**: $2-5 (excluding QuickSight)
+**Estimated monthly cost**: $2-5 (excluding Quick Sight)
 
 ## Security
 

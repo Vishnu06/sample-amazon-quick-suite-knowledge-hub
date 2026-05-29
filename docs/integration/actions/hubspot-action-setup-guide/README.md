@@ -26,9 +26,9 @@ Follow the step-by-step instructions to set up the HubSpot Action in your Amazon
 
 ![Confirm new app](images/image_3.png)
 
-## Quick Suite Actions Setup
+## Quick Actions Setup
 
-8) Navigate to Quick Suite and click on `Integration`, then `Actions`
+8) Navigate to Quick and click on `Integration`, then `Actions`
 
 9) Select HubSpot to create an action integration
 

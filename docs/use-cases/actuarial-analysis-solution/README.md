@@ -7,7 +7,7 @@ description: "Comprehensive actuarial analysis solution for insurance claims pro
 
 **Comprehensive actuarial analysis solution** that transforms traditional insurance claims processing through AI-powered natural language interfaces and advanced statistical modeling.
 
-This solution addresses critical challenges in insurance operations by providing **real-time fraud detection**, **litigation risk assessment**, **loss reserving calculations**, and **predictive analytics** - all accessible through conversational AI via Amazon Quick Suite.
+This solution addresses critical challenges in insurance operations by providing **real-time fraud detection**, **litigation risk assessment**, **loss reserving calculations**, and **predictive analytics** - all accessible through conversational AI via Amazon Quick.
 
 ##  Business Value
 
@@ -39,7 +39,7 @@ Complete actuarial analysis solution with:
 - **SQL Query Engine** for flexible data access (Athena, RDS, Redshift, Snowflake, etc.)
 - **AgentCore Gateway** for natural language interaction
 - **Session-Based Memory** for efficient data sharing
-- **Amazon Quick Suite Integration** with conversational AI interface and automated workflow orchestration through Flows
+- **Amazon Quick Integration** with conversational AI interface and automated workflow orchestration through Flows
 
 ##  Project Structure
 
@@ -49,7 +49,7 @@ actuarial-analytics-platform/
  cdk.json                    # CDK configuration
  pyproject.toml              # Project dependencies and configuration
  deploy.sh                   # Deployment script
- QUICKSUITE.md              # QuickSuite integration guide
+ QUICKSUITE.md              # Amazon Quick integration guide
  tools/                      # Lambda function code
     agentcore_lambda.py    # Main AgentCore handler
     data_query_lambda.py   # Data query handler
@@ -118,7 +118,7 @@ This single command deploys:
 1. Go to **AWS CloudFormation** in the AWS Console
 2. Find the **ActuarialToolsStack** stack
 3. Click on the **Outputs** tab
-4. Copy the required values for Quick Suite integration
+4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
 
@@ -130,7 +130,7 @@ aws cloudformation describe-stacks --stack-name ActuarialToolsStack --query 'Sta
 aws cloudformation describe-stacks --stack-name ActuarialToolsStack --query 'Stacks[0].Outputs[?OutputKey==`GatewayUrl`].OutputValue' --output text
 ```
 
-Key outputs for QuickSuite integration:
+Key outputs for Quick integration:
 
 - `GatewayUrl` - AgentCore Gateway endpoint
 - `ClientId` - OAuth2 client ID
@@ -159,9 +159,9 @@ Key outputs for QuickSuite integration:
 | `calculate_reserves` | Calculate IBNR reserves | session_id | reserves, projections |
 | `monitor_development` | KPI tracking and alerts | session_id | alerts, metrics, trends |
 
-## QuickSuite Integration
+## Quick Integration
 
-Complete guide to integrate Actuarial Analysis Tools with QuickSuite using MCP Actions and Flows.
+Complete guide to integrate Actuarial Analysis Tools with Quick using MCP Actions and Flows.
 
 ### Prerequisites
 
@@ -172,11 +172,11 @@ From your CDK deployment, you'll need:
 - `ClientId` - Cognito Client ID
 - `TokenEndpoint` - OAuth token endpoint
 
-### Configure MCP Action in QuickSuite
+### Configure MCP Action in Quick
 
 **Step 1: Access Integrations**
 
-1. Navigate to **Integrations** in Amazon QuickSuite
+1. Navigate to **Integrations** in Amazon Quick
 2. Click on **Actions**
 3. Click the **+** button for **Model Context Protocol**
 
@@ -208,11 +208,11 @@ Fill in the MCP configuration:
 2. Select **Next**
 3. Select **Next**
 
-### QuickSuite Flows Integration
+### Quick Flows Integration
 
 1. Click the **Flows** icon and choose **+ Create a new flow** if no flows exist or **Generate flow** to create a new flow.
 
-2. Amazon QuickSuite Flows analyzes your conversation and generates a prompt to generate a Flow. Replace the generated prompt with the following prompt:
+2. Amazon Quick Flows analyzes your conversation and generates a prompt to generate a Flow. Replace the generated prompt with the following prompt:
 
 **--- COPY THE TEXT BELOW FOR QUICKSUITE FLOWS ---**
 
@@ -318,6 +318,6 @@ The `sample_data/claims.csv` contains 10,000+ synthetic insurance claims with:
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file for details.
+This library is licensed under the MIT-0 License. See the repository [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) for details.
 
 ---

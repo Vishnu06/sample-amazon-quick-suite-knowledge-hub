@@ -56,7 +56,7 @@ The deployment creates the following AWS resources:
 - **AWS Lambda Layer**: Contains Python dependencies (boto3, PyJWT)
 - **Amazon API Gateway**: HTTP API with CORS configuration and JWT authorization
 - **Amazon Cognito User Pool**: Handles user authentication with app client
-- **AWS Lambda Functions**: Implements QuickSuite embedding logic with 10-hour session lifetime
+- **AWS Lambda Functions**: Implements Quick embedding logic with 10-hour session lifetime
 - **AWS IAM Roles**: Provides necessary permissions for all resources
 - **AWS IAM Identity Center Integration**: Auto-configured for seamless authentication
 

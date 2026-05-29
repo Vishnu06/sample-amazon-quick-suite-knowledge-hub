@@ -20,7 +20,7 @@
 
 5) Go to **Quick** > **Integrations** > **New Action** > choose **Smartsheet**. Insert the client id and secret from previous step
 
-![Quick Suite Smartsheet setup](images/image_5.png)
+![Quick Smartsheet setup](images/image_5.png)
 
 6) Once action is created successfully, click on **sign-in**. You will get pop-up window
 

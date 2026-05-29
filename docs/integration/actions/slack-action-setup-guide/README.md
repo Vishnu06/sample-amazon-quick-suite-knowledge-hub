@@ -30,11 +30,11 @@
 
    **Note**: You MUST click on **Save URLs** button.
 
-8) Go to Quick Suite and choose Integration
+8) Go to Quick and choose Integration
 
 9) Select Slack and choose Next
 
-![Quick Suite Integration](images/image_7.png)
+![Quick Integration](images/image_7.png)
 
 ![Select Slack](images/image_8.png)
 

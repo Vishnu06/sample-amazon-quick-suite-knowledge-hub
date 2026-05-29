@@ -3,7 +3,7 @@
 Actuarial Analysis Solution MCP Integration Stack
 
 CDK application entry point for deploying Actuarial Analysis tools
-infrastructure with QuickSuite integration using native constructs.
+infrastructure with Amazon Quick integration using native constructs.
 """
 
 import aws_cdk as cdk
@@ -22,7 +22,7 @@ ActuarialToolsStack(
     app,
     "quicksuite-actuarial-mcp",
     env=env,
-    description="Actuarial Analysis Solution MCP Integration with QuickSuite",
+    description="Actuarial Analysis Solution MCP Integration with Amazon Quick",
 )
 
 app.synth()

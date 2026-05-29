@@ -1,11 +1,11 @@
-# Amazon Quick Suite Bootstrap - Terraform
+# Amazon Quick Bootstrap - Terraform
 
-This Terraform module sets up Amazon Quick Suite with IAM Identity Center integration.
+This Terraform module sets up Amazon Quick with IAM Identity Center integration.
 
 ## Features
 
 - Creates or uses existing IAM Identity Center instance
-- Sets up QuickSight account subscription
+- Sets up Quick Sight account subscription
 - Creates admin group in Identity Center
 - Configures necessary IAM roles and policies
 - Deploys Lambda function for automated setup
@@ -58,8 +58,8 @@ This Terraform module sets up Amazon Quick Suite with IAM Identity Center integr
 |------|-------------|------|---------|----------|
 | `aws_region` | AWS region to deploy resources | `string` | `"us-east-1"` | No |
 | `identity_center_instance_arn` | ARN of existing IAM Identity Center instance | `string` | `""` | No |
-| `quick_suite_account_name` | Name for the Quick Suite account | `string` | `"QuickSuiteBootstrap"` | No |
-| `quick_suite_admin_email` | Email address for the Quick Suite admin | `string` | `"admin@example.com"` | No |
+| `quick_suite_account_name` | Name for the Quick account | `string` | `"QuickSuiteBootstrap"` | No |
+| `quick_suite_admin_email` | Email address for the Quick admin | `string` | `"admin@example.com"` | No |
 | `quick_suite_admin_group_name` | Name of the admin group in Identity Center | `string` | `"QUICK_SUITE_ADMIN"` | No |
 | `force_update` | Set to true to force re-run of setup | `bool` | `false` | No |
 | `tags` | Additional tags to apply to resources | `map(string)` | `{}` | No |
@@ -70,11 +70,11 @@ This Terraform module sets up Amazon Quick Suite with IAM Identity Center integr
 |------|-------------|
 | `identity_center_instance_arn` | ARN of the IAM Identity Center instance |
 | `identity_store_id` | ID of the Identity Store |
-| `lambda_function_arn` | ARN of the Quick Suite setup Lambda function |
+| `lambda_function_arn` | ARN of the Quick setup Lambda function |
 | `lambda_function_name` | Name of the Lambda function |
 | `lambda_execution_role_arn` | ARN of the Lambda execution role |
-| `quick_suite_account_name` | Name of the Quick Suite account |
-| `quick_suite_admin_email` | Admin email for Quick Suite |
+| `quick_suite_account_name` | Name of the Quick account |
+| `quick_suite_admin_email` | Admin email for Quick |
 | `quick_suite_admin_group_name` | Admin group name in Identity Center |
 
 ## Architecture
@@ -105,7 +105,7 @@ To destroy all resources:
 terraform destroy
 ```
 
-**Note:** This will attempt to delete the QuickSight subscription and related resources.
+**Note:** This will attempt to delete the Quick Sight subscription and related resources.
 
 ## Troubleshooting
 
@@ -124,10 +124,10 @@ If using an existing Identity Center, ensure the ARN is correct and your credent
 
 ## License
 
-This project is licensed under the [MIT-0 (MIT No Attribution)](LICENSE) license.
+This project is licensed under the [MIT-0 (MIT No Attribution)](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) license.
 
 ## Related Resources
 
-- [Amazon Quick Documentation](https://docs.aws.amazon.com/quicksuite/)
+- [Amazon Quick Documentation](https://docs.aws.amazon.com/quick/latest/userguide/)
 - [IAM Identity Center Documentation](https://docs.aws.amazon.com/singlesignon/)
 - [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)

@@ -1,11 +1,11 @@
 ---
 category: Capability
-description: "Amazon Redshift MCP integration for database operations with Amazon Quick Suite"
+description: "Amazon Redshift MCP integration for database operations with Amazon Quick"
 ---
 
 # Redshift Data Query MCP - Amazon Redshift Database Integration
 
-**Amazon Redshift Data Query MCP integration** with Amazon QuickSuite. This solution creates an MCP integration that enables read-only access to Amazon Redshift clusters through QuickSuite using MCP Actions with AWS LAB Redshift MCP Server.
+**Amazon Redshift Data Query MCP integration** with Amazon Quick. This solution creates an MCP integration that enables read-only access to Amazon Redshift clusters through Quick using MCP Actions with AWS LAB Redshift MCP Server.
 
 ##  Architecture
 
@@ -16,7 +16,7 @@ description: "Amazon Redshift MCP integration for database operations with Amazo
 - **AgentCore Gateway**: Amazon Bedrock AgentCore Gateway with Lambda target
 - **Lambda Wrapper**: Wraps AWS LAB Redshift MCP Server for AgentCore compatibility
 - **AWS LAB Redshift MCP Server**: Official AWS LAB MCP server implementation
-- **QuickSuite Integration**: MCP Actions for conversational AI
+- **Quick Integration**: MCP Actions for conversational AI
 - **Amazon Redshift**: Cluster discovery and SQL query execution
 
 ##  Purpose
@@ -24,7 +24,7 @@ description: "Amazon Redshift MCP integration for database operations with Amazo
 This MCP integration enables:
 
 - **Direct Redshift Access**: Query Amazon Redshift clusters through natural language
-- **QuickSuite Integration**: Integration using MCP Actions
+- **Quick Integration**: Integration using MCP Actions
 - **AgentCore Gateway**: Gateway with Lambda target and authentication
 - **Read-Only Operations**: Secure database discovery and query execution
 
@@ -82,14 +82,14 @@ cdk deploy --require-approval never
 1. Go to **AWS CloudFormation** in the AWS Console
 2. Find the **RedshiftAgentCoreStack** stack
 3. Click on the **Outputs** tab
-4. Copy the required values for Quick Suite integration
+4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
 ```bash
 aws cloudformation describe-stacks --stack-name RedshiftAgentCoreStack --query 'Stacks[0].Outputs'
 ```
 
-Key outputs for QuickSuite Actions:
+Key outputs for Quick Actions:
 
 - `GatewayUrl` - AgentCore Gateway endpoint
 - `ClientId` - OAuth2 client ID
@@ -158,9 +158,9 @@ Key outputs for QuickSuite Actions:
 - `sql` (required): SQL query string
 
 **Output**: Query results with columns and rows
-## QuickSuite Integration
+## Quick Integration
 
-Complete guide to integrate Amazon Redshift with Amazon QuickSuite using MCP Actions.
+Complete guide to integrate Amazon Redshift with Amazon Quick using MCP Actions.
 
 ### Prerequisites
 
@@ -171,11 +171,11 @@ From your CDK deployment, you'll need:
 - `ClientSecret` - Cognito Client Secret
 - `CognitoTokenUrl` - OAuth2 token endpoint
 
-### Configure MCP Action in QuickSuite
+### Configure MCP Action in Quick
 
 **Step 1: Access Integrations**
 
-1. Navigate to **Integrations** in Amazon QuickSuite
+1. Navigate to **Integrations** in Amazon Quick
 2. Click on **Actions**
 3. Click the **+** button for **Model Context Protocol**
 
@@ -203,7 +203,7 @@ Fill in the MCP configuration:
 2. Select **Next**
 3. Select **Next**
 
-### Usage in QuickSuite
+### Usage in Quick
 
 ```
 "List all available Redshift clusters"
@@ -216,7 +216,7 @@ Fill in the MCP configuration:
 
 **MCP Authentication Issues:**
 
-- Verify OAuth2 credentials in QuickSuite MCP Actions
+- Verify OAuth2 credentials in Quick MCP Actions
 - Check Cognito token endpoint configuration
 - Ensure client secret is correctly copied
 
@@ -230,7 +230,7 @@ Fill in the MCP configuration:
 
 - Monitor AgentCore Gateway throttling limits
 - Check Lambda timeout and memory settings
-- Review CORS configuration for QuickSuite
+- Review CORS configuration for Quick
 
 ##  Documentation
 
@@ -243,11 +243,11 @@ Fill in the MCP configuration:
 This library is licensed under the MIT-0 License.
 - `CognitoTokenUrl` - OAuth2 token endpoint
 
-### Configure MCP Action in Amazon Quick Suite
+### Configure MCP Action in Amazon Quick
 
 **Step 1: Access Integrations**
 
-1. Navigate to **Integrations** in Amazon Quick Suite
+1. Navigate to **Integrations** in Amazon Quick
 2. Select **Actions**
 3. Select the **+** button for **Model Context Protocol**
 
@@ -275,7 +275,7 @@ Complete the MCP configuration:
 2. Select **Next**
 3. Select **Next**
 
-### Usage in Amazon Quick Suite
+### Usage in Amazon Quick
 
 Example queries:
 ```
@@ -290,7 +290,7 @@ Example queries:
 
 **MCP Authentication Issues:**
 
-- Verify OAuth2 credentials in Amazon Quick Suite MCP Actions
+- Verify OAuth2 credentials in Amazon Quick MCP Actions
 - Check Amazon Cognito token endpoint configuration
 - Ensure client secret is correctly copied without extra spaces
 
@@ -304,7 +304,7 @@ Example queries:
 
 - Monitor Amazon Bedrock Agent Runtime throttling limits
 - Check AWS Lambda timeout and memory settings
-- Review Cross-Origin Resource Sharing (CORS) configuration for Amazon Quick Suite
+- Review Cross-Origin Resource Sharing (CORS) configuration for Amazon Quick
 
 **Deployment Issues:**
 
@@ -324,4 +324,4 @@ See [CONTRIBUTING](/HOW-TO-CONTRIBUTE.md) for more information.
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the MIT-0 License. See the repository [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE).

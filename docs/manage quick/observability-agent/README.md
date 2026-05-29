@@ -1,25 +1,25 @@
 ---
 category: Management
-description: "Quick Suite Observability Agent - Natural Language Monitoring"
+description: "Quick Observability Agent - Natural Language Monitoring"
 ---
 
-# Quick Suite Observability Agent - Natural Language Monitoring
+# Quick Observability Agent - Natural Language Monitoring
 
-**Quick Suite Observability MCP integration** with Amazon QuickSuite. This solution creates an MCP integration that enables natural language monitoring of Quick Suite through CloudWatch Logs, CloudWatch Metrics, and CloudTrail using MCP Actions.
+**Quick Observability MCP integration** with Amazon Quick. This solution creates an MCP integration that enables natural language monitoring of Quick through CloudWatch Logs, CloudWatch Metrics, and CloudTrail using MCP Actions.
 
 
 **Components:**
 
 - **AgentCore Gateway**: Amazon Bedrock AgentCore Gateway with Lambda target
 - **Lambda Function**: Observability query handler with 20 monitoring tools
-- **QuickSuite Integration**: MCP Actions for conversational monitoring
+- **Quick Integration**: MCP Actions for conversational monitoring
 - **Data Sources**: CloudWatch Logs, CloudWatch Metrics, CloudTrail
 
 ## 🎯 Purpose
 
 This MCP integration enables:
 
-- **Natural Language Monitoring**: Query Quick Suite metrics through conversation
+- **Natural Language Monitoring**: Query Quick metrics through conversation
 - **Comprehensive Analytics**: 20 tools covering chat, feedback, usage, performance, and audit
 - **Dynamic Schema Discovery**: Automatically discover log fields for custom queries
 - **Multi-Source Data**: CloudWatch Logs (9 tools), Metrics (8 tools), CloudTrail (1 tool), Analytics (2 tools)
@@ -52,7 +52,7 @@ Before you begin, ensure you have:
 - Node.js and npm installed
 - Python 3.9 or later
 - AWS CDK CLI installed (`npm install -g aws-cdk`)
-- Amazon QuickSight Enterprise Edition with Quick Suite enabled
+- Amazon Quick Sight Enterprise Edition with Quick enabled
 
 **Required IAM Permissions:**
 - CloudFormation (create/update stacks)
@@ -95,14 +95,14 @@ cdk deploy --require-approval never
 1. Go to **AWS CloudFormation** in the AWS Console
 2. Find the **quicksuite-observability-mcp** stack
 3. Click on the **Outputs** tab
-4. Copy the required values for Quick Suite integration
+4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
 ```bash
 aws cloudformation describe-stacks --stack-name quicksuite-observability-mcp --query 'Stacks[0].Outputs'
 ```
 
-Key outputs for QuickSuite Actions:
+Key outputs for Quick Actions:
 
 - `GatewayUrl` - AgentCore Gateway endpoint
 - `ClientId` - OAuth2 client ID
@@ -143,9 +143,9 @@ Key outputs for QuickSuite Actions:
 - `get_log_schema` - Discover available log fields dynamically
 - `query_chat_analytics` - Execute custom analytics queries
 
-## 🎨 QuickSuite Integration
+## 🎨 Quick Integration
 
-Complete guide to integrate Quick Suite Observability with Amazon QuickSuite using MCP Actions.
+Complete guide to integrate Quick Observability with Amazon Quick using MCP Actions.
 
 ### Prerequisites
 
@@ -160,7 +160,7 @@ From your CDK deployment, you'll need:
 
 **1.1 Access Integrations**
 
-1. Navigate to **Integrations** in Amazon QuickSuite
+1. Navigate to **Integrations** in Amazon Quick
 2. Click on **Actions**
 3. Click the **+** button for **Model Context Protocol**
 
@@ -168,8 +168,8 @@ From your CDK deployment, you'll need:
 
 Fill in the MCP configuration:
 
-- **Name**: Quick Suite Observability
-- **Description**: Natural language monitoring for Quick Suite using CloudWatch Logs, Metrics, and CloudTrail
+- **Name**: Quick Observability
+- **Description**: Natural language monitoring for Quick using CloudWatch Logs, Metrics, and CloudTrail
 - **MCP Server Endpoint**: Paste your `GatewayUrl` from CDK deployment outputs
 - Click **Next**
 
@@ -189,24 +189,24 @@ Fill in the MCP configuration:
 2. Select **Next**
 3. Select **Next**
 
-### Step 2: Create Quick Suite Agent
+### Step 2: Create Quick Agent
 
 **2.1 Access Agents**
 
-1. Navigate to **Agents** in Amazon QuickSuite
+1. Navigate to **Agents** in Amazon Quick
 2. Click **Create agent**
 
 **2.2 Configure Agent**
 
-- **Agent name**: Quick Suite Observability Agent
-- **Description**: Natural language monitoring for Quick Suite using CloudWatch Logs, Metrics, and CloudTrail
+- **Agent name**: Quick Observability Agent
+- **Description**: Natural language monitoring for Quick using CloudWatch Logs, Metrics, and CloudTrail
 
 **2.3 Add Agent Instructions**
 
 Copy and paste the following instructions into the **Agent Instructions** field:
 
 ```
-You are the Quick Suite Observability Agent with access to monitoring tools that query CloudWatch Logs, CloudWatch Metrics, and CloudTrail.
+You are the Quick Observability Agent with access to monitoring tools that query CloudWatch Logs, CloudWatch Metrics, and CloudTrail.
 
 CORE CAPABILITIES:
 • Chat Analysis: View conversations, find errors, search queries, measure performance
@@ -261,7 +261,7 @@ MULTI-TOOL PATTERNS:
 DATA INTERPRETATION:
 • Error rates >5%: Flag as concerning
 • Capacity >80%: Alert proactively
-• Zero results: Explain CloudWatch Logs may be empty if Quick Suite unused or logging just enabled
+• Zero results: Explain CloudWatch Logs may be empty if Quick unused or logging just enabled
 • Anomalies: Highlight and ask if expected
 
 RESPONSE STYLE:
@@ -273,7 +273,7 @@ RESPONSE STYLE:
 • Combine tools intelligently for comprehensive answers
 
 OPENING MESSAGE:
-"Hello! I'm your Quick Suite Observability Agent. I can help you monitor:
+"Hello! I'm your Quick Observability Agent. I can help you monitor:
 📊 Chat conversations and errors
 👍 User feedback and satisfaction  
 📈 Usage statistics (DAU/WAU/MAU) and capacity
@@ -281,7 +281,7 @@ OPENING MESSAGE:
 🔍 API activity and security auditing
 🔬 Custom analytics with dynamic queries
 
-What would you like to know about your Quick Suite environment?"
+What would you like to know about your Quick environment?"
 
 KEY CONSTRAINTS:
 • CloudWatch Logs may be empty initially
@@ -295,7 +295,7 @@ KEY CONSTRAINTS:
 
 1. Scroll to **Actions** section
 2. Click **Add action**
-3. Select **Quick Suite Observability** (the MCP action you just created)
+3. Select **Quick Observability** (the MCP action you just created)
 4. Click **Save**
 
 ### Step 3: Test the Agent
@@ -326,7 +326,7 @@ Open the agent and try these queries:
 
 ### Usage Analysis
 ```
-"How is Quick Suite being used this week?"
+"How is Quick being used this week?"
 ```
 
 ### Asset Usage
@@ -348,7 +348,7 @@ Open the agent and try these queries:
 
 **MCP Authentication Issues:**
 
-- Verify OAuth2 credentials in QuickSuite MCP Actions
+- Verify OAuth2 credentials in Quick MCP Actions
 - Check Cognito token endpoint configuration
 - Ensure client secret is correctly copied (no spaces)
 
@@ -357,7 +357,7 @@ Open the agent and try these queries:
 - CloudWatch Logs delivery was enabled when stack was deployed
 - Only has data from deployment time forward (not historical)
 - Check log groups exist: `/aws/quicksuite/chat`, `/aws/quicksuite/feedback`, `/aws/quicksuite/agent-hours`
-- Verify Quick Suite is actively being used
+- Verify Quick is actively being used
 
 **Query Returns Zero Results:**
 
@@ -373,7 +373,7 @@ Open the agent and try these queries:
 
 ## 📝 License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the MIT-0 License. See the repository [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE).
 
 ## 🧹 Cleanup
 
@@ -403,7 +403,7 @@ This will delete:
 
 ## 📚 Additional Resources
 
-- [Amazon QuickSight Documentation](https://docs.aws.amazon.com/quicksight/)
+- [Amazon Quick Sight Documentation](https://docs.aws.amazon.com/quick/latest/userguide/)
 - [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
 - [Amazon Bedrock AgentCore Documentation](https://docs.aws.amazon.com/bedrock/)
 - [CloudWatch Logs Insights Query Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html)

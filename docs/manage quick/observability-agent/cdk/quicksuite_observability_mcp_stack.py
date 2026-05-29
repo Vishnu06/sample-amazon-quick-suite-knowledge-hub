@@ -1,8 +1,8 @@
 """
-Quick Suite Observability MCP Stack
+Quick Observability MCP Stack
 
 Deploys:
-1. CloudWatch Log Groups for Quick Suite
+1. CloudWatch Log Groups for Quick
 2. Log delivery configuration
 3. AgentCore Gateway with Lambda target
 4. Cognito for OAuth2

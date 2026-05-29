@@ -1,6 +1,6 @@
 # GenAI Operations Hub
 
-Build an AI-powered operations dashboard for Amazon Bedrock invocation logs using Amazon QuickSight Q, Spaces, and Flows.
+Build an AI-powered operations dashboard for Amazon Bedrock invocation logs using Amazon Quick Sight Q, Spaces, and Flows.
 
 ## Overview
 
@@ -16,22 +16,22 @@ This solution enables leaders and engineers to:
 
 ## What's Included
 
-- **Infrastructure as Code**: CDK stack to provision S3, Athena, and QuickSight resources
+- **Infrastructure as Code**: CDK stack to provision S3, Athena, and Quick Sight resources
 - **Sample Data**: Real Bedrock invocation logs for testing
 - **Step-by-Step Guides**: Console-based instructions for each task
 
 ## Tasks
 
-1. **AI Dashboard** - Use QuickSight Generative BI to build visualizations with natural language
-2. **Create Space** - Set up a QuickSight Space with your dashboard
+1. **AI Dashboard** - Use Quick Sight Generative BI to build visualizations with natural language
+2. **Create Space** - Set up a Quick Sight Space with your dashboard
 3. **Custom Agent** - Build a chat agent connected to your Space
 4. **Flow Automation** - Schedule daily reports to email/Slack
 
 ## Prerequisites
 
 - AWS Account with Bedrock invocation logs enabled
-- QuickSight Enterprise Edition subscription
-- Permissions for S3, Athena, QuickSight, and IAM
+- Quick Sight Enterprise Edition subscription
+- Permissions for S3, Athena, Quick Sight, and IAM
 
 ## Quick Start
 
@@ -92,8 +92,8 @@ genai-operations-hub/
 
 ## Contributing
 
-See the [Amazon Quick Suite Knowledge Hub Contribution Guide](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/HOW-TO-CONTRIBUTE/)
+See the [Amazon Quick Knowledge Hub Contribution Guide](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/HOW-TO-CONTRIBUTE/)
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the MIT-0 License. See the repository [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE).

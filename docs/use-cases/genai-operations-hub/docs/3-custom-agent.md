@@ -1,6 +1,6 @@
 # Task 3: Custom Agent
 
-Build a custom AI chat agent connected to your QuickSight Space for conversational analytics.
+Build a custom AI chat agent connected to your Quick Sight Space for conversational analytics.
 
 **Duration:** 15-20 minutes
 
@@ -20,13 +20,13 @@ A custom agent is an AI-powered chat interface that can:
 
 ### Step 1: Navigate to Chat Agents
 
-1. Go to the **Amazon QuickSight Console**
+1. Go to the **Amazon Quick Sight Console**
 2. Click **Chat agents** in the left navigation menu
 3. This opens the chat agents interface
 
 ### Step 2: Create Your Custom Agent
 
-QuickSight offers two ways to create an agent. Choose the method that works best for you:
+Quick Sight offers two ways to create an agent. Choose the method that works best for you:
 
 #### Option A: Using Natural Language Prompt (Recommended)
 
@@ -257,7 +257,7 @@ Here are example conversations you can have with your agent:
 
 ✅ Created a custom AI chat agent  
 ✅ Configured agent persona and communication style  
-✅ Connected agent to your QuickSight Space  
+✅ Connected agent to your Quick Sight Space  
 ✅ Tested agent with operational questions  
 ✅ Launched agent for team use  
 ✅ Enabled conversational analytics for Bedrock operations

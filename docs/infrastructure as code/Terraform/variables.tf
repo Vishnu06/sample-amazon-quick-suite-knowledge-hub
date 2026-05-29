@@ -1,4 +1,4 @@
-# Amazon Quick Suite Bootstrap - Variables
+# Amazon Quick Bootstrap - Variables
 
 variable "aws_region" {
   description = "AWS region to deploy resources"
@@ -33,7 +33,7 @@ variable "identity_center_region" {
 }
 
 variable "quick_suite_account_name" {
-  description = "Name for the Quick Suite account"
+  description = "Name for the Quick account"
   type        = string
   default     = "QuickSuiteBootstrap"
 
@@ -44,7 +44,7 @@ variable "quick_suite_account_name" {
 }
 
 variable "quick_suite_admin_email" {
-  description = "Email address for the Quick Suite admin user"
+  description = "Email address for the Quick admin user"
   type        = string
   default     = "admin@example.com"
 
@@ -66,7 +66,7 @@ variable "quick_suite_admin_group_name" {
 }
 
 variable "force_update" {
-  description = "Set to true to force re-run of the Quick Suite setup"
+  description = "Set to true to force re-run of the Quick setup"
   type        = bool
   default     = false
 }

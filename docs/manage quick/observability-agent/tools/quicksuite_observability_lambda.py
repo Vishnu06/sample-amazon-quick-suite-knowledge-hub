@@ -1,7 +1,7 @@
 """
-Quick Suite Observability Lambda Handler for AgentCore Gateway
+Quick Observability Lambda Handler for AgentCore Gateway
 
-Provides 15 custom tools for Quick Suite monitoring:
+Provides 15 custom tools for Quick monitoring:
 
 CloudWatch Logs Tools (7):
 - get_chat_conversations
@@ -956,7 +956,7 @@ def _handle_request(event, context):
             logger.info(f"Time range: {start_time} to {end_time}")
 
             try:
-                # Query CloudTrail with QuickSight EventSource filter
+                # Query CloudTrail with Quick Sight EventSource filter
                 logger.info("Calling CloudTrail LookupEvents with quicksight.amazonaws.com filter...")
                 response = cloudtrail_client.lookup_events(
                     LookupAttributes=[
@@ -971,14 +971,14 @@ def _handle_request(event, context):
                 )
 
                 all_events = response.get('Events', [])
-                logger.info(f"CloudTrail returned {len(all_events)} QuickSight events")
+                logger.info(f"CloudTrail returned {len(all_events)} Quick Sight events")
 
                 # Log first 5 events to see what we're getting
                 for i, evt in enumerate(all_events[:5]):
                     logger.info(f"Sample event {i+1}: EventName={evt.get('EventName')}, EventSource={evt.get('EventSource')}, Username={evt.get('Username')}")
 
                 events = []
-                # All events are already QuickSight events due to LookupAttributes filter
+                # All events are already Quick Sight events due to LookupAttributes filter
                 for event in all_events:
                     # Extract user info from CloudTrailEvent first
                     user_identity = None
@@ -1062,7 +1062,7 @@ def _handle_request(event, context):
                 return {"statusCode": 500, "body": json.dumps({"error": f"Error querying CloudTrail: {str(e)}"})}
 
         elif tool_name == "get_log_schema":
-            logger.info("Getting schema for all Quick Suite log groups")
+            logger.info("Getting schema for all Quick log groups")
 
             log_groups = {
                 "chat": CHAT_LOG_GROUP,

@@ -1,6 +1,6 @@
 # CDK Infrastructure for Amazon Bedrock Knowledge Base MCP Integration
 
-This directory contains the AWS CDK infrastructure code for deploying the Amazon Bedrock Knowledge Base MCP integration with Amazon Quick Suite.
+This directory contains the AWS CDK infrastructure code for deploying the Amazon Bedrock Knowledge Base MCP integration with Amazon Quick.
 
 ## Architecture Overview
 
@@ -8,7 +8,7 @@ The CDK stack deploys the following AWS resources:
 
 ### Core Components
 
-- **Amazon Bedrock AgentCore Gateway**: MCP protocol gateway for Quick Suite integration
+- **Amazon Bedrock AgentCore Gateway**: MCP protocol gateway for Quick integration
 - **AWS Lambda Function**: Processes knowledge base queries and retrieval operations
 - **Amazon Cognito User Pool**: Provides OAuth 2.0 authentication for secure access
 - **IAM Roles and Policies**: Implements least-privilege access controls
@@ -84,7 +84,7 @@ Ensure you have the following installed and configured:
    cdk deploy
    ```
 
-5. **Save the outputs**: Note the following values for Quick Suite configuration:
+5. **Save the outputs**: Note the following values for Quick configuration:
    - `GatewayUrl`: MCP gateway endpoint
    - `ClientId`: Cognito client ID
    - `ClientSecret`: Cognito client secret

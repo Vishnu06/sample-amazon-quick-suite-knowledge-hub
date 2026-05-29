@@ -104,8 +104,8 @@ export default function Home() {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center space-x-8">
                 <div className="flex items-center space-x-2">
-                  <img src="/quicksuite.png" alt="Amazon QuickSuite" className="w-8 h-8" />
-                  <span className="text-xl font-semibold">Quick Suite Chat Agent Embedding Demo</span>
+                  <img src="/amazonquick.png" alt="Amazon Quick" className="w-8 h-8" />
+                  <span className="text-xl font-semibold">Quick Chat Agent Embedding Demo</span>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -124,10 +124,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-5xl font-bold text-aws-dark-blue mb-6">
-                Quick Suite Chat Agent Embedding Demo
+                Quick Chat Agent Embedding Demo
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Experience Quick Suite&apos;s chat agent embedded directly into your application. This demo showcases how to integrate conversational capabilities that provide contextual responses within your existing workflow.
+                Experience Quick&apos;s chat agent embedded directly into your application. This demo showcases how to integrate conversational capabilities that provide contextual responses within your existing workflow.
               </p>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-aws-dark-blue mb-4">Ready to try the demo?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Sign in with your Cognito credentials to experience Quick Suite&apos;s embedded chat capabilities.
+              Sign in with your Cognito credentials to experience Quick&apos;s embedded chat capabilities.
             </p>
             <button
               onClick={handleSignIn}
@@ -171,7 +171,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-aws-dark-blue mb-3">One-Click Embedding</h3>
-                <p className="text-gray-600">Embed Quick Suite chat agents into your applications.</p>
+                <p className="text-gray-600">Embed Quick chat agents into your applications.</p>
               </div>
 
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
@@ -222,7 +222,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-aws-dark-blue mb-4">Learn More</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                For more detailed information about the Quick Suite SDK and experience-specific options, explore these resources.
+                For more detailed information about the Quick SDK and experience-specific options, explore these resources.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -276,8 +276,8 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
-                <img src="/quicksuite.png" alt="Amazon QuickSuite" className="w-8 h-8" />
-                <span className="text-xl font-semibold">Quick Suite Chat Agent Embedding Demo</span>
+                <img src="/amazonquick.png" alt="Amazon Quick" className="w-8 h-8" />
+                <span className="text-xl font-semibold">Quick Chat Agent Embedding Demo</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -303,7 +303,7 @@ export default function Home() {
       <main className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-aws-dark-blue mb-4">Quick Suite Embedded Chat Demo</h1>
+            <h1 className="text-4xl font-bold text-aws-dark-blue mb-4">Quick Embedded Chat Demo</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the embedded chat interface. Click the chat button in the bottom right corner to start a conversation with the chat assistant.
             </p>
@@ -328,7 +328,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-aws-dark-blue mb-3">Embedding Integration</h3>
-              <p className="text-gray-600">See how QuickSuite chat seamlessly integrates into web applications using the embedding SDK.</p>
+              <p className="text-gray-600">See how Amazon Quick chat seamlessly integrates into web applications using the embedding SDK.</p>
             </div>
           </div>
         </div>

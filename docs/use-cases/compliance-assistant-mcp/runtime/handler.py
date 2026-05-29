@@ -7,7 +7,7 @@ Lambda function backing the AgentCore Gateway MCP target.
   - get_analysis_report: retrieves completed report from S3
 
 Flow:
-  1. Quick Suite → Gateway → this Lambda (sync, <60s)
+  1. Quick → Gateway → this Lambda (sync, <60s)
   2. start_compliance_analysis → writes DynamoDB → invokes self async → returns job_id
   3. Async invocation → HTTP POST to AgentCore Runtime → Runtime runs CrewAI
   4. Runtime agent updates DynamoDB + S3 as it progresses

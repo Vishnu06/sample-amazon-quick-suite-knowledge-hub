@@ -1,4 +1,4 @@
-# Amazon Quick Suite Bootstrap - Example Variables
+# Amazon Quick Bootstrap - Example Variables
 # Copy this file to terraform.tfvars and customize the values
 
 # AWS Region
@@ -10,7 +10,7 @@ identity_center_region = "us-west-2"
 identity_center_instance_arn = ""
 identity_center_identity_store_id = ""
 
-# Quick Suite Account Name
+# Quick Account Name
 quick_suite_account_name = "TerraformUser"
 
 # Admin Email Address

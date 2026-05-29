@@ -73,7 +73,7 @@ class DocumentSkillsStack(cdk.Stack):
 
         # ─── CloudFront: Clean download URLs (avoids corporate proxy blocks on S3 URLs) ───
         # Unsigned — paths contain UUIDs (unguessable), files auto-expire after 7 days.
-        # CloudFront signed URLs don't work with Quick Suite (chat renderer strips ~ chars).
+        # CloudFront signed URLs don't work with Quick (chat renderer strips ~ chars).
         distribution = cloudfront.Distribution(
             self,
             "DocsDistribution",
@@ -349,7 +349,7 @@ class DocumentSkillsStack(cdk.Stack):
                     allowed_scopes=[f"{gateway_name}/invoke"],
                 ),
             ),
-            description="MCP Gateway for Quick Suite document generation skills",
+            description="MCP Gateway for Quick document generation skills",
         )
 
         # ─── Gateway Targets ───
@@ -440,25 +440,25 @@ class DocumentSkillsStack(cdk.Stack):
             self,
             "McpUrl",
             value=gateway.attr_gateway_url,
-            description="MCP URL for Quick Suite configuration",
+            description="MCP URL for Quick configuration",
         )
         cdk.CfnOutput(
             self,
             "TokenUrl",
             value=f"https://docskills-{self.account[:8]}.auth.{self.region}.amazoncognito.com/oauth2/token",
-            description="OAuth2 Token URL for Quick Suite configuration",
+            description="OAuth2 Token URL for Quick configuration",
         )
         cdk.CfnOutput(
             self,
             "ClientId",
             value=app_client.user_pool_client_id,
-            description="Cognito Client ID for Quick Suite configuration",
+            description="Cognito Client ID for Quick configuration",
         )
         cdk.CfnOutput(
             self,
             "Scope",
             value=f"{gateway_name}/invoke",
-            description="OAuth scope for Quick Suite configuration",
+            description="OAuth scope for Quick configuration",
         )
         cdk.CfnOutput(
             self,

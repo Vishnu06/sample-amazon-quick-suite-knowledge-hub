@@ -42,7 +42,7 @@ class ExportListResponse(BaseModel):
 
 
 class ExportListActivity:
-    """Exports a SharePoint list to CSV in S3 with a QuickSight manifest."""
+    """Exports a SharePoint list to CSV in S3 with a Quick Sight manifest."""
 
     def __init__(self, graph_client: GraphApiClient, s3_dao: S3Dao, error_handler: ActivityErrorHandler) -> None:
         self._graph_client = graph_client
@@ -51,7 +51,7 @@ class ExportListActivity:
 
     @tracer.capture_method
     def export(self, request: ExportListRequest) -> Response:
-        """Export a SharePoint list to CSV in S3 with a QuickSight manifest.
+        """Export a SharePoint list to CSV in S3 with a Quick Sight manifest.
 
         S3 key structure (stable, overwritten on each export):
             exports/{site_id}/{list_id}/data.csv

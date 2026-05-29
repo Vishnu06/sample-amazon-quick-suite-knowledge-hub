@@ -1,11 +1,11 @@
 ---
 category: Capability
-description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with QuickSuite"
+description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with Quick"
 ---
 
 # Bedrock KB Retrieval MCP - Amazon Bedrock Knowledge Base Integration
 
-**Amazon Bedrock Knowledge Base Retrieval MCP integration** with Amazon QuickSuite. This solution creates an MCP integration that enables direct access to Amazon Bedrock Knowledge Bases through QuickSuite using MCP Actions.
+**Amazon Bedrock Knowledge Base Retrieval MCP integration** with Amazon Quick. This solution creates an MCP integration that enables direct access to Amazon Bedrock Knowledge Bases through Quick using MCP Actions.
 
 ##  Architecture
 
@@ -15,7 +15,7 @@ description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with Quick
 
 - **AgentCore Gateway**: Amazon Bedrock AgentCore Gateway with Lambda target
 - **Lambda Function**: Amazon Bedrock Knowledge Base retrieval handler
-- **QuickSuite Integration**: MCP Actions for conversational AI
+- **Quick Integration**: MCP Actions for conversational AI
 - **Amazon Bedrock Knowledge Bases**: Document retrieval and semantic search
 
 ##  Purpose
@@ -23,7 +23,7 @@ description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with Quick
 This MCP integration enables:
 
 - **Direct KB Access**: Query Amazon Bedrock Knowledge Bases through natural language
-- **QuickSuite Integration**: Integration using MCP Actions
+- **Quick Integration**: Integration using MCP Actions
 - **AgentCore Gateway**: Gateway with Lambda target and authentication
 - **Document Retrieval**: Semantic search with reranking and filtering
 
@@ -73,14 +73,14 @@ cdk deploy --require-approval never
 1. Go to **AWS CloudFormation** in the AWS Console
 2. Find the **quicksuite-bedrock-kb-mcp** stack
 3. Click on the **Outputs** tab
-4. Copy the required values for Quick Suite integration
+4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
 ```bash
 aws cloudformation describe-stacks --stack-name quicksuite-bedrock-kb-mcp --query 'Stacks[0].Outputs'
 ```
 
-Key outputs for QuickSuite Actions:
+Key outputs for Quick Actions:
 
 - `GatewayUrl` - AgentCore Gateway endpoint
 - `ClientId` - OAuth2 client ID
@@ -116,9 +116,9 @@ Key outputs for QuickSuite Actions:
 
 **Output**: Newline-separated JSON documents with content, location, score
 
-## QuickSuite Integration
+## Quick Integration
 
-Complete guide to integrate Bedrock KB Retrieval with Amazon QuickSuite using MCP Actions.
+Complete guide to integrate Bedrock KB Retrieval with Amazon Quick using MCP Actions.
 
 ### Prerequisites
 
@@ -129,11 +129,11 @@ From your CDK deployment, you'll need:
 - `ClientSecret` - Cognito Client Secret
 - `CognitoTokenUrl` - OAuth2 token endpoint
 
-### Configure MCP Action in QuickSuite
+### Configure MCP Action in Quick
 
 **Step 1: Access Integrations**
 
-1. Navigate to **Integrations** in Amazon QuickSuite
+1. Navigate to **Integrations** in Amazon Quick
 2. Click on **Actions**
 3. Click the **+** button for **Model Context Protocol**
 
@@ -161,7 +161,7 @@ Fill in the MCP configuration:
 2. Select **Next**
 3. Select **Next**
 
-### Usage in QuickSuite
+### Usage in Quick
 
 ```
 "List all available knowledge bases"
@@ -174,7 +174,7 @@ Fill in the MCP configuration:
 
 **MCP Authentication Issues:**
 
-- Verify OAuth2 credentials in QuickSuite MCP Actions
+- Verify OAuth2 credentials in Quick MCP Actions
 - Check Cognito token endpoint configuration
 - Ensure client secret is correctly copied
 
@@ -188,7 +188,7 @@ Fill in the MCP configuration:
 
 - Monitor AgentCore Gateway throttling limits
 - Check Lambda timeout and memory settings
-- Review CORS configuration for QuickSuite
+- Review CORS configuration for Quick
 
 ##  Documentation
 

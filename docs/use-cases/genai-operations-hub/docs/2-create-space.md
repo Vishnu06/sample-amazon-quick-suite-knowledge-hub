@@ -1,12 +1,12 @@
 # Task 2: Create Space
 
-Set up a QuickSight Space to organize your dashboard and enable AI-powered queries.
+Set up a Quick Sight Space to organize your dashboard and enable AI-powered queries.
 
 **Duration:** 8-12 minutes
 
 ---
 
-## What is a QuickSight Space?
+## What is a Quick Sight Space?
 
 A Space is a collaborative workspace that brings together dashboards, topics, and AI capabilities. Spaces enable:
 - Centralized access to related analytics content
@@ -20,7 +20,7 @@ A Space is a collaborative workspace that brings together dashboards, topics, an
 
 ### Step 1: Create a New Space
 
-1. Navigate to the **Amazon QuickSight Console**
+1. Navigate to the **Amazon Quick Sight Console**
 2. Click **Spaces** in the left navigation menu
 3. Click **Create space**
 4. Configure your Space:
@@ -108,7 +108,7 @@ If you shared the Space, verify access:
 
 ## What You've Accomplished
 
-✅ Created a QuickSight Space to organize GenAI operations content  
+✅ Created a Quick Sight Space to organize GenAI operations content  
 ✅ Added your dashboard and topics to the Space  
 ✅ Configured appropriate visibility and permissions  
 ✅ Enabled team collaboration on operational insights  

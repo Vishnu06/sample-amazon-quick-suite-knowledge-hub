@@ -1,4 +1,4 @@
-# Amazon Quick Suite Bootstrap - Outputs
+# Amazon Quick Bootstrap - Outputs
 
 output "identity_center_instance_arn" {
   description = "ARN of the IAM Identity Center instance"
@@ -11,12 +11,12 @@ output "identity_store_id" {
 }
 
 output "lambda_function_arn" {
-  description = "ARN of the Quick Suite setup Lambda function"
+  description = "ARN of the Quick setup Lambda function"
   value       = aws_lambda_function.quick_suite_setup.arn
 }
 
 output "lambda_function_name" {
-  description = "Name of the Quick Suite setup Lambda function"
+  description = "Name of the Quick setup Lambda function"
   value       = aws_lambda_function.quick_suite_setup.function_name
 }
 
@@ -26,12 +26,12 @@ output "lambda_execution_role_arn" {
 }
 
 output "quick_suite_account_name" {
-  description = "Name of the Quick Suite account"
+  description = "Name of the Quick account"
   value       = var.quick_suite_account_name
 }
 
 output "quick_suite_admin_email" {
-  description = "Admin email for Quick Suite"
+  description = "Admin email for Quick"
   value       = var.quick_suite_admin_email
 }
 
@@ -41,7 +41,7 @@ output "quick_suite_admin_group_name" {
 }
 
 output "setup_result" {
-  description = "Result of the Quick Suite setup invocation"
+  description = "Result of the Quick setup invocation"
   value       = aws_lambda_invocation.quick_suite_setup.result
   sensitive   = true
 }

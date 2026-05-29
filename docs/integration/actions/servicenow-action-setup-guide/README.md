@@ -28,9 +28,9 @@ Reference: <https://www.servicenow.com/docs/bundle/xanadu-platform-security/page
 
    Copy the **Client ID** and **Secret** values, as these will be used in next step
 
-6) Go to **AWS** > **Quick Suite** page, and click on **Integration**:
+6) Go to **AWS** > **Quick** page, and click on **Integration**:
 
-![Quick Suite Integration](images/image_4.png)
+![Quick Integration](images/image_4.png)
 
 7) Select **ServiceNow** then **Next**
 
@@ -64,4 +64,4 @@ Reference: <https://www.servicenow.com/docs/bundle/xanadu-platform-security/page
 
 ![Authorization confirmation](images/image_10.png)
 
-11) In Quick Suite, while creating chat agent, you can now link this action to the chat agent.
+11) In Quick, while creating chat agent, you can now link this action to the chat agent.

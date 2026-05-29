@@ -99,7 +99,7 @@
 2. **Storage**: Logs stored in S3 bucket
 3. **Cataloging**: Glue Data Catalog defines schema
 4. **Querying**: Athena queries logs using SQL
-5. **Visualization**: QuickSight connects to Athena
+5. **Visualization**: Quick Sight connects to Athena
 6. **AI Dashboard**: Q builds visuals from natural language
 7. **Organization**: Dashboard added to Space
 8. **Intelligence**: Custom agent uses Space as knowledge
@@ -113,15 +113,15 @@
 - **Glue Database**: Metadata catalog
 - **Glue Table**: Schema definition for logs
 - **Athena Workgroup**: Query execution environment
-- **IAM Roles**: QuickSight permissions
+- **IAM Roles**: Quick Sight permissions
 
-### Analytics Layer (QuickSight)
+### Analytics Layer (Quick Sight)
 - **Data Source**: Athena connection
 - **Datasets**: Structured views of data
 - **Q**: AI-powered query interface
 - **Dashboard**: Visual analytics
 
-### Intelligence Layer (QuickSight)
+### Intelligence Layer (Quick Sight)
 - **Space**: Collaborative workspace
 - **Custom Agent**: AI assistant
 - **Flows**: Automation engine
@@ -129,7 +129,7 @@
 ### Integration Layer
 - **Email**: SES for notifications
 - **Slack**: Webhook integration
-- **API**: QuickSight APIs for automation
+- **API**: Quick Sight APIs for automation
 
 ## Security Architecture
 
@@ -158,7 +158,7 @@
 
 - **S3**: Unlimited storage, auto-scaling
 - **Athena**: Serverless, parallel query execution
-- **QuickSight**: Auto-scales with users
+- **Quick Sight**: Auto-scales with users
 - **SPICE**: In-memory cache for fast queries
 
 ## Cost Optimization
@@ -166,11 +166,11 @@
 1. **S3 Lifecycle**: Move old logs to Glacier
 2. **Athena**: Use partitioning and compression
 3. **SPICE**: Cache frequently accessed data
-4. **QuickSight**: Use reader sessions for viewers
+4. **Quick Sight**: Use reader sessions for viewers
 
 ## Monitoring
 
 - **CloudWatch**: Athena query metrics
 - **S3 Metrics**: Storage and request metrics
-- **QuickSight**: Dashboard usage analytics
+- **Quick Sight**: Dashboard usage analytics
 - **Flow Execution**: Success/failure logs

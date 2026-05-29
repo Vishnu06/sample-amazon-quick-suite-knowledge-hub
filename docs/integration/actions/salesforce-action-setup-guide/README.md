@@ -77,7 +77,7 @@
 
    **Note**: Please wait for at least 10 minutes for Salesforce to be ready.
 
-8) Go to Quick Suite and choose Integration, Select **Salesforce** and choose **Next**
+8) Go to Quick and choose Integration, Select **Salesforce** and choose **Next**
 
    Insert the following data:
 

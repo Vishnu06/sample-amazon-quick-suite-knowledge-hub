@@ -1,135 +1,45 @@
-# Amazon Quick Suite
+# Amazon Quick Knowledge Hub
 
-[Amazon Quick Suite](https://aws.amazon.com/quicksuite/){:target="_blank"} answers your questions and turns those answers into actions using agentic teammates for research, business insights, and automation.
+The [official Amazon Quick documentation](https://docs.aws.amazon.com/quick/latest/userguide/){:target="_blank"} tells you what each feature does and how to configure it through the console. What it does not always give you is the complete working implementation. It will not hand you the exact OAuth redirect URIs for ServiceNow, the Terraform to bootstrap an account with IAM Identity Center, or the CDK stack that makes Cognito work as a desktop OIDC provider. This hub fills that gap with integration guides, infrastructure-as-code, and deployable reference architectures maintained by the Amazon Quick team.
 
-This knowledge base offers a variety of resources and materials to assist you in getting started with Amazon Quick Suite.
+## Amazon Quick at a glance
 
-##  Use Cases
+[Amazon Quick](https://aws.amazon.com/quick/){:target="_blank"} is an agentic AI workspace with six features that work together. [Amazon Quick Sight](https://docs.aws.amazon.com/quick/latest/userguide/supported-data-sources.html){:target="_blank"} is the business intelligence feature where you connect to data sources, prepare data, build interactive dashboards, and ask natural language questions against your data. [Amazon Quick Flows](https://docs.aws.amazon.com/quick/latest/userguide/using-amazon-quick-flows.html){:target="_blank"} automates repetitive tasks with AI-powered workflows that use your data and take actions in connected applications. [Amazon Quick Automate](https://docs.aws.amazon.com/quick/latest/userguide/using-amazon-quick-automations.html){:target="_blank"} builds end-to-end business process automations with AI agents that make contextual decisions, execute actions across your applications, and loop in humans when judgment is needed. [Amazon Quick Index](https://aws.amazon.com/quicksuite/index/){:target="_blank"} connects your organization's documents and data to Amazon Quick so AI responses are grounded in your information. [Amazon Quick Research](https://docs.aws.amazon.com/quick/latest/userguide/view-research-report.html){:target="_blank"} conducts in-depth AI-powered research across the web and your data, delivered as a cited report. [Apps in Amazon Quick](https://docs.aws.amazon.com/quick/latest/userguide/getting-started-apps.html){:target="_blank"} lets you build fully managed interactive web applications using AI that securely connect to your services, store data, and use your existing information.
 
-<div class="grid" markdown>
+These features are tied together by shared capabilities. You build [chat agents](https://docs.aws.amazon.com/quick/latest/userguide/working-with-agents.html){:target="_blank"} with specific instructions, knowledge sources, and tools attached, then share them with your team. You organize resources into [spaces](https://docs.aws.amazon.com/quick/latest/userguide/working-with-spaces.html){:target="_blank"} so agents only draw from relevant data. You connect third-party services through [action connectors](https://docs.aws.amazon.com/quick/latest/userguide/action-connectors.html){:target="_blank"} using OAuth, [MCP](https://spec.modelcontextprotocol.io/specification/){:target="_blank"}, or OpenAPI. You bring documents in through [knowledge bases](https://docs.aws.amazon.com/quick/latest/userguide/knowledge-base-integrations.html){:target="_blank"} with automatic sync and access controls. [Extensions](https://docs.aws.amazon.com/quick/latest/userguide/extension-access.html){:target="_blank"} make Quick available inside your [browser](https://docs.aws.amazon.com/quick/latest/userguide/browser-extension-user-guide.html){:target="_blank"}, Slack, Microsoft Teams, and Microsoft 365 applications. The [desktop application](https://docs.aws.amazon.com/quick/latest/userguide/amazon-quick-desktop.html){:target="_blank"} connects to local files, email, calendar, and connected services natively on macOS and Windows. Chat also handles [document and visual creation](https://docs.aws.amazon.com/quick/latest/userguide/document-and-visual-creation.html){:target="_blank"} from natural language.
 
-<div markdown>
+## What this hub covers
 
-###  For Sales & Marketing
+The [integrations section](integration/actions/asana-action-setup-guide/README.md) has step-by-step OAuth and connector setup for each supported third-party service. Most guides follow the same pattern: register an OAuth app on the provider side, configure the redirect URI and scopes, then create the action connector in the Amazon Quick console. The MCP implementations are complete CDK stacks you can deploy directly.
 
-- **Analyze** sales territories and product lines
-- **Generate** customized sales proposals
-- **Access** product information quickly
-- **Create** LinkedIn posts and social media content
+The [Terraform module](infrastructure as code/Terraform/README.md) bootstraps an Amazon Quick account with AWS IAM Identity Center from scratch, handling the account subscription, admin user, group membership, and IAM roles in a single `terraform apply`.
 
-</div>
+The [management section](manage quick/Identity.md) covers identity configuration, security guardrails, customization options, and a CloudWatch-based observability MCP that exposes chat logs, feedback, agent hours, Quick Sight metrics, and CloudTrail audit data through natural language queries in Quick itself.
 
-<div markdown>
+The [desktop section](amazon-quick-on-desktop/README.md) is a CDK stack that deploys Amazon Cognito as an OIDC provider for the desktop application. It includes an API Gateway proxy that strips the `offline_access` scope (which Cognito does not support but Quick sends with every request), a user invitation flow, and MFA configuration. This is for [enterprise deployments](https://docs.aws.amazon.com/quick/latest/userguide/desktop-enterprise-setup.html){:target="_blank"} where you use local users or IAM Identity Center without a federated IdP.
 
-###  For Managers & Operations
+The [use cases section](use-cases/actuarial-analysis-solution/README.md) has complete, deployable solutions covering chat agent embedding, document generation, compliance automation, and operational dashboards.
 
-- **Organize** team collateral and customer information
-- **Set** access permissions for different team members
-- **Search** across content to generate insights
-- **Collaborate** effectively with organized resource access
+## Workshops
 
-</div>
+| Workshop | What you build |
+|----------|----------------|
+| [Amazon Quick Flows](https://catalog.us-east-1.prod.workshops.aws/workshops/a8484e57-2e30-40ee-bd98-0122f0d05acc){:target="_blank"} | Workflow automation with AI decision-making, customer support triage, and agent-backed flows |
+| [A Complete Guide to Amazon Quick](https://catalog.workshops.aws/amazon-quick-suite-workshop/en-US){:target="_blank"} | Data connections, dashboards, chat agents, spaces, and app building |
+| [Security and Governance Controls](https://catalog.us-east-1.prod.workshops.aws/workshops/fc1e6164-b5f5-4158-a269-88e71b769af3/en-US){:target="_blank"} | Identity integration, access policies, data governance, monitoring, and compliance |
 
-<div markdown>
+## Links
 
-###  For Finance
+| Resource | Link |
+|----------|------|
+| Official documentation | [docs.aws.amazon.com/quick](https://docs.aws.amazon.com/quick/latest/userguide/){:target="_blank"} |
+| Features | [aws.amazon.com/quick/features](https://aws.amazon.com/quick/features/){:target="_blank"} |
+| FAQs | [aws.amazon.com/quick/faqs](https://aws.amazon.com/quick/faqs/){:target="_blank"} |
+| Pricing | [aws.amazon.com/quicksuite/pricing](https://aws.amazon.com/quicksuite/pricing/){:target="_blank"} |
+| Sign in | [quicksight.aws.amazon.com](https://quicksight.aws.amazon.com/){:target="_blank"} |
+| Community | [community.amazonquicksight.com](https://community.amazonquicksight.com/){:target="_blank"} |
+| YouTube | [youtube.com/@AmazonQuickSuite](https://www.youtube.com/@AmazonQuickSuite){:target="_blank"} |
 
-- **Perform** deep research across multiple data sources
-- **Generate** comprehensive reports with source citations
-- **Track** research progress and validate findings
-- **Combine** structured and unstructured data for complete analysis
+## Contributing
 
-</div>
-
-<div markdown>
-
-###  For Human Resources
-
-- **Transform** employee data and policies into strategic advantages
-- **Streamline** new hire onboarding and performance management
-- **Track** compliance and employee engagement
-- **Automate** HR processes and documentation
-
-</div>
-
-<div markdown>
-
-###  For Legal
-
-- **Analyze** contracts and perform legal research
-- **Monitor** compliance and prepare cases
-- **Find** critical information in seconds, not hours
-- **Manage** legal documentation and workflows
-
-</div>
-
-<div markdown>
-
-###  For Energy
-
-- **Consolidate** fragmented technical data and operational systems
-- **Streamline** oil and gas operations
-- **Manage** regulatory compliance and environmental data
-- **Optimize** energy project workflows
-
-</div>
-
-</div>
-
-##  Getting Started
-
-<div class="grid cards" markdown>
-
--  **Getting started with Amazon Quick Suite**
-
-    ---
-
-    Learn about the concepts and necessary configurations.
-
-    [ Developer Guide](https://docs.aws.amazon.com/quicksight/latest/developerguide/getting-started.html){:target="_blank"}
-
--  **Demo Central**
-
-    ---
-
-    Welcome to Amazon Quick Suite DemoCentral
-
-    [ Demo Central](https://democentral.learnquicksight.online/){:target="_blank"}
-
--  **Quick Suite Sign In**
-
-    ---
-
-    Sign in to Quick Suite
-
-    [ here](https://quicksight.aws.amazon.com/){:target="_blank"}
-
--  **Amazon Quick Suite Community**
-
-    ---
-
-    Find answers to your questions, learning resources, and events in your area!
-
-    [  Amazon Quick Suite Community](https://aws-crm.lightning.force.com/lightning/r/Report/00ORU0000004bgv2AA/view?queryScope=userFolders){:target="_blank"}
-
--  **Broadcast**
-
-    ---
-
-    Watch tutorials, demos, and updates on our YouTube channel
-
-    [ Amazon Quick Suite YouTube](https://www.youtube.com/@AmazonQuickSuite){:target="_blank"}
-
-</div>
-
-##  Other Resources
-
-###  Workshops
-
-#### [A Complete Guide to Amazon Quick Suite: The Unified AI-Powered Business Workspace](https://catalog.workshops.aws/amazon-quick-suite-workshop/en-US){:target="_blank"}
-
-This hands-on workshop will guide you through the key features and capabilities of Amazon Quick Suite. Amazon Quick Suite is a comprehensive, generative AI-powered business intelligence platform that makes it easy to analyze data, create visualizations, automate workflows, and collaborate across your organization. The service combines traditional business intelligence capabilities with modern AI assistance, requiring no machine learning expertise to use.
-
-#### [Configure security and governance controls for Amazon Quick Suite](https://catalog.us-east-1.prod.workshops.aws/workshops/fc1e6164-b5f5-4158-a269-88e71b769af3/en-US){:target="_blank"}
-
-This hands-on workshop will guide you through to implement comprehensive security and administrative controls for Amazon Quick Suite. Practice configuring identity integration, access policies, and data governance frameworks. Learn to establish monitoring, auditing, and compliance controls that meet enterprise requirements. Work through scenarios covering user management, content governance, and security best practices for Quick Suite environments in production.
+See [How to Contribute](HOW-TO-CONTRIBUTE.md).

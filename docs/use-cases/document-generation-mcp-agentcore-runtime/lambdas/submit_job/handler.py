@@ -11,7 +11,7 @@ in a background thread on AgentCore Runtime with no timeout constraint.
 When it finishes, it direct-persists the result to S3 and marks the job
 COMPLETED in DynamoDB. The Step Function polling loop detects this and exits.
 
-Returns the job_id immediately (well under Quick Suite's 60s MCP timeout).
+Returns the job_id immediately (well under Quick's 60s MCP timeout).
 """
 
 import json

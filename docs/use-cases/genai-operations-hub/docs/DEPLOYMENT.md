@@ -66,7 +66,7 @@ Confirm the deployment when prompted. This creates:
 - S3 bucket for Athena results
 - Glue database and table
 - Athena workgroup
-- IAM roles for QuickSight
+- IAM roles for Quick Sight
 
 **Deployment time**: ~5 minutes
 
@@ -122,7 +122,7 @@ aws athena start-query-execution \
   --work-group genai-ops-workgroup
 ```
 
-## Step 11: Enable QuickSight
+## Step 11: Enable Quick Sight
 
 1. Go to [QuickSight Console](https://quicksight.aws.amazon.com/)
 2. Sign up for Enterprise Edition (if not already)
@@ -185,10 +185,10 @@ cdk destroy
 Monthly costs (approximate):
 - S3 storage: $0.023/GB (~$2-5 for typical logs)
 - Athena queries: $5/TB scanned (~$1-3 for typical usage)
-- QuickSight Enterprise: $18/user/month
+- Quick Sight Enterprise: $18/user/month
 - Glue Data Catalog: $1/100k requests (~$0.10)
 
-**Total**: ~$20-30/month (excluding QuickSight user fees)
+**Total**: ~$20-30/month (excluding Quick Sight user fees)
 
 ## Security Best Practices
 

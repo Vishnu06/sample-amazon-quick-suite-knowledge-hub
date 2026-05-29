@@ -1,7 +1,7 @@
 """
-Quick Suite Setup Lambda Handler
+Quick Setup Lambda Handler
 
-This Lambda function handles the setup of Amazon Quick Suite with IAM Identity Center.
+This Lambda function handles the setup of Amazon Quick with IAM Identity Center.
 It can be invoked as a CloudFormation Custom Resource or directly via Lambda invocation.
 """
 
@@ -19,7 +19,7 @@ logger.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
 
 
 class QuickSuiteSetup:
-    """Handles Quick Suite setup operations."""
+    """Handles Quick setup operations."""
 
     def __init__(self, region: str = None):
         self.region = region or os.environ.get("AWS_REGION", "us-east-1")
@@ -35,8 +35,8 @@ class QuickSuiteSetup:
     def create_quicksight_subscription(
         self, account_name: str, admin_email: str
     ) -> dict:
-        """Create QuickSight account subscription."""
-        logger.info(f"Creating QuickSight subscription: {account_name}")
+        """Create Quick Sight account subscription."""
+        logger.info(f"Creating Quick Sight subscription: {account_name}")
 
         try:
             # Check if subscription already exists
@@ -44,7 +44,7 @@ class QuickSuiteSetup:
                 existing = self.quicksight.describe_account_subscription(
                     AwsAccountId=self.account_id
                 )
-                logger.info(f"QuickSight subscription already exists: {existing}")
+                logger.info(f"Quick Sight subscription already exists: {existing}")
                 return {"status": "EXISTS", "subscription": existing}
             except self.quicksight.exceptions.ResourceNotFoundException:
                 pass
@@ -58,16 +58,16 @@ class QuickSuiteSetup:
                 Edition="ENTERPRISE",
             )
 
-            logger.info(f"QuickSight subscription created: {response}")
+            logger.info(f"Quick Sight subscription created: {response}")
             return {"status": "CREATED", "subscription": response}
 
         except ClientError as e:
-            logger.error(f"Error creating QuickSight subscription: {e}")
+            logger.error(f"Error creating Quick Sight subscription: {e}")
             raise
 
     def create_quicksight_namespace(self, namespace: str = "default") -> dict:
-        """Create QuickSight namespace."""
-        logger.info(f"Creating QuickSight namespace: {namespace}")
+        """Create Quick Sight namespace."""
+        logger.info(f"Creating Quick Sight namespace: {namespace}")
 
         try:
             # Check if namespace exists
@@ -117,7 +117,7 @@ class QuickSuiteSetup:
             response = self.identity_store.create_group(
                 IdentityStoreId=identity_store_id,
                 DisplayName=group_name,
-                Description=f"Admin group for Quick Suite - {group_name}",
+                Description=f"Admin group for Quick - {group_name}",
             )
 
             logger.info(f"Group created: {response}")
@@ -128,9 +128,9 @@ class QuickSuiteSetup:
             raise
 
     def create_quicksight_service_role(self) -> dict:
-        """Create IAM service role for QuickSight."""
+        """Create IAM service role for Quick Sight."""
         role_name = "QuickSuiteServiceRole"
-        logger.info(f"Creating QuickSight service role: {role_name}")
+        logger.info(f"Creating Quick Sight service role: {role_name}")
 
         try:
             # Check if role exists
@@ -156,7 +156,7 @@ class QuickSuiteSetup:
             response = self.iam.create_role(
                 RoleName=role_name,
                 AssumeRolePolicyDocument=json.dumps(assume_role_policy),
-                Description="Service role for Amazon Quick Suite",
+                Description="Service role for Amazon Quick",
                 Tags=[{"Key": "ManagedBy", "Value": "QuickSuiteStarterKit"}],
             )
 
@@ -181,8 +181,8 @@ class QuickSuiteSetup:
             raise
 
     def setup(self, properties: dict) -> dict:
-        """Run the complete Quick Suite setup."""
-        logger.info(f"Starting Quick Suite setup with properties: {properties}")
+        """Run the complete Quick setup."""
+        logger.info(f"Starting Quick setup with properties: {properties}")
 
         results = {
             "subscription": None,
@@ -192,7 +192,7 @@ class QuickSuiteSetup:
         }
 
         try:
-            # 1. Create QuickSight subscription
+            # 1. Create Quick Sight subscription
             results["subscription"] = self.create_quicksight_subscription(
                 account_name=properties.get("AccountName", "QuickSuiteStarterKit"),
                 admin_email=properties.get("AdminEmail", "admin@example.com"),
@@ -215,21 +215,21 @@ class QuickSuiteSetup:
             # 4. Create service role
             results["service_role"] = self.create_quicksight_service_role()
 
-            logger.info(f"Quick Suite setup completed successfully: {results}")
+            logger.info(f"Quick setup completed successfully: {results}")
             return {"status": "SUCCESS", "results": results}
 
         except Exception as e:
-            logger.error(f"Quick Suite setup failed: {e}")
+            logger.error(f"Quick setup failed: {e}")
             return {"status": "FAILED", "error": str(e), "results": results}
 
     def cleanup(self, properties: dict) -> dict:
-        """Clean up Quick Suite resources."""
-        logger.info(f"Starting Quick Suite cleanup with properties: {properties}")
+        """Clean up Quick resources."""
+        logger.info(f"Starting Quick cleanup with properties: {properties}")
 
         results = {}
 
         try:
-            # Delete QuickSight subscription
+            # Delete Quick Sight subscription
             try:
                 self.quicksight.delete_account_subscription(
                     AwsAccountId=self.account_id
@@ -239,17 +239,17 @@ class QuickSuiteSetup:
                 logger.warning(f"Could not delete subscription: {e}")
                 results["subscription"] = f"FAILED: {e}"
 
-            logger.info(f"Quick Suite cleanup completed: {results}")
+            logger.info(f"Quick cleanup completed: {results}")
             return {"status": "SUCCESS", "results": results}
 
         except Exception as e:
-            logger.error(f"Quick Suite cleanup failed: {e}")
+            logger.error(f"Quick cleanup failed: {e}")
             return {"status": "FAILED", "error": str(e), "results": results}
 
 
 def handler(event, context):
     """
-    Lambda handler for Quick Suite setup.
+    Lambda handler for Quick setup.
 
     Supports both CloudFormation Custom Resource events and direct invocation.
     """

@@ -52,9 +52,9 @@
 
 ![Authentication redirect URI](images/image_5.png)
 
-7) Go to **AWS** > **Quick Suite** page, and click on **Integration**:
+7) Go to **AWS** > **Quick** page, and click on **Integration**:
 
-![Quick Suite Integration](images/image_6.png)
+![Quick Integration](images/image_6.png)
 
 8) Select **Microsoft Teams** then **Next**
 
@@ -86,4 +86,4 @@
 
 ![Authorization consent](images/image_10.png)
 
-12) In Quick Suite, while creating chat agent, you can now link this action to the chat agent.
+12) In Quick, while creating chat agent, you can now link this action to the chat agent.
