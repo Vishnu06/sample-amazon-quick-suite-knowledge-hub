@@ -44,9 +44,9 @@ Reference: <https://www.servicenow.com/docs/bundle/xanadu-platform-security/page
 
 ![System property configuration](images/image_8.png)
 
-8) Go to **AWS** > **Quick Suite** page, and click on **Integration**:
+8) Go to **AWS** > **Quick** page, and click on **Integration**:
 
-![Quick Suite Integration](images/image_9.png)
+![Quick Integration](images/image_9.png)
 
 9) Select **ServiceNow** then **Next**, enter the following information:
 
@@ -70,13 +70,13 @@ Reference: <https://www.servicenow.com/docs/bundle/xanadu-platform-security/page
 
 ![ServiceNow authorization](images/image_12.png)
 
-12) **Using ServiceNow Integration in Quick Suite**
+12) **Using ServiceNow Integration in Quick**
 
-Now that your ServiceNow integration is configured and authorized, you can use it across different Quick Suite components:
+Now that your ServiceNow integration is configured and authorized, you can use it across different Quick components:
 
 **For Chat Agents:**
 
-1. Navigate to **Chat** in Quick Suite
+1. Navigate to **Chat** in Quick
 2. Create a new chat agent or edit an existing one
 3. In the agent configuration, go to the **Actions** section
 4. Click **Add Action** and select your **ServiceNow Integration**
@@ -84,7 +84,7 @@ Now that your ServiceNow integration is configured and authorized, you can use i
 
 **For Flows:**
 
-1. Go to **Flows** in Quick Suite
+1. Go to **Flows** in Quick
 2. Create a new flow or edit an existing workflow
 3. Add an **Action Step** to your flow
 4. Select your **ServiceNow Integration** from the available actions
@@ -92,7 +92,7 @@ Now that your ServiceNow integration is configured and authorized, you can use i
 
 **For Automate Projects:**
 
-1. Navigate to **Automate** in Quick Suite
+1. Navigate to **Automate** in Quick
 2. Create or edit an automation project
 3. Add a **ServiceNow Action** component to your automation workflow
 4. Configure the integration to automatically perform ServiceNow operations based on triggers or schedules
@@ -103,4 +103,4 @@ Now that your ServiceNow integration is configured and authorized, you can use i
 - **Flow**: Automatically create tickets when certain conditions are met
 - **Automate**: Schedule regular ServiceNow data synchronization
 
-Your ServiceNow integration is now ready to streamline IT service management across all Quick Suite capabilities.
+Your ServiceNow integration is now ready to streamline IT service management across all Quick capabilities.

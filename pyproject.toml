@@ -1,7 +1,7 @@
 [project]
-name = "amazon-quick-suite-knowledge-hub"
+name = "amazon-quick-knowledge-hub"
 version = "1.0.0"
-description = "Integration guides and documentation for Amazon Quick Suite"
+description = "Integration guides and documentation for Amazon Quick"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

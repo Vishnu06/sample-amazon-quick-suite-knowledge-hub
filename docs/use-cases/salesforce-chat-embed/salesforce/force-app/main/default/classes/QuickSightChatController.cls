@@ -1,5 +1,5 @@
 /**
- * Apex controller for QuickSight Chat Agent LWC.
+ * Apex controller for Quick Sight Chat Agent LWC.
  * Currently unused - Chat Agent uses static embed URL.
  * Kept for future use with WithIdentity API.
  */

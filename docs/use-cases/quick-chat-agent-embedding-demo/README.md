@@ -5,26 +5,26 @@ description: "Quick Chat Agent Embedding Demo for web applications using AWS ser
 
 # Quick Chat Agent Embedding Demo
 
-Bring AI-powered conversational intelligence directly into your applications with Amazon QuickSuite embedded chat. This demo shows how to seamlessly integrate QuickSuite's unified chat experience—which combines structured data insights, document knowledge, and actionable workflows into your own web applications.
+Bring AI-powered conversational intelligence directly into your applications with Amazon Quick embedded chat. This demo shows how to seamlessly integrate Quick's unified chat experience—which combines structured data insights, document knowledge, and actionable workflows into your own web applications.
 
 This implementation uses the `generate_embed_url_for_registered_user_with_identity` API to create secure, user specific embed URLs with trusted identity propagation, ensuring authenticated users receive personalized chat experiences within your application.
 
-##  Business Value
+## Business Value
 
-- Embed Amazon QuickSuite chat agents into existing web applications
+- Embed Amazon Quick chat agents into existing web applications
 - Maintain security with trusted identity propagation
 - Scale chat functionality across multiple domains and applications
 - Leverage AWS managed services for reliability and performance
 
-##  Demo
+## Demo
 
 ![Quick Chat Agent Embedding Demo](images/quick-chat-agent-embedding-demo.gif)
 
-##  Architecture
+## Architecture
 
 ![Architecture Diagram](images/quick-chat-agent-embedding-architecture.png)
 
-##  Overview
+## Overview
 
 Complete embedding solution with:
 
@@ -34,7 +34,7 @@ Complete embedding solution with:
 - **AWS CDK Infrastructure** for automated deployment
 - **Session Management** with 10-hour token lifetime
 
-##  Project Structure
+## Project Structure
 
 ```
  infrastructure/          # AWS CDK deployment code
@@ -47,7 +47,7 @@ Complete embedding solution with:
      lib/                # Utility functions
 ```
 
-##  Getting Started
+## Getting Started
 
 ### 1. Clone Repository (Sparse Checkout)
 
@@ -93,14 +93,14 @@ Before starting the frontend application, you must create matching users in both
 #### Why Both Users Are Required
 
 - **Amazon Cognito User**: Authenticates the web application
-- **AWS IAM Identity Center User**: Required for Amazon QuickSuite trusted identity propagation
+- **AWS IAM Identity Center User**: Required for Amazon Quick trusted identity propagation
 - **Matching Email Addresses**: Links the identities for seamless authentication flow
 
 **Important**: The email addresses must match exactly for trusted identity propagation to function correctly.
 
-### 4. Configure Amazon QuickSuite Agent ID
+### 4. Configure Amazon Quick Agent ID
 
-1. Navigate to the Amazon QuickSuite console
+1. Navigate to the Amazon Quick console
 2. Go to **Explore** → **Chat agents**
 3. In the **Action** column, select the options menu next to **Chat**
 4. Choose **View chat agent details**
@@ -139,4 +139,4 @@ cdk destroy
 
 ## License
 
-This project is licensed under the MIT No Attribution License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT No Attribution License - see the [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) file for details.

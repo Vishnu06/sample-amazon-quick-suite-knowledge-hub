@@ -26,9 +26,9 @@
 
    ![Client ID and Tenant ID](images/image_4.png)
 
-6) Go to **AWS** > **Quick Suite** page, and click on **Integration**:
+6) Go to **AWS** > **Quick** page, and click on **Integration**:
 
-   ![Quick Suite Integration](images/image_6.png)
+   ![Quick Integration](images/image_6.png)
 
 7) Select **Microsoft SharePoint Online Integration** then **Next**
 
@@ -62,10 +62,10 @@
 9) Navigate to **Integration** => **Actions** => **Microsoft SharePoint Online Integration** (or your MS Sharepoint integration name), and click on **Sign in**:
 
    ![Authorization consent](images/image_9.png)
-   
+
    - Enter your Microsoft Sharepoint email and password in the popup window;
    - Check **Consent on behalf of your organization** and click **Accept**:
 
    ![Authorization consent](images/image_10.png)
 
-10) In Quick Suite, while creating chat agent, you can now link this action to the chat agent
+10) In Quick, while creating chat agent, you can now link this action to the chat agent

@@ -3,7 +3,7 @@
 Redshift AgentCore Gateway - Amazon Redshift MCP Integration
 
 CDK application entry point for deploying Redshift MCP integration
-infrastructure with QuickSuite integration.
+infrastructure with Amazon Quick integration.
 """
 
 import aws_cdk as cdk
@@ -22,7 +22,7 @@ RedshiftAgentCoreStack(
     app,
     "quicksuite-redshift-mcp",
     env=env,
-    description="Amazon Redshift MCP Integration with QuickSuite",
+    description="Amazon Redshift MCP Integration with Amazon Quick",
 )
 
 app.synth()

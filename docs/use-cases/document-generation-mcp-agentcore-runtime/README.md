@@ -1,11 +1,11 @@
 ---
 category: Capability
-description: "AI-powered document generation (docx, pdf, pptx, xlsx, HTML) for Amazon Quick Suite using MCP Gateway with AgentCore Runtime and Code Interpreter"
+description: "AI-powered document generation (docx, pdf, pptx, xlsx, HTML) for Amazon Quick using MCP Gateway with AgentCore Runtime and Code Interpreter"
 ---
 
 # Document Generation MCP with AgentCore Runtime
 
-AI-powered document generation for Amazon Quick Suite. Creates professional
+AI-powered document generation for Amazon Quick. Creates professional
 docx, pdf, pptx, xlsx, and HTML files using a Strands SDK agent with
 Claude Sonnet on Bedrock and AgentCore Code Interpreter.
 
@@ -85,7 +85,7 @@ with tool call budgeting and base64 capture hooks for reliability.
 ## Architecture
 
 ```text
-Amazon Quick Suite (Chat)
+Amazon Quick (Chat)
     │
     ▼
 AgentCore Gateway (MCP tools)  ← CDK-managed: Gateway + Cognito + Lambdas
@@ -141,7 +141,7 @@ AgentCore Gateway (MCP tools)  ← CDK-managed: Gateway + Cognito + Lambdas
 - **Fire-and-forget invocation** — submit_job invokes the agent with a 10s read timeout and doesn't wait for completion; the agent runs independently on AgentCore Runtime with no Lambda timeout constraint
 - **Direct-persist** — the agent uploads the result to S3 and marks the job COMPLETED in DynamoDB before returning, so the result is persisted regardless of any downstream timeouts
 - **Step Function polling loop** — polls DynamoDB every 30s to detect when the agent finishes; 45-minute timeout as a safety net
-- **Async submit/poll** — works around Quick Suite's 60-second MCP timeout
+- **Async submit/poll** — works around Quick's 60-second MCP timeout
 - **S3 + CloudFront** — file delivery via clean `*.cloudfront.net` URLs that aren't blocked by corporate proxies (S3 presigned URLs are often blocked)
 - **CDK-managed Gateway** — Gateway, Cognito, CloudFront, and all infrastructure in a single CDK stack
 
@@ -303,7 +303,7 @@ cdk deploy --parameters AgentCoreRuntimeId=document_skills_agent-XxxYyyZzz
 CDK will show you the resources it plans to create and ask for confirmation.
 Type `y` to proceed.
 
-On success, the stack outputs all the values you need for Quick Suite:
+On success, the stack outputs all the values you need for Quick:
 
 ```text
 Outputs:
@@ -345,11 +345,11 @@ cd ..
 - **AgentCore Gateway** (`document-skills-gateway`) — MCP gateway with two tool targets
 - **Cognito User Pool** — OAuth2 authorizer with `client_credentials` grant for the gateway
 
-### Configure Quick Suite
+### Configure Quick
 
 Using the CDK stack outputs (and the Client Secret from the command above):
 
-1. Go to **Quick Suite Admin → MCP Actions → Add MCP Server**
+1. Go to **Quick Admin → MCP Actions → Add MCP Server**
 2. Fill in:
 
 | Setting | Value |
@@ -360,11 +360,11 @@ Using the CDK stack outputs (and the Client Secret from the command above):
 | Client Secret | from `describe-user-pool-client` command |
 | Scope | `Scope` from stack output (`document-skills-gateway/invoke`) |
 
-The auth uses OAuth2 `client_credentials` flow — Quick Suite requests a token
+The auth uses OAuth2 `client_credentials` flow — Quick requests a token
 from the Cognito token URL using the client ID + secret, then passes that JWT
 in the `Authorization` header when calling the MCP gateway.
 
-1. Save and test by asking Quick Suite to create a document
+1. Save and test by asking Quick to create a document
 
 **If you need to retrieve these values later:**
 
@@ -385,13 +385,13 @@ aws cognito-idp describe-user-pool-client \
 
 ## Create a Custom Agent with Document Skills
 
-You can create a custom Quick Suite agent that uses the document generation
+You can create a custom Quick agent that uses the document generation
 MCP tools. The key behavior: after submitting a job, the agent should
 automatically poll for the result instead of asking the user what to do next.
 
 ### Agent Setup
 
-1. Go to **Quick Suite Admin → Custom Agents → Create Agent**
+1. Go to **Quick Admin → Custom Agents → Create Agent**
 2. Configure the agent with the MCP server you set up in the previous section
 3. Use the system prompt below
 
@@ -469,7 +469,7 @@ The user controls when to check — the agent gives them the exact query to use.
 
 ## Testing
 
-### Test the agent directly (without Gateway/Quick Suite)
+### Test the agent directly (without Gateway/Quick)
 
 You can invoke the agent directly using the AgentCore CLI:
 

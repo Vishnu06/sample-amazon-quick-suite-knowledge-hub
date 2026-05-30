@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Quick Suite Observability MCP - CDK App"""
+"""Quick Observability MCP - CDK App"""
 
 import aws_cdk as cdk
 from cdk.quicksuite_observability_mcp_stack import QuickSuiteObservabilityMCPStack
@@ -15,7 +15,7 @@ QuickSuiteObservabilityMCPStack(
     app,
     "quicksuite-observability-mcp",
     env=env,
-    description="Quick Suite Observability MCP with AgentCore Gateway",
+    description="Quick Observability MCP with AgentCore Gateway",
 )
 
 app.synth()

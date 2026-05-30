@@ -1,0 +1,31 @@
+# CDK
+cdk.out/
+.cdk.staging/
+cdk.context.json
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# TypeScript
+dist/
+*.js
+*.d.ts
+*.js.map
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

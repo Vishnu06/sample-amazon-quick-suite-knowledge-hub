@@ -1,6 +1,6 @@
 # CDK Infrastructure for Amazon Bedrock Knowledge Base MCP Integration
 
-This directory contains the AWS CDK infrastructure code for deploying the Amazon Bedrock Knowledge Base MCP integration with Amazon Quick Suite.
+This directory contains the AWS CDK infrastructure code for deploying the Amazon Bedrock Knowledge Base MCP integration with Amazon Quick.
 
 ## Architecture Overview
 
@@ -8,7 +8,7 @@ The CDK stack deploys the following AWS resources:
 
 ### Core Components
 
-- **Amazon Bedrock AgentCore Gateway**: MCP protocol gateway for Quick Suite integration
+- **Amazon Bedrock AgentCore Gateway**: MCP protocol gateway for Quick integration
 - **AWS Lambda Function**: Processes knowledge base queries and retrieval operations
 - **Amazon Cognito User Pool**: Provides OAuth 2.0 authentication for secure access
 - **IAM Roles and Policies**: Implements least-privilege access controls
@@ -41,7 +41,7 @@ The main CDK stack creates:
    - Source code from `../tools/` directory
 
 3. **Cognito User Pool**
- 
+
 4. **MCP Gateway**
    - Protocol type: MCP
    - Authorization: Custom JWT (Cognito)
@@ -65,26 +65,30 @@ Ensure you have the following installed and configured:
 ### Deploy the Stack
 
 1. **Navigate to the project root**:
+
    ```bash
    cd docs/use-cases/bedrock-kb-retrieval-mcp
    ```
 
 2. **Install Python dependencies**:
+
    ```bash
    uv sync
    ```
 
 3. **Bootstrap CDK (first time only)**:
+
    ```bash
    cdk bootstrap
    ```
 
 4. **Deploy the stack**:
+
    ```bash
    cdk deploy
    ```
 
-5. **Save the outputs**: Note the following values for Quick Suite configuration:
+5. **Save the outputs**: Note the following values for Quick configuration:
    - `GatewayUrl`: MCP gateway endpoint
    - `ClientId`: Cognito client ID
    - `ClientSecret`: Cognito client secret
@@ -137,6 +141,7 @@ The stack implements least-privilege access:
 ### CloudWatch Integration
 
 The stack automatically creates:
+
 - Lambda function log groups
 - CloudWatch metrics for all services
 - Error tracking and alerting capabilities
@@ -144,11 +149,13 @@ The stack automatically creates:
 ### Common Issues
 
 **Deployment Failures**:
+
 - Verify AWS credentials and permissions
 - Check CDK version compatibility
 - Ensure unique resource names
 
 **Runtime Errors**:
+
 - Check Lambda function logs in CloudWatch
 - Verify IAM permissions for Bedrock access
 - Confirm tool schema JSON is valid
@@ -156,11 +163,13 @@ The stack automatically creates:
 ### Debugging
 
 Enable verbose CDK output:
+
 ```bash
 cdk deploy --verbose
 ```
 
 View CloudFormation events:
+
 ```bash
 aws cloudformation describe-stack-events --stack-name BedrockKBNativeStack
 ```

@@ -48,9 +48,9 @@ From **Jira API**, add:
 
 ![Settings with credentials](images/image_4.png)
 
-7) Go to **AWS** > **Quick Suite** page, and click on **Integration**:
+7) Go to **AWS** > **Quick** page, and click on **Integration**:
 
-![Quick Suite Integration](images/image_5.png)
+![Quick Integration](images/image_5.png)
 
 8) Select **Jira Cloud**, then **Next**
 
@@ -94,6 +94,6 @@ cloudId returned is the Instance ID
 
 ![Signed in status](images/image_12.png)
 
-13) In Quick Suite, while creating chat agent, you can now link this action to the chat agent.
+13) In Quick, while creating chat agent, you can now link this action to the chat agent.
 
 ![Link to chat agent](images/image_13.png)

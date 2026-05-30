@@ -1,6 +1,6 @@
 ---
 name: "Documentation Improvement 📚"
-about: Suggest improvements to Amazon Quick Suite Knowledge Hub documentation
+about: Suggest improvements to Amazon Quick Knowledge Hub documentation
 title: "[DOCS] "
 labels: documentation
 assignees: '@aws-samples/quick-suite-team'

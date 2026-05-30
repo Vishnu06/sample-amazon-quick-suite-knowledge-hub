@@ -8,13 +8,13 @@ Before setting up the frontend, ensure you have completed the following:
 
 1. **Infrastructure Deployment**: Deploy the AWS infrastructure using the deployment script in the `infrastructure/` directory
 2. **User Configuration**: Create matching users in Amazon Cognito and AWS IAM Identity Center (see main README.md)
-3. **Agent ID Configuration**: Configure your Amazon QuickSuite Agent ID (see main README.md)
+3. **Agent ID Configuration**: Configure your Amazon Quick Agent ID (see main README.md)
 4. **Node.js**: Version 18 or later installed
 5. **npm**: Package manager installed
 
 ## Configuration
 
-The infrastructure deployment creates a `.env.local` file with environment variables. Ensure you have configured your Amazon QuickSuite Agent ID as described in the main README.md file before proceeding.
+The infrastructure deployment creates a `.env.local` file with environment variables. Ensure you have configured your Amazon Quick Agent ID as described in the main README.md file before proceeding.
 
 ## Setup and Deployment
 
@@ -42,7 +42,7 @@ The infrastructure deployment automatically generates the following environment 
 - `NEXT_PUBLIC_COGNITO_USER_POOL_ID`: Amazon Cognito User Pool identifier
 - `NEXT_PUBLIC_COGNITO_CLIENT_ID`: Amazon Cognito App Client identifier
 - `NEXT_PUBLIC_COGNITO_DOMAIN`: Amazon Cognito domain configuration
-- `NEXT_PUBLIC_QUICKSUITE_AGENT_ID`: Amazon QuickSuite Agent ID (requires manual configuration)
+- `NEXT_PUBLIC_QUICKSUITE_AGENT_ID`: Amazon Quick Agent ID (requires manual configuration)
 - `NEXT_PUBLIC_AWS_REGION`: AWS Region where resources are deployed
 
 ## Troubleshooting

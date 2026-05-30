@@ -1,14 +1,14 @@
 # Box - Action Setup Guide
 
-Quick users can connect to 3P agents using the custom MCP connector in Quick Suite. The steps below explain how a user can connect to Box's agents from Quick.
+Quick users can connect to 3P agents using the custom MCP connector in Quick. The steps below explain how a user can connect to Box's agents from Quick.
 
 ## Step 1: Access Integrations
 
-1) From the Quick Suite Home screen, select **Integrations** from the Connections section on the left navigation panel
+1) From the Quick Home screen, select **Integrations** from the Connections section on the left navigation panel
 2) Select the **Actions** tab in the main panel
 3) Select the plus (+) sign in the **Model Context Protocol** tile in the Set up a new integration section
 
-![Quick Suite Integrations](images/image_1.png)
+![Quick Integrations](images/image_1.png)
 
 ## Step 2: Create Integration
 
@@ -40,7 +40,7 @@ This allows the underlying OAuth security framework to verify the identity of th
 
 ## Step 4: Grant Authorization
 
-10) A pop-up window from Box MCP server will appear with a request to approve authorization for the Amazon Quick Suite MCP client
+10) A pop-up window from Box MCP server will appear with a request to approve authorization for the Amazon Quick MCP client
 11) Click **Grant Access to Box**
 
 ![Box authorization popup](images/image_4.png)

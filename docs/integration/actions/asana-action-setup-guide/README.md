@@ -1,8 +1,8 @@
 # Asana - Action Setup Guide
 
-Asana is a web-based work management platform that helps teams organize, collaborate, and plan tasks. If you're an Asana user, you can create an Amazon Quick Suite Action to allow your end users to create and update tasks from within their Quick Assistant chat.
+Asana is a web-based work management platform that helps teams organize, collaborate, and plan tasks. If you're an Asana user, you can create an Amazon Quick Action to allow your end users to create and update tasks from within their Quick Assistant chat.
 
-Follow the step by step instructions to set up Asana Action in your Quick Suite.
+Follow the step by step instructions to set up Asana Action in your Quick.
 
 ## Asana Prerequisites
 
@@ -34,15 +34,15 @@ To build a proper OAuth flow, you must supply your new application with three ke
 
 Also make sure to select the workspace you want this app to work with under **Choose distribution method**.
 
-## Quick Suite Actions Setup
+## Quick Actions Setup
 
-### Step 3: Access Quick Suite Actions
+### Step 3: Access Quick Actions
 
-Go to Quick Suite → Go to Left-hand side bar → Under **Connections**, Choose **Actions**
+Go to Quick → Go to Left-hand side bar → Under **Connections**, Choose **Actions**
 
 Click **Asana** → Choose **Next**
 
-![Quick Suite Actions selection](images/image_6.png)
+![Quick Actions selection](images/image_6.png)
 
 ### Step 4: Configure Asana Connection
 

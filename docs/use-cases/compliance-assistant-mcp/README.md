@@ -1,11 +1,11 @@
 ---
 category: Use Case
-description: "Multi-agent compliance analysis via Amazon Quick Suite using CrewAI, Bedrock AgentCore Runtime, and MCP"
+description: "Multi-agent compliance analysis via Amazon Quick using CrewAI, Bedrock AgentCore Runtime, and MCP"
 ---
 
-# Compliance Assistant — Multi-Agent Analysis via Amazon Quick Suite
+# Compliance Assistant — Multi-Agent Analysis via Amazon Quick
 
-Multi-agent compliance analysis exposed as an MCP server to Amazon Quick Suite through Amazon Bedrock AgentCore Gateway. Users ask compliance questions in natural language, and a 3-agent CrewAI pipeline analyzes regulations, drafts policies, and recommends AWS solutions — orchestrated asynchronously to respect Quick Suite's 60-second MCP timeout.
+Multi-agent compliance analysis exposed as an MCP server to Amazon Quick through Amazon Bedrock AgentCore Gateway. Users ask compliance questions in natural language, and a 3-agent CrewAI pipeline analyzes regulations, drafts policies, and recommends AWS solutions — orchestrated asynchronously to respect Quick's 60-second MCP timeout.
 
 **Components:**
 
@@ -17,7 +17,7 @@ Multi-agent compliance analysis exposed as an MCP server to Amazon Quick Suite t
 
 ## 🎯 Purpose
 
-- **Regulatory Analysis on Demand** — Ask Quick Suite to analyze PCI DSS, HIPAA, NIST CSF, ISO 27001, SOX, GDPR, etc.
+- **Regulatory Analysis on Demand** — Ask Quick to analyze PCI DSS, HIPAA, NIST CSF, ISO 27001, SOX, GDPR, etc.
 - **Multi-Agent Pipeline** — 3 specialized CrewAI agents work sequentially: Compliance Analyst → Compliance Specialist → Solutions Architect
 - **Async Job Pattern** — Every MCP tool call returns in < 5 seconds; the full pipeline runs in the background (3-5 minutes)
 - **Managed Infrastructure** — AgentCore Runtime handles container builds, scaling, and health checks — no Docker or ECS required
@@ -176,7 +176,7 @@ cdk deploy \
 >
 > Then add `-c "@aws-cdk/core:bootstrapQualifier=myid"` to all `cdk deploy` / `cdk destroy` commands.
 
-The stack outputs everything you need for Quick Suite integration:
+The stack outputs everything you need for Quick integration:
 
 | Output | Description |
 |--------|-------------|
@@ -261,7 +261,7 @@ aws iam put-role-policy \
 | `get_analysis_status` | Polls job progress | status, progress message |
 | `get_analysis_report` | Retrieves completed markdown report from S3 | Full report |
 
-## 🎨 Quick Suite Integration
+## 🎨 Quick Integration
 
 From the CDK stack outputs (Step 4), gather these values:
 
@@ -273,7 +273,7 @@ From the CDK stack outputs (Step 4), gather these values:
 
 ### Configure MCP Action
 
-1. Navigate to **Integrations** in Amazon Quick Suite
+1. Navigate to **Integrations** in Amazon Quick
 2. Click **Actions** → **+** button for **Model Context Protocol**
 3. Fill in:
    - **Name**: Compliance Assistant
@@ -287,7 +287,7 @@ From the CDK stack outputs (Step 4), gather these values:
    - **Token URL** → Paste `CognitoTokenUrl`
 5. Click **Create and Continue** → **Next** → **Next**
 
-### Create Quick Suite Agent
+### Create Quick Agent
 
 1. Navigate to **Agents** → **Create agent**
 2. Configure:
@@ -374,7 +374,7 @@ RESPONSE STYLE:
 
 **MCP Authentication Issues:**
 
-- Verify OAuth2 credentials in Quick Suite MCP Actions configuration
+- Verify OAuth2 credentials in Quick MCP Actions configuration
 - Retrieve the client secret via CLI (see Step 4) — it's not shown in CloudFormation outputs
 - Ensure client secret is copied without leading/trailing spaces
 
@@ -390,7 +390,7 @@ RESPONSE STYLE:
 - The Lambda handler retries up to 3 times with backoff on cold-start errors
 - To warm up: `agentcore invoke '{"job_id":"warmup","topic":"test"}'`
 
-**Quick Suite Shows "Tool call timed out":**
+**Quick Shows "Tool call timed out":**
 
 - This means a single MCP call exceeded 60 seconds — should not happen with the async pattern
 - Check that the Lambda is returning immediately from `start_compliance_analysis`
@@ -433,4 +433,4 @@ aws bedrock-agent delete-agent \
 
 ## 📝 License
 
-This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
+This library is licensed under the MIT-0 License. See the repository [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE).

@@ -1,14 +1,15 @@
 # Task 4: Flow Automation
 
-Automate daily reports using QuickSight Flows to send insights via email or Slack.
+Automate daily reports using Quick Sight Flows to send insights via email or Slack.
 
 **Duration:** 30-40 minutes
 
 ---
 
-## What are QuickSight Flows?
+## What are Quick Sight Flows?
 
 Flows enable you to automate analytics workflows:
+
 - Schedule recurring reports
 - Query data from Spaces and Topics
 - Use AI agents to generate insights
@@ -41,7 +42,7 @@ After registration, you'll see the app overview page. Copy and save these values
 - **Application (client) ID** - Example: `12345678-1234-1234-1234-123456789abc`
 - **Directory (tenant) ID** - Example: `87654321-4321-4321-4321-cba987654321`
 
-**Important:** Keep these IDs handy - you'll need them when creating the QuickSight integration.
+**Important:** Keep these IDs handy - you'll need them when creating the Quick Sight integration.
 
 ### Step 3: Configure API Permissions
 
@@ -72,7 +73,7 @@ You should see green checkmarks next to each permission indicating admin consent
 
 ### Step 5: Construct Token URL
 
-You'll need to construct the token URL for QuickSight. The format is:
+You'll need to construct the token URL for Quick Sight. The format is:
 
 ```
 https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
@@ -81,15 +82,16 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 Replace `{tenant-id}` with your Directory (tenant) ID from Step 2.
 
 **Example:**
+
 ```
 https://login.microsoftonline.com/87654321-4321-4321-4321-cba987654321/oauth2/v2.0/token
 ```
 
 Save this URL - you'll need it in the next part.
 
-### Step 6: Create QuickSight Integration
+### Step 6: Create Quick Sight Integration
 
-1. Go to the **Amazon QuickSight Console**
+1. Go to the **Amazon Quick Sight Console**
 2. In the left navigation menu, expand **CONNECT APPS AND DATA**
 3. Click **Integrations**
 4. Click the **Actions** tab at the top
@@ -102,16 +104,20 @@ Save this URL - you'll need it in the next part.
 Fill in the integration form:
 
 **Basic Information:**
+
 - **Name**: `Microsoft Outlook Integration`
 - **Description (Optional)**: `Send automated reports via email`
 
 **Connection type:**
+
 - Select **Public network**
 
 **Authentication method:**
+
 - Select **Service authentication** (for automated workflows)
 
 **Authentication settings:**
+
 - **Base URL**: `https://graph.microsoft.com/v1.0`
 - **Client ID**: Paste your Application (client) ID from Azure
 - **Client secret**: Paste your client secret value from Azure
@@ -122,7 +128,7 @@ Fill in the integration form:
 ### Step 8: Create and Test
 
 1. Click **Create and continue**
-2. QuickSight will validate your credentials
+2. Quick Sight will validate your credentials
 3. If successful, you'll see a confirmation message
 
 ### Step 9: Share Integration (Optional)
@@ -139,13 +145,13 @@ If other users need to use this integration in their Flows:
 
 ### Step 1: Navigate to Flows
 
-1. Go to the **QuickSight Console**
+1. Go to the **Quick Sight Console**
 2. Click **Flows** in the left navigation menu
 3. Click **Create flow**
 
 ### Step 2: Generate Flow with Natural Language
 
-QuickSight will prompt you to describe your workflow in plain English.
+Quick Sight will prompt you to describe your workflow in plain English.
 
 **Enter this prompt:**
 
@@ -159,13 +165,14 @@ Create a daily report flow that:
 
 Click **Generate**
 
-**AI-Powered Automation:** QuickSight will automatically create a multi-step workflow based on your description!
+**AI-Powered Automation:** Quick Sight will automatically create a multi-step workflow based on your description!
 
 ### Step 3: Review Generated Flow
 
-QuickSight creates a flow with these steps:
+Quick Sight creates a flow with these steps:
 
 **Flow Steps:**
+
 1. **Enter Recipient Email Address** - Input step for email recipient
 2. **Query Yesterday's Bedrock Metrics** - Queries the Space
 3. **Analyze Bedrock Data** - Uses your chat agent for analysis
@@ -174,6 +181,7 @@ QuickSight creates a flow with these steps:
 
 **Expected Errors:**
 You'll see error messages at the top:
+
 - "Action connector required" - Need to configure email integration
 - "Schedule creation failed" - Need to manually create schedule
 
@@ -221,6 +229,7 @@ Click **Save**
 Click on the **Send Daily Report Email** step.
 
 You'll see two errors that need to be fixed:
+
 - **Action connector required**
 - **Action required**
 
@@ -238,6 +247,7 @@ Send an email to Enter Recipient Email Address with the subject 'Daily GenAI Ope
 ```
 
 **Or use this simpler format:**
+
 - **To**: Reference the input → `Enter Recipient Email Address`
 - **Subject**: `Daily GenAI Operations Report - [Current Date]`
 - **Body**: Reference the agent output → `Generate Report Summary`
@@ -254,6 +264,7 @@ Now that the flow is configured, create the schedule:
 2. Configure schedule settings:
 
 **Set schedule:**
+
 - **Schedule name**: `Daily reports`
 - **Description**: `Weekday morning GenAI operations summary`
 - **Repeats**: Select **Custom**
@@ -265,10 +276,12 @@ Now that the flow is configured, create the schedule:
 3. Click **Next**
 
 **Inputs:**
+
 - If prompted for the email address input, enter the default recipient
 - Click **Next**
 
 **Review and Create:**
+
 - Review the schedule summary
 - Click **Create**
 
@@ -277,6 +290,7 @@ Now that the flow is configured, create the schedule:
 After creation, you'll see the schedule summary:
 
 **Schedule details:**
+
 - **Name**: Daily reports
 - **Frequency**: At 08:00 AM, only on Monday, Tuesday, Wednesday, Thursday, and Friday
 - **Status**: Active (toggle on/off)
@@ -293,6 +307,7 @@ Before waiting for the scheduled run, test manually:
 5. Check your email for the report
 
 **Testing Tips:**
+
 - Use your own email for testing
 - Verify all steps complete successfully
 - Check that the agent's analysis is relevant
@@ -321,7 +336,7 @@ Track your flow's performance over time:
 - ✓ Admin consent granted (green checkmarks visible)
 - ✓ Client secret generated and saved
 - ✓ Token URL constructed correctly
-- ✓ QuickSight integration created with Service authentication
+- ✓ Quick Sight integration created with Service authentication
 - ✓ Integration validation successful
 - ✓ Flow generated with all required steps
 - ✓ Email input configured with default value
@@ -341,6 +356,7 @@ Track your flow's performance over time:
 **Error:** "Unable to authenticate with provided credentials"
 
 **Solutions:**
+
 1. Verify the Client ID and Client secret are copied correctly (no extra spaces)
 2. Ensure the Token URL uses your correct tenant ID
 3. Confirm admin consent was granted for all API permissions
@@ -351,6 +367,7 @@ Track your flow's performance over time:
 **Error:** "Need admin approval"
 
 **Solution:** You must have Azure AD admin privileges to grant consent. Contact your IT administrator to:
+
 1. Grant admin consent for the API permissions
 2. Or assign you the "Cloud Application Administrator" role
 
@@ -359,18 +376,21 @@ Track your flow's performance over time:
 **Common mistake:** Using the wrong token URL format
 
 **Correct format:**
+
 ```
 https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ```
 
 **Incorrect formats:**
+
 - ❌ `https://login.microsoftonline.com/common/oauth2/v2.0/token`
 - ❌ `https://login.microsoft.com/{tenant-id}/oauth2/v2.0/token`
 - ❌ Missing `/v2.0/token` at the end
 
 ### "Action connector required" Error
 
-**Solution:** 
+**Solution:**
+
 1. Click on the **Send Daily Report Email** step
 2. Select your **Microsoft Outlook Integration** from the Connector dropdown
 3. Select **Send an email (V2)** as the Type
@@ -379,6 +399,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### "Schedule creation failed" Error
 
 **Solution:**
+
 1. Ensure all flow steps are configured and saved
 2. Fix any remaining errors in the flow
 3. Click **Create Schedule** again
@@ -387,6 +408,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### Email Not Received
 
 **Possible causes:**
+
 1. **Wrong email address**: Verify the recipient email in the input step
 2. **Integration not authenticated**: Re-authenticate the Outlook integration
 3. **Permissions issue**: Ensure the integration has Mail.Send permission in Azure
@@ -395,6 +417,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### Agent Response is Generic
 
 **Solution:**
+
 1. Edit the **Analyze Bedrock Data** step
 2. Make the prompt more specific with exact metrics needed
 3. Reference the data source explicitly: "Query Yesterday's Bedrock Metrics"
@@ -406,7 +429,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 
 ✅ Set up Azure app registration for email integration  
 ✅ Configured Microsoft Graph API permissions  
-✅ Created QuickSight Outlook integration with Service authentication  
+✅ Created Quick Sight Outlook integration with Service authentication  
 ✅ Generated automated workflow using natural language  
 ✅ Configured email recipient input  
 ✅ Customized AI agent analysis prompt  
@@ -457,6 +480,7 @@ Automated by QuickSight Flows
 ### Enhance Your Flow
 
 Consider these improvements:
+
 1. **Add conditional logic**: Only send email if there are anomalies
 2. **Include visualizations**: Attach charts from the dashboard
 3. **Multiple recipients**: Add distribution list support
@@ -468,4 +492,3 @@ Consider these improvements:
 - [QuickSight Flows Documentation](https://docs.aws.amazon.com/quicksight/latest/user/flows.html)
 - [Microsoft Graph API Reference](https://docs.microsoft.com/en-us/graph/api/overview)
 - [Amazon Bedrock Logging](https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html)
-

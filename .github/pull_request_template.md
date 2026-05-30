@@ -1,6 +1,6 @@
 ## Description
 
-Brief description of changes to the Amazon Quick Suite Knowledge Hub
+Brief description of changes to the Amazon Quick Knowledge Hub
 
 ## Type of Change
 
@@ -20,18 +20,18 @@ Brief description of changes to the Amazon Quick Suite Knowledge Hub
 
 ## Checklist
 
-- [ ] My content follows the Amazon Quick Suite Knowledge Hub style guidelines
+- [ ] My content follows the Amazon Quick Knowledge Hub style guidelines
 - [ ] I have performed a self-review of my content
 - [ ] I have updated navigation (mkdocs.yml) if adding new content
 - [ ] My changes generate no new warnings or errors
 - [ ] All external links are valid and accessible
 - [ ] Content is accurate and up-to-date
 
-## Amazon Quick Suite Knowledge Hub Guidelines
+## Amazon Quick Knowledge Hub Guidelines
 
 - [ ] No hardcoded secrets, credentials, or sensitive data
 - [ ] All service names and versions are specified
-- [ ] Screenshots include proper Amazon Quick Suite branding
+- [ ] Screenshots include proper Amazon Quick branding
 - [ ] Integration steps are clear and complete
 - [ ] Troubleshooting section included (if applicable)
 
@@ -43,4 +43,4 @@ N/A
 
 ## Additional Notes
 
-Add any additional context about this contribution to the Amazon Quick Suite Knowledge Hub.
+Add any additional context about this contribution to the Amazon Quick Knowledge Hub.

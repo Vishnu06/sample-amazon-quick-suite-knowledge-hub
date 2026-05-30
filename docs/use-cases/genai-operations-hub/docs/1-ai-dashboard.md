@@ -1,6 +1,6 @@
 # Task 1: AI Dashboard
 
-Build AI-powered visualizations using QuickSight's Generative BI capabilities.
+Build AI-powered visualizations using Quick Sight's Generative BI capabilities.
 
 **Duration:** 15-20 minutes
 
@@ -12,11 +12,11 @@ Topics enable natural language queries on your datasets. You'll create one topic
 
 ### What are Topics?
 
-Topics in QuickSight define the business context for your data. They enable non-technical users to ask questions like "What were the invocations yesterday?" without knowing SQL or data structures.
+Topics in Quick Sight define the business context for your data. They enable non-technical users to ask questions like "What were the invocations yesterday?" without knowing SQL or data structures.
 
 ### Step 1: Create Topic for Daily Invocations
 
-1. Navigate to the **Amazon QuickSight Console**
+1. Navigate to the **Amazon Quick Sight Console**
 2. Click **Topics** in the left navigation menu
 3. Click **Create Topic**
 4. Configure the topic:
@@ -30,7 +30,7 @@ Topics in QuickSight define the business context for your data. They enable non-
 6. Review the auto-generated field names and synonyms
 7. Click **Save**
 
-**Tip:** QuickSight automatically generates synonyms for your fields (e.g., "date" might also be recognized as "day", "time", "when"). You can customize these later if needed.
+**Tip:** Quick Sight automatically generates synonyms for your fields (e.g., "date" might also be recognized as "day", "time", "when"). You can customize these later if needed.
 
 ### Step 2: Create Topic for Model Performance
 
@@ -53,6 +53,7 @@ Topics in QuickSight define the business context for your data. They enable non-
 4. Click **Add data** and **Save**
 
 **Validation:**
+
 - ✓ Three topics visible in the Topics list
 - ✓ Each topic shows "Ready" status
 - ✓ Field names and synonyms are auto-generated
@@ -61,11 +62,11 @@ Topics in QuickSight define the business context for your data. They enable non-
 
 ## Part 2: Build Dashboard with Generative BI
 
-Use QuickSight's Generative BI to build visualizations using natural language - no drag and drop needed!
+Use Quick Sight's Generative BI to build visualizations using natural language - no drag and drop needed!
 
 ### What is Generative BI?
 
-Generative BI is Amazon QuickSight's AI-powered feature that lets you create visualizations using natural language. Simply describe what you want to see, and it automatically generates the appropriate charts and insights.
+Generative BI is Amazon Quick Sight's AI-powered feature that lets you create visualizations using natural language. Simply describe what you want to see, and it automatically generates the appropriate charts and insights.
 
 ### Step 1: Create a New Analysis
 

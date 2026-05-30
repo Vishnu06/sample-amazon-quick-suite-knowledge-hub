@@ -12,7 +12,7 @@ Parameters:
     Default: ""
   AllowedDomains:
     Type: CommaDelimitedList
-    Description: Comma-separated list of allowed domains for QuickSuite embedding
+    Description: Comma-separated list of allowed domains for Amazon Quick embedding
     Default: "http://localhost:3000,https://localhost:3000"
 
 Resources:
@@ -206,14 +206,14 @@ Resources:
                         'status': "Role Error: " + str(e)
                       }
                     else:
-                      logger.info("=== CREATING QUICKSUITE CLIENT ===")
+                      logger.info("=== CREATING QUICK CLIENT ===")
                       quicksuite = boto3.client(
                         'quicksight',
                         aws_access_key_id=user_creds['Credentials']['AccessKeyId'],
                         aws_secret_access_key=user_creds['Credentials']['SecretAccessKey'],
                         aws_session_token=user_creds['Credentials']['SessionToken'],
                       )
-                      logger.info("QuickSuite client created")
+                      logger.info("Quick client created")
 
                       logger.info("=== BOTO3 VERSION INFO ===")
                       logger.info("boto3 version: %s" % boto3.__version__)
@@ -242,10 +242,10 @@ Resources:
                           'status': 'SUCCESS'
                         }
                       except Exception as e:
-                        logger.error("QuickSuite embed error: %s" % str(e))
+                        logger.error("Quick embed error: %s" % str(e))
                         result = {
                           'embedUrl': '',
-                          'status': "QuickSuite Error: " + str(e)
+                          'status': "Quick Error: " + str(e)
                         }
                 else:
                   result = {
@@ -653,5 +653,5 @@ Outputs:
     Value: !Sub https://${UserPoolDomain}.auth.${AWS::Region}.amazoncognito.com
 
   QuickSuiteRole:
-    Description: Role to be assumed to invoke QuickSuite embedding
+    Description: Role to be assumed to invoke Amazon Quick embedding
     Value: !GetAtt QuickSuiteRole.Arn

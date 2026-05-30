@@ -28,7 +28,7 @@
 
 6) Go to **Action** > **New Action**, and select **PagerDuty Advance**
 
-![Quick Suite PagerDuty setup](images/image_5.png)
+![Quick PagerDuty setup](images/image_5.png)
 
 7) Confirm available actions and click **Next**
 

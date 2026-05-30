@@ -4,7 +4,7 @@ Complete setup instructions for the GenAI Operations Hub.
 
 ## Overview
 
-Deploy the infrastructure and configure QuickSight to analyze Bedrock invocation logs.
+Deploy the infrastructure and configure Quick Sight to analyze Bedrock invocation logs.
 
 **Duration:** 15-20 minutes
 
@@ -13,7 +13,7 @@ Deploy the infrastructure and configure QuickSight to analyze Bedrock invocation
 ## Prerequisites
 
 - AWS Account with Bedrock invocation logs enabled
-- QuickSight Enterprise Edition subscription
+- Quick Sight Enterprise Edition subscription
 - AWS CLI configured with appropriate credentials
 - Python 3.8+ and Node.js 14+ installed
 
@@ -41,6 +41,7 @@ cdk bootstrap
 ```
 
 **Troubleshooting:** If bootstrap fails with CloudFormation hook errors, try a different region:
+
 ```bash
 cdk bootstrap aws://ACCOUNT-ID/us-west-2
 ```
@@ -52,6 +53,7 @@ cdk deploy GenAIOperationsStack --require-approval never
 ```
 
 This creates:
+
 - S3 buckets for logs and query results
 - Glue database and table
 - Athena workgroup
@@ -72,6 +74,7 @@ python3 generate_all_data.py
 ```
 
 This generates synthetic data for:
+
 - Bedrock model invocations
 - Guardrails interventions
 - Model evaluations
@@ -107,9 +110,9 @@ aws athena start-query-execution \
 
 ---
 
-## Part 3: Configure QuickSight
+## Part 3: Configure Quick Sight
 
-### Step 7: Find Your QuickSight Username
+### Step 7: Find Your Quick Sight Username
 
 ```bash
 aws quicksight list-users \
@@ -122,12 +125,12 @@ Your username will be in the format: `<IAMRoleName>/<SessionName>` (e.g., `Admin
 
 **Important:** Save this username - you'll need it in the next steps!
 
-### Step 8: Grant QuickSight Permissions
+### Step 8: Grant Quick Sight Permissions
 
-**CRITICAL: Do this BEFORE creating QuickSight resources**
+**CRITICAL: Do this BEFORE creating Quick Sight resources**
 
-1. Go to the **Amazon QuickSight Console**
-2. Click your profile icon (top right) → **Manage QuickSight**
+1. Go to the **Amazon Quick Sight Console**
+2. Click your profile icon (top right) → **Manage Quick Sight**
 3. Under **Permissions** in the left menu, click on **AWS Resources**
 4. Configure permissions:
    - ✅ Check **Amazon Athena**
@@ -139,9 +142,9 @@ Your username will be in the format: `<IAMRoleName>/<SessionName>` (e.g., `Admin
    - `genai-ops-athena-results-<ACCOUNT_ID>`
 6. Click **Finish** → **Update**
 
-**Critical Step:** If you skip this, QuickSight resource creation will fail with permission errors.
+**Critical Step:** If you skip this, Quick Sight resource creation will fail with permission errors.
 
-### Step 9: Create QuickSight Resources
+### Step 9: Create Quick Sight Resources
 
 Use the boto3 script to create data sources and datasets:
 
@@ -153,6 +156,7 @@ python3 create_quicksight_resources.py '<IAMRoleName>/<SessionName>'
 Replace `'<IAMRoleName>/<SessionName>'` with your actual username from Step 6.
 
 This script creates:
+
 - Athena data source
 - Three datasets with pre-configured SQL queries:
   - Daily Bedrock Invocations
@@ -162,20 +166,23 @@ This script creates:
 **Expected time:** ~1 minute
 
 **Troubleshooting:** If you see `DataSource is in status CREATION_FAILED`:
+
 1. This means Step 7 permissions weren't granted properly
 2. Delete the failed data source:
+
    ```bash
    aws quicksight delete-data-source \
      --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
      --data-source-id genai-ops-athena-source \
      --region us-east-1
    ```
+
 3. Go back to Step 7 and verify both Athena and S3 permissions with both buckets selected
 4. Re-run the script
 
-### Step 10: Verify QuickSight Resources
+### Step 10: Verify Quick Sight Resources
 
-1. Go to the **QuickSight Console**
+1. Go to the **Quick Sight Console**
 2. Click **Datasets** in the left navigation menu
 3. Verify these three datasets exist:
    - ✅ Daily Bedrock Invocations
@@ -194,10 +201,10 @@ This script creates:
 - ✓ Sample data generated successfully
 - ✓ Sample data uploaded to S3
 - ✓ Athena query executes without errors
-- ✓ QuickSight username identified
+- ✓ Quick Sight username identified
 - ✓ S3 and Athena permissions granted
 - ✓ Data source created successfully
-- ✓ All three datasets visible in QuickSight
+- ✓ All three datasets visible in Quick Sight
 - ✓ Datasets show sample data when previewed
 
 ---
@@ -207,7 +214,7 @@ This script creates:
 ✅ Deployed infrastructure with CDK  
 ✅ Generated synthetic sample data  
 ✅ Uploaded sample Bedrock logs to S3  
-✅ Configured QuickSight permissions  
+✅ Configured Quick Sight permissions  
 ✅ Created data sources and datasets  
 ✅ Verified data connectivity
 

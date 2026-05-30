@@ -400,7 +400,7 @@ class ComplianceAssistantStack(cdk.Stack):
         CfnOutput(
             self,
             "GatewayUrl",
-            description="AgentCore Gateway URL (MCP Server endpoint for Quick Suite)",
+            description="AgentCore Gateway URL (MCP Server endpoint for Quick)",
             value=gateway.get_att("GatewayUrl").to_string(),
         )
 

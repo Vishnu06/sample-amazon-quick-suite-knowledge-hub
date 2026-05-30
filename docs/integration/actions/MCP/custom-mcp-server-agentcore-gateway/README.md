@@ -5,7 +5,7 @@ description: "Build Your Custom MCP Server Using AgentCore Gateway and Connect w
 
 # Build Your Custom MCP Server Using AgentCore Gateway and Connect with Quick
 
-Customers build AI agents and automations in Amazon Quick to analyze data, search enterprise knowledge, and run workflows across their business. Amazon Quick is a unified agentic AI workspace that empowers teams to analyze data, build intelligent agents, discover enterprise knowledge, and automate workflows, all in one place. Quick Suite supports Model Context Protocol (MCP) integrations for action execution, data access, and AI agent integration. MCP provides a standard way for AI applications and agents to discover and invoke tools exposed by external services.
+Customers build AI agents and automations in Amazon Quick to analyze data, search enterprise knowledge, and run workflows across their business. Amazon Quick is a unified agentic AI workspace that empowers teams to analyze data, build intelligent agents, discover enterprise knowledge, and automate workflows, all in one place. Quick supports Model Context Protocol (MCP) integrations for action execution, data access, and AI agent integration. MCP provides a standard way for AI applications and agents to discover and invoke tools exposed by external services.
 
 If you already have **APIs running on AWS Lambda**, you can MCPify your Lambda functions by adding them as targets to AgentCore Gateway. Gateway handles the MCP protocol for you, no infrastructure to manage, and no changes to your existing Lambda functions.
 

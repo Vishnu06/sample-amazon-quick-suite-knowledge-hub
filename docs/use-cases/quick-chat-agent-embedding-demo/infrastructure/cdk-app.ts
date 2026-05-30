@@ -19,7 +19,7 @@ export class QuickChatEmbeddingStack extends cdk.Stack {
     // Create Lambda Layer from local folder (simpler approach)
     const layer = new lambda.LayerVersion(this, 'QuickChatLayer', {
       layerVersionName: `quick-suite-embedding-deps-${this.account}`,
-      description: 'Python dependencies for Quick Suite chat agent embedding (boto3, PyJWT, requests)',
+      description: 'Python dependencies for Quick chat agent embedding (boto3, PyJWT, requests)',
       code: lambda.Code.fromAsset(path.join(__dirname), {
         bundling: {
           image: lambda.Runtime.PYTHON_3_11.bundlingImage,
@@ -91,7 +91,7 @@ export class QuickChatEmbeddingStack extends cdk.Stack {
 
     new cdk.CfnOutput(this, 'AllowedDomains', {
       value: allowedDomains,
-      description: 'Allowed domains for QuickSight embedding'
+      description: 'Allowed domains for Quick Sight embedding'
     });
 
     new cdk.CfnOutput(this, 'StackId', {
@@ -150,7 +150,7 @@ export class QuickChatEmbeddingStack extends cdk.Stack {
       },
       {
         id: 'AwsSolutions-IAM5',
-        reason: 'Demo Lambda needs broad permissions for QuickSight and Cognito operations',
+        reason: 'Demo Lambda needs broad permissions for Quick Sight and Cognito operations',
         appliesTo: ['Resource::*']
       }
     ]);
@@ -158,7 +158,7 @@ export class QuickChatEmbeddingStack extends cdk.Stack {
     NagSuppressions.addResourceSuppressions(template.getResource('QuickSuiteRole'), [
       {
         id: 'AwsSolutions-IAM5',
-        reason: 'QuickSuite role needs broad permissions for embedding operations',
+        reason: 'Quick role needs broad permissions for embedding operations',
         appliesTo: ['Resource::*']
       }
     ]);

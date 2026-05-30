@@ -2,7 +2,7 @@
 get_job_result Lambda — AgentCore Gateway target.
 
 Checks job status in DynamoDB. If complete, generates a presigned S3 URL
-for the document download. Returns status to the Quick Suite agent.
+for the document download. Returns status to the Quick agent.
 """
 
 import json
@@ -47,7 +47,7 @@ def lambda_handler(event, context):
 
         # Use unsigned CloudFront URL — clean, short, not blocked by corporate proxies.
         # Security: paths contain UUIDs (unguessable), files auto-expire from S3 after 7 days.
-        # Note: CloudFront signed URLs don't work with Quick Suite because the chat
+        # Note: CloudFront signed URLs don't work with Quick because the chat
         # renderer strips ~ characters from signatures, corrupting them.
         cf_domain = os.environ.get("CLOUDFRONT_DOMAIN", "")
         if cf_domain and s3_key:
@@ -87,7 +87,7 @@ def lambda_handler(event, context):
     else:
         # SUBMITTED or PROCESSING — long-poll: wait up to 50s checking every 10s
         # before returning. This reduces the number of MCP calls the assistant
-        # needs to make (Quick Suite assistants have limited tool call budgets).
+        # needs to make (Quick assistants have limited tool call budgets).
         import time as _time
 
         poll_end = _time.time() + 50

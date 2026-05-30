@@ -5,20 +5,22 @@ AWS CDK infrastructure for GenAI Operations Hub.
 ## What Gets Deployed
 
 ### Base CDK Stack (GenAIOperationsStack)
+
 1. **S3 Bucket** - `genai-ops-bedrock-logs-{account}` for Bedrock logs
 2. **S3 Bucket** - `genai-ops-athena-results-{account}` for Athena query results
 3. **Glue Database** - `genai_ops_db` for data catalog
 4. **Glue Table** - `bedrock_invocation_logs` with schema for Bedrock logs
 5. **Athena Workgroup** - `genai-ops-workgroup` for query execution
-6. **IAM Role** - QuickSight access to S3 and Athena
+6. **IAM Role** - Quick Sight access to S3 and Athena
 
-### QuickSight Resources (via boto3 script)
-7. **Data Source** - Athena connection for QuickSight
+### Quick Sight Resources (via boto3 script)
+
+7. **Data Source** - Athena connection for Quick Sight
 8. **Dataset** - Daily Bedrock Invocations (aggregated daily metrics)
 9. **Dataset** - Model Performance Metrics (latency and token analysis)
 10. **Dataset** - Stop Reason Analysis (completion patterns)
 
-**Note:** QuickSight resources are created via `create_quicksight_resources.py` script to bypass CloudFormation hooks.
+**Note:** Quick Sight resources are created via `create_quicksight_resources.py` script to bypass CloudFormation hooks.
 
 ## Prerequisites
 
@@ -57,12 +59,12 @@ cdk deploy GenAIOperationsStack --require-approval never
 
 **Time**: ~5 minutes
 
-### Step 3: Grant QuickSight Permissions
+### Step 3: Grant Quick Sight Permissions
 
-**CRITICAL: Do this before creating QuickSight resources**
+**CRITICAL: Do this before creating Quick Sight resources**
 
-1. Go to **QuickSight Console**
-2. Profile icon → **Manage QuickSight** → **Permissions**
+1. Go to **Quick Sight Console**
+2. Profile icon → **Manage Quick Sight** → **Permissions**
 3. **AWS Resources** → **Manage**
 4. Check **Amazon Athena** → **Enable write permission for Athena Workgroup**
 5. Check **Amazon S3** → Select buckets:
@@ -70,7 +72,7 @@ cdk deploy GenAIOperationsStack --require-approval never
    - `genai-ops-athena-results-<ACCOUNT_ID>`
 6. Click **Update**
 
-### Step 4: Create QuickSight Resources
+### Step 4: Create Quick Sight Resources
 
 ```bash
 pip install boto3
@@ -78,6 +80,7 @@ python3 create_quicksight_resources.py 'Admin/your-username'
 ```
 
 Find your username:
+
 ```bash
 aws quicksight list-users \
   --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
@@ -103,7 +106,7 @@ After deployment, note these outputs:
 - **DatabaseName** - Glue database name
 - **TableName** - Glue table name
 - **AthenaWorkGroup** - Athena workgroup name
-- **QuickSightRoleArn** - IAM role ARN for QuickSight
+- **Quick SightRoleArn** - IAM role ARN for Quick Sight
 
 ## Customization
 
@@ -144,26 +147,29 @@ logs_bucket = s3.Bucket(
 
 ## Troubleshooting
 
-### QuickSight Data Source Creation Failed
+### Quick Sight Data Source Creation Failed
 
 **Error**: `DataSource is in status CREATION_FAILED`
 
-**Cause**: QuickSight lacks permissions to access Athena/S3
+**Cause**: Quick Sight lacks permissions to access Athena/S3
 
 **Solution**:
+
 1. Delete failed data source:
+
    ```bash
    aws quicksight delete-data-source \
      --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
      --data-source-id genai-ops-athena-source \
      --region us-east-1
    ```
-2. Grant QuickSight permissions (see Step 3 above)
+
+2. Grant Quick Sight permissions (see Step 3 above)
 3. Run script again
 
 ### CloudFormation Hook Errors
 
-**Error**: `AWS::EarlyValidation::PropertyValidation` blocks QuickSight resources
+**Error**: `AWS::EarlyValidation::PropertyValidation` blocks Quick Sight resources
 
 **Solution**: Use `create_quicksight_resources.py` script instead of CDK (bypasses hooks)
 
@@ -172,8 +178,9 @@ logs_bucket = s3.Bucket(
 **Error**: `InvalidParameterValueException`
 
 **Causes**:
+
 - Data source doesn't exist or failed
-- QuickSight lacks permissions
+- Quick Sight lacks permissions
 - Athena workgroup doesn't exist
 
 **Solution**: Verify Steps 2-4 completed successfully
@@ -219,6 +226,7 @@ aws cloudformation describe-stack-events \
 ### Bucket Already Exists
 
 If bucket names conflict, either:
+
 1. Delete existing bucket
 2. Change bucket name in code
 3. Use different AWS account
@@ -234,7 +242,7 @@ Resources created by this stack:
 | Athena Queries | $5/TB scanned |
 | IAM Roles | Free |
 
-**Estimated monthly cost**: $2-5 (excluding QuickSight)
+**Estimated monthly cost**: $2-5 (excluding Quick Sight)
 
 ## Security
 
@@ -246,6 +254,7 @@ Resources created by this stack:
 ## Next Steps
 
 After deployment:
+
 1. Upload sample data to S3
 2. Follow the [Setup Guide](../docs/0-setup.md) to verify deployment
 3. Start building your dashboard with [AI Dashboard Guide](../docs/1-ai-dashboard.md)

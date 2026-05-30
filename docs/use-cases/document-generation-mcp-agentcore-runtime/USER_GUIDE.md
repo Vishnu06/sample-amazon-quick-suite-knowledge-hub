@@ -1,6 +1,6 @@
 # Document Generation — User Guide
 
-Generate professional documents directly from Amazon Quick Suite chat.
+Generate professional documents directly from Amazon Quick chat.
 Type what you need, and get a real downloadable file in minutes.
 
 ## Supported Formats
@@ -17,7 +17,7 @@ Type what you need, and get a real downloadable file in minutes.
 
 ### Step 1: Ask in Chat
 
-Open Quick Suite and type your request in the chat. Be specific about what you want.
+Open Quick and type your request in the chat. Be specific about what you want.
 
 **Example:**
 
@@ -27,14 +27,14 @@ Open Quick Suite and type your request in the chat. Be specific about what you w
 
 ### Step 2: Review and Submit
 
-Quick Suite will show an **Action review** popup with the tool name
+Quick will show an **Action review** popup with the tool name
 `create_document` and the parameters it detected (document type, content).
 
 Click **Submit** to start generating.
 
 ### Step 3: Wait for Generation
 
-The document typically takes **3-5 minutes** to generate. Quick Suite will
+The document typically takes **3-5 minutes** to generate. Quick will
 automatically check the status and notify you when it's ready.
 
 For complex documents (15+ slides, detailed tables, multiple charts), it may
@@ -82,6 +82,7 @@ Good prompts are specific. The more detail you give, the better the output.
 
 **Better:**
 > Build a project budget tracker spreadsheet with these sheets:
+>
 > 1. Summary dashboard with total budget, spent, remaining, and a pie chart
 > 2. Monthly expenses (Jan-Dec) with categories: Personnel, Software,
 >    Infrastructure, Travel, Training. Include SUM formulas per row and column.
@@ -126,6 +127,7 @@ and what formulas you need.
 ### Mention the Format Explicitly
 
 Include the file type in your request to avoid ambiguity:
+
 - "Create a **PowerPoint** presentation..."
 - "Write a **Word document**..."
 - "Build an **Excel spreadsheet**..."
@@ -142,6 +144,7 @@ For spreadsheets and tables, giving sample data helps:
 ### Request Specific Formatting
 
 The agent can handle formatting requests:
+
 - "Use a **blue and white** color scheme"
 - "Add **page numbers** and a header with the company name"
 - "Include **conditional formatting** — red for values below target"

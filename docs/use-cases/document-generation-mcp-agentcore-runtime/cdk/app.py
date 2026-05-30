@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CDK app entry point for Quick Suite Document Skills stack."""
+"""CDK app entry point for Quick Document Skills stack."""
 
 import os
 
@@ -15,7 +15,7 @@ DocumentSkillsStack(
         account=os.environ.get("CDK_DEFAULT_ACCOUNT"),
         region=os.environ.get("CDK_DEFAULT_REGION", "us-west-2"),
     ),
-    description="Quick Suite Document Skills via AgentCore Gateway + Runtime",
+    description="Quick Document Skills via AgentCore Gateway + Runtime",
 )
 
 app.synth()
