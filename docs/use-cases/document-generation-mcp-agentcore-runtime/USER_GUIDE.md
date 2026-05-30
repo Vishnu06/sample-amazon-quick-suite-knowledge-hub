@@ -82,6 +82,7 @@ Good prompts are specific. The more detail you give, the better the output.
 
 **Better:**
 > Build a project budget tracker spreadsheet with these sheets:
+>
 > 1. Summary dashboard with total budget, spent, remaining, and a pie chart
 > 2. Monthly expenses (Jan-Dec) with categories: Personnel, Software,
 >    Infrastructure, Travel, Training. Include SUM formulas per row and column.
@@ -126,6 +127,7 @@ and what formulas you need.
 ### Mention the Format Explicitly
 
 Include the file type in your request to avoid ambiguity:
+
 - "Create a **PowerPoint** presentation..."
 - "Write a **Word document**..."
 - "Build an **Excel spreadsheet**..."
@@ -142,6 +144,7 @@ For spreadsheets and tables, giving sample data helps:
 ### Request Specific Formatting
 
 The agent can handle formatting requests:
+
 - "Use a **blue and white** color scheme"
 - "Add **page numbers** and a header with the company name"
 - "Include **conditional formatting** — red for values below target"

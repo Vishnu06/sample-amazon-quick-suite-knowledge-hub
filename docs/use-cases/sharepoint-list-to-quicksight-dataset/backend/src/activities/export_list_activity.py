@@ -8,7 +8,7 @@ import csv
 import hashlib
 import io
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from aws_lambda_powertools.event_handler import Response
 from pydantic import BaseModel
@@ -104,7 +104,7 @@ class ExportListActivity:
                 row_count=len(items_response.items),
                 column_count=len(column_names),
                 columns=column_names,
-                exported_at=datetime.now(timezone.utc),
+                exported_at=datetime.now(UTC),
                 instructions=(
                     f"To create a Quick Sight dataset: "
                     f"1) Open Amazon Quick and choose Datasets. "

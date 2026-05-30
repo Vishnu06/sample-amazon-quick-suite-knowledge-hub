@@ -7,7 +7,7 @@ description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with Quick
 
 **Amazon Bedrock Knowledge Base Retrieval MCP integration** with Amazon Quick. This solution creates an MCP integration that enables direct access to Amazon Bedrock Knowledge Bases through Quick using MCP Actions.
 
-##  Architecture
+## Architecture
 
 ![Bedrock KB Retrieval MCP Architecture](./images/bedrockkb-architecture.png)
 
@@ -18,7 +18,7 @@ description: "Amazon Bedrock Knowledge Base Retrieval MCP integration with Quick
 - **Quick Integration**: MCP Actions for conversational AI
 - **Amazon Bedrock Knowledge Bases**: Document retrieval and semantic search
 
-##  Purpose
+## Purpose
 
 This MCP integration enables:
 
@@ -27,7 +27,7 @@ This MCP integration enables:
 - **AgentCore Gateway**: Gateway with Lambda target and authentication
 - **Document Retrieval**: Semantic search with reranking and filtering
 
-##  Project Structure
+## Project Structure
 
 ```
 bedrock-kb-retrieval-mcp/
@@ -44,7 +44,7 @@ bedrock-kb-retrieval-mcp/
  README.md                      # This file
 ```
 
-##  Quick Start
+## Quick Start
 
 ### 1. Clone Repository (Sparse Checkout)
 
@@ -76,6 +76,7 @@ cdk deploy --require-approval never
 4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
+
 ```bash
 aws cloudformation describe-stacks --stack-name quicksuite-bedrock-kb-mcp --query 'Stacks[0].Outputs'
 ```
@@ -87,7 +88,7 @@ Key outputs for Quick Actions:
 - `ClientSecret` - OAuth2 client secret
 - `CognitoTokenUrl` - OAuth2 token endpoint
 
-##  Available Tools
+## Available Tools
 
 ### Knowledge Base Tools (kb_agentcore_lambda.py)
 
@@ -190,7 +191,7 @@ Fill in the MCP configuration:
 - Check Lambda timeout and memory settings
 - Review CORS configuration for Quick
 
-##  Documentation
+## Documentation
 
 - [CDK Deployment Guide](cdk/README.md) - Infrastructure details
 - [MCP Tool Definitions](tools/kb_agentcore_tools.json) - API specifications

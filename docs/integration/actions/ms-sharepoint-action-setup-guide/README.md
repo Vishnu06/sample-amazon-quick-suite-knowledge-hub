@@ -62,7 +62,7 @@
 9) Navigate to **Integration** => **Actions** => **Microsoft SharePoint Online Integration** (or your MS Sharepoint integration name), and click on **Sign in**:
 
    ![Authorization consent](images/image_9.png)
-   
+
    - Enter your Microsoft Sharepoint email and password in the popup window;
    - Check **Consent on behalf of your organization** and click **Accept**:
 

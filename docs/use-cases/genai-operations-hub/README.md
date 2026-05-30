@@ -5,6 +5,7 @@ Build an AI-powered operations dashboard for Amazon Bedrock invocation logs usin
 ## Overview
 
 This solution enables leaders and engineers to:
+
 - **Analyze** Bedrock usage trends with AI-built dashboards
 - **Chat** with custom agents that understand your operational data
 - **Automate** daily reports via email or Slack
@@ -12,7 +13,6 @@ This solution enables leaders and engineers to:
 ## Architecture
 
 ![GenAI Operations Hub Architecture](architecture/GenAIOpsHub.png)
-
 
 ## What's Included
 

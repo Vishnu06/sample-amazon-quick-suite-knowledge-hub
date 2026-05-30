@@ -5,16 +5,16 @@ import os
 import urllib.error
 import urllib.parse
 import urllib.request
-from dataclasses import dataclass, asdict
-from enum import Enum
+from dataclasses import asdict, dataclass
+from enum import Enum, StrEnum
 
 
-class Route(str, Enum):
+class Route(StrEnum):
     AUTHORIZE = "/oauth2/authorize"
     TOKEN = "/oauth2/token"
 
 
-class HttpMethod(str, Enum):
+class HttpMethod(StrEnum):
     GET = "GET"
     POST = "POST"
 
@@ -26,7 +26,7 @@ class StatusCode(int, Enum):
     BAD_GATEWAY = 502
 
 
-class ContentType(str, Enum):
+class ContentType(StrEnum):
     JSON = "application/json"
     FORM = "application/x-www-form-urlencoded"
 
@@ -42,7 +42,6 @@ class ProxyResponse:
         if self.headers is None:
             del result["headers"]
         return result
-
 
 
 class AuthorizeHandler:
@@ -121,7 +120,9 @@ def handler(event: dict, _context: object) -> dict:
             case (Route.TOKEN, HttpMethod.POST):
                 response = token_handler.handle(event)
             case _:
-                response = ProxyResponse(statusCode=StatusCode.NOT_FOUND, body="Not found")
+                response = ProxyResponse(
+                    statusCode=StatusCode.NOT_FOUND, body="Not found"
+                )
     except Exception as e:
         print(f"ERROR: {e}")
         response = ProxyResponse(

@@ -6,9 +6,7 @@ The repository contains setup guides, integration documentation, and use cases f
 
 ## How You Can Help
 
-
-
-###  Add Guidance Documentation
+### Add Guidance Documentation
 
 Amazon Quick best practices and administration:
 
@@ -17,7 +15,7 @@ Amazon Quick best practices and administration:
 - **Administration**: Configuration management, monitoring, troubleshooting guides
 - **Best Practices**: Security guidelines, operational procedures, compliance frameworks
 
-###  Add Integration Guides
+### Add Integration Guides
 
 Integration guides for connecting third-party services to Amazon Quick:
 
@@ -26,7 +24,7 @@ Integration guides for connecting third-party services to Amazon Quick:
 - Troubleshooting common issues
 - Include screenshots and code examples
 
-###  Share Use Cases
+### Share Use Cases
 
 Complete solutions demonstrating Amazon Quick integrations:
 
@@ -37,7 +35,7 @@ Complete solutions demonstrating Amazon Quick integrations:
 
 ---
 
-##  Reporting Bugs
+## Reporting Bugs
 
 Found something that doesn't work as expected? Please [open a bug report](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/issues/new?template=bug_report.md) with:
 
@@ -46,7 +44,7 @@ Found something that doesn't work as expected? Please [open a bug report](https:
 - Expected vs actual behavior
 - Environment details and error messages
 
-##  Improve Documentation
+## Improve Documentation
 
 Spot an error or unclear explanation in our docs? Please [open a documentation improvement](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/issues/new?template=documentation.md) with:
 
@@ -54,7 +52,7 @@ Spot an error or unclear explanation in our docs? Please [open a documentation i
 - Description of the issue or improvement
 - Suggested changes
 
-##  Get Help
+## Get Help
 
 Need help with setup, troubleshooting, or missing integration guides? Please [ask for help](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/issues/new?template=help_needed.md) with:
 
@@ -62,7 +60,7 @@ Need help with setup, troubleshooting, or missing integration guides? Please [as
 - Details about what you've tried
 - Environment information and error messages
 
-##  Share Examples
+## Share Examples
 
 Created something cool with Amazon Quick? We'd love to hear about your use cases:
 
@@ -70,7 +68,7 @@ Created something cool with Amazon Quick? We'd love to hear about your use cases
 - Share your experience and learnings
 - Help other users with questions
 
-##  Contributing via Pull Requests
+## Contributing via Pull Requests
 
 Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
 
@@ -90,7 +88,7 @@ To send us a pull request, please:
 
 GitHub provides additional documentation on [forking a repository](https://help.github.com/articles/fork-a-repo/) and [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
-##  Contributing Guidelines
+## Contributing Guidelines
 
 ### Before You Start
 
@@ -147,13 +145,13 @@ For security vulnerabilities, please **DO NOT** open a public issue. Instead:
 - Allow time for us to address the issue before public disclosure
 - See our [Security Policy](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/security/policy) for more details
 
-##  Questions and Support
+## Questions and Support
 
 - **Documentation questions**: Use [GitHub Discussions](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/discussions)
 - **Technical support**: Contact AWS Support for Quick issues
 - **Community support**: Join the [Amazon Quick Community](https://community.amazonquicksight.com/)
 
-##  Development Setup
+## Development Setup
 
 ### About Package Management
 
@@ -215,13 +213,13 @@ git push origin my-branch
 
 **On every commit** (~30-60 seconds):
 
--  **Code formatting** (auto-fixes with ruff)
--  **Import sorting** (auto-fixes)
--  **Linting** (with ruff)
--  **File hygiene** (trailing whitespace, etc.)
--  **Markdown formatting** (auto-fixes)
--  **Security scanning** (bandit)
--  **Documentation build** (mkdocs build --strict)
+- **Code formatting** (auto-fixes with ruff)
+- **Import sorting** (auto-fixes)
+- **Linting** (with ruff)
+- **File hygiene** (trailing whitespace, etc.)
+- **Markdown formatting** (auto-fixes)
+- **Security scanning** (bandit)
+- **Documentation build** (mkdocs build --strict)
 
 ### Skipping Hooks (WIP Commits)
 
@@ -371,20 +369,20 @@ npm run dev
 
 Explain any configuration options.
 
-##  Code of Conduct
+## Code of Conduct
 
 This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct). For more information see the Code of Conduct FAQ or contact <opensource-codeofconduct@amazon.com> with any additional questions or comments.
 
-##  Licensing
+## Licensing
 
 See the [LICENSE](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub/blob/main/LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
 
 By contributing to this project, you agree that your contributions will be licensed under the MIT-0 License.
 
-##  Recognition
+## Recognition
 
 Contributors are recognized in the project's Contributors section.
 
-##  Thank You
+## Thank You
 
 All contributions are appreciated, from typo fixes to complete integration guides.

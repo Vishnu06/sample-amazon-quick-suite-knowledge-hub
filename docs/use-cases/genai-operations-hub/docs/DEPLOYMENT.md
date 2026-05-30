@@ -62,6 +62,7 @@ cdk deploy
 ```
 
 Confirm the deployment when prompted. This creates:
+
 - S3 bucket for Bedrock logs
 - S3 bucket for Athena results
 - Glue database and table
@@ -81,6 +82,7 @@ aws cloudformation describe-stacks \
 ```
 
 You'll need:
+
 - `LogsBucketName`
 - `DatabaseName`
 - `TableName`
@@ -183,6 +185,7 @@ cdk destroy
 ## Cost Estimate
 
 Monthly costs (approximate):
+
 - S3 storage: $0.023/GB (~$2-5 for typical logs)
 - Athena queries: $5/TB scanned (~$1-3 for typical usage)
 - Quick Sight Enterprise: $18/user/month

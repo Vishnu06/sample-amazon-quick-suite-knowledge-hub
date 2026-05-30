@@ -7,7 +7,6 @@ description: "Quick Observability Agent - Natural Language Monitoring"
 
 **Quick Observability MCP integration** with Amazon Quick. This solution creates an MCP integration that enables natural language monitoring of Quick through CloudWatch Logs, CloudWatch Metrics, and CloudTrail using MCP Actions.
 
-
 **Components:**
 
 - **AgentCore Gateway**: Amazon Bedrock AgentCore Gateway with Lambda target
@@ -55,6 +54,7 @@ Before you begin, ensure you have:
 - Amazon Quick Sight Enterprise Edition with Quick enabled
 
 **Required IAM Permissions:**
+
 - CloudFormation (create/update stacks)
 - Lambda (create/update functions)
 - IAM (create roles and policies)
@@ -83,6 +83,7 @@ cdk deploy --require-approval never
 ```
 
 **What gets deployed:**
+
 - AgentCore Gateway with OAuth 2.0 (Cognito)
 - Lambda function with 20 monitoring tools
 - 3 CloudWatch Log Groups: `/aws/quicksuite/chat`, `/aws/quicksuite/feedback`, `/aws/quicksuite/agent-hours`
@@ -98,6 +99,7 @@ cdk deploy --require-approval never
 4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
+
 ```bash
 aws cloudformation describe-stacks --stack-name quicksuite-observability-mcp --query 'Stacks[0].Outputs'
 ```
@@ -112,21 +114,25 @@ Key outputs for Quick Actions:
 ## 🔧 Available Tools (20 Total)
 
 ### Chat & Conversations (4 tools)
+
 - `get_chat_conversations` - View all chat history within time range
 - `get_chat_errors` - Find failed conversations
 - `get_chat_performance` - Success rates, totals, averages
 - `search_chat_by_query` - Keyword search in conversations
 
 ### User Feedback (2 tools)
+
 - `get_user_feedback` - Individual feedback entries
 - `get_feedback_summary` - Aggregate feedback statistics
 
 ### Usage & Capacity (3 tools)
+
 - `get_agent_hours_usage` - Hours consumption by service/subscription
 - `get_active_users` - DAU/WAU/MAU metrics
 - `get_asset_usage` - Agent, flow, action, and space usage with user counts
 
 ### Performance & Health (6 tools)
+
 - `get_dashboard_metrics` - Dashboard views and load times
 - `get_ingestion_metrics` - Dataset refresh statistics
 - `get_visual_metrics` - Visual performance metrics
@@ -135,11 +141,13 @@ Key outputs for Quick Actions:
 - `get_spice_capacity` - SPICE storage usage
 
 ### Comprehensive & Audit (3 tools)
+
 - `get_aggregate_metrics` - Account-wide summary
 - `get_quicksight_api_calls` - API audit trail
 - `query_chat_analytics` - Custom CloudWatch Insights queries
 
 ### Advanced Analytics (2 tools)
+
 - `get_log_schema` - Discover available log fields dynamically
 - `query_chat_analytics` - Execute custom analytics queries
 
@@ -315,31 +323,37 @@ Open the agent and try these queries:
 ## 💡 Usage Examples
 
 ### Daily Health Check
+
 ```
 "Give me a system health overview"
 ```
 
 ### Troubleshooting
+
 ```
 "Why are users reporting errors?"
 ```
 
 ### Usage Analysis
+
 ```
 "How is Quick being used this week?"
 ```
 
 ### Asset Usage
+
 ```
 "Show me most used assets"
 ```
 
 ### Custom Analytics
+
 ```
 "Show me conversations by message_scope"
 ```
 
 ### User-Specific Analysis
+
 ```
 "Show me conversations for user vineet"
 ```
@@ -384,6 +398,7 @@ cdk destroy
 ```
 
 This will delete:
+
 - Lambda function
 - AgentCore Gateway
 - Cognito User Pool

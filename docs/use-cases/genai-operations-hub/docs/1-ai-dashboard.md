@@ -53,6 +53,7 @@ Topics in Quick Sight define the business context for your data. They enable non
 4. Click **Add data** and **Save**
 
 **Validation:**
+
 - ✓ Three topics visible in the Topics list
 - ✓ Each topic shows "Ready" status
 - ✓ Field names and synonyms are auto-generated

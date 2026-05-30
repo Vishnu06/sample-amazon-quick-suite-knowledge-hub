@@ -109,6 +109,7 @@
 ## Components
 
 ### Infrastructure Layer (CDK)
+
 - **S3 Buckets**: Log storage and Athena results
 - **Glue Database**: Metadata catalog
 - **Glue Table**: Schema definition for logs
@@ -116,17 +117,20 @@
 - **IAM Roles**: Quick Sight permissions
 
 ### Analytics Layer (Quick Sight)
+
 - **Data Source**: Athena connection
 - **Datasets**: Structured views of data
 - **Q**: AI-powered query interface
 - **Dashboard**: Visual analytics
 
 ### Intelligence Layer (Quick Sight)
+
 - **Space**: Collaborative workspace
 - **Custom Agent**: AI assistant
 - **Flows**: Automation engine
 
 ### Integration Layer
+
 - **Email**: SES for notifications
 - **Slack**: Webhook integration
 - **API**: Quick Sight APIs for automation

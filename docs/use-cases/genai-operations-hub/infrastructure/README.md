@@ -5,6 +5,7 @@ AWS CDK infrastructure for GenAI Operations Hub.
 ## What Gets Deployed
 
 ### Base CDK Stack (GenAIOperationsStack)
+
 1. **S3 Bucket** - `genai-ops-bedrock-logs-{account}` for Bedrock logs
 2. **S3 Bucket** - `genai-ops-athena-results-{account}` for Athena query results
 3. **Glue Database** - `genai_ops_db` for data catalog
@@ -13,6 +14,7 @@ AWS CDK infrastructure for GenAI Operations Hub.
 6. **IAM Role** - Quick Sight access to S3 and Athena
 
 ### Quick Sight Resources (via boto3 script)
+
 7. **Data Source** - Athena connection for Quick Sight
 8. **Dataset** - Daily Bedrock Invocations (aggregated daily metrics)
 9. **Dataset** - Model Performance Metrics (latency and token analysis)
@@ -78,6 +80,7 @@ python3 create_quicksight_resources.py 'Admin/your-username'
 ```
 
 Find your username:
+
 ```bash
 aws quicksight list-users \
   --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
@@ -151,13 +154,16 @@ logs_bucket = s3.Bucket(
 **Cause**: Quick Sight lacks permissions to access Athena/S3
 
 **Solution**:
+
 1. Delete failed data source:
+
    ```bash
    aws quicksight delete-data-source \
      --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
      --data-source-id genai-ops-athena-source \
      --region us-east-1
    ```
+
 2. Grant Quick Sight permissions (see Step 3 above)
 3. Run script again
 
@@ -172,6 +178,7 @@ logs_bucket = s3.Bucket(
 **Error**: `InvalidParameterValueException`
 
 **Causes**:
+
 - Data source doesn't exist or failed
 - Quick Sight lacks permissions
 - Athena workgroup doesn't exist
@@ -219,6 +226,7 @@ aws cloudformation describe-stack-events \
 ### Bucket Already Exists
 
 If bucket names conflict, either:
+
 1. Delete existing bucket
 2. Change bucket name in code
 3. Use different AWS account
@@ -246,6 +254,7 @@ Resources created by this stack:
 ## Next Steps
 
 After deployment:
+
 1. Upload sample data to S3
 2. Follow the [Setup Guide](../docs/0-setup.md) to verify deployment
 3. Start building your dashboard with [AI Dashboard Guide](../docs/1-ai-dashboard.md)

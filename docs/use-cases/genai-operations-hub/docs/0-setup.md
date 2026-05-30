@@ -41,6 +41,7 @@ cdk bootstrap
 ```
 
 **Troubleshooting:** If bootstrap fails with CloudFormation hook errors, try a different region:
+
 ```bash
 cdk bootstrap aws://ACCOUNT-ID/us-west-2
 ```
@@ -52,6 +53,7 @@ cdk deploy GenAIOperationsStack --require-approval never
 ```
 
 This creates:
+
 - S3 buckets for logs and query results
 - Glue database and table
 - Athena workgroup
@@ -72,6 +74,7 @@ python3 generate_all_data.py
 ```
 
 This generates synthetic data for:
+
 - Bedrock model invocations
 - Guardrails interventions
 - Model evaluations
@@ -153,6 +156,7 @@ python3 create_quicksight_resources.py '<IAMRoleName>/<SessionName>'
 Replace `'<IAMRoleName>/<SessionName>'` with your actual username from Step 6.
 
 This script creates:
+
 - Athena data source
 - Three datasets with pre-configured SQL queries:
   - Daily Bedrock Invocations
@@ -162,14 +166,17 @@ This script creates:
 **Expected time:** ~1 minute
 
 **Troubleshooting:** If you see `DataSource is in status CREATION_FAILED`:
+
 1. This means Step 7 permissions weren't granted properly
 2. Delete the failed data source:
+
    ```bash
    aws quicksight delete-data-source \
      --aws-account-id $(aws sts get-caller-identity --query Account --output text) \
      --data-source-id genai-ops-athena-source \
      --region us-east-1
    ```
+
 3. Go back to Step 7 and verify both Athena and S3 permissions with both buckets selected
 4. Re-run the script
 

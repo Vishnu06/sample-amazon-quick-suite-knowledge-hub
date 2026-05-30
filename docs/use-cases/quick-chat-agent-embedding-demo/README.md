@@ -9,22 +9,22 @@ Bring AI-powered conversational intelligence directly into your applications wit
 
 This implementation uses the `generate_embed_url_for_registered_user_with_identity` API to create secure, user specific embed URLs with trusted identity propagation, ensuring authenticated users receive personalized chat experiences within your application.
 
-##  Business Value
+## Business Value
 
 - Embed Amazon Quick chat agents into existing web applications
 - Maintain security with trusted identity propagation
 - Scale chat functionality across multiple domains and applications
 - Leverage AWS managed services for reliability and performance
 
-##  Demo
+## Demo
 
 ![Quick Chat Agent Embedding Demo](images/quick-chat-agent-embedding-demo.gif)
 
-##  Architecture
+## Architecture
 
 ![Architecture Diagram](images/quick-chat-agent-embedding-architecture.png)
 
-##  Overview
+## Overview
 
 Complete embedding solution with:
 
@@ -34,7 +34,7 @@ Complete embedding solution with:
 - **AWS CDK Infrastructure** for automated deployment
 - **Session Management** with 10-hour token lifetime
 
-##  Project Structure
+## Project Structure
 
 ```
  infrastructure/          # AWS CDK deployment code
@@ -47,7 +47,7 @@ Complete embedding solution with:
      lib/                # Utility functions
 ```
 
-##  Getting Started
+## Getting Started
 
 ### 1. Clone Repository (Sparse Checkout)
 

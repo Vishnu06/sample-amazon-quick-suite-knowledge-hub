@@ -12,7 +12,7 @@ The following sequence diagram shows the Amazon Quick desktop authentication flo
 
 ![Cognito OIDC Auth Flow](diagrams/cognito-oidc-auth-flow.png)
 
-The stack deploys an Amazon Cognito User Pool with a hosted UI domain and public app client, and an Amazon API Gateway REST API with an AWS Lambda proxy that strips `offline_access` scope from OAuth requests. That scope is currently sent with all requests in Amazon Quick, but is not available within Cognito. New users are provisioned by an admin and receive a Cognito invitation email; they set their own password on first sign-in. 
+The stack deploys an Amazon Cognito User Pool with a hosted UI domain and public app client, and an Amazon API Gateway REST API with an AWS Lambda proxy that strips `offline_access` scope from OAuth requests. That scope is currently sent with all requests in Amazon Quick, but is not available within Cognito. New users are provisioned by an admin and receive a Cognito invitation email; they set their own password on first sign-in.
 
 ## Important security considerations
 

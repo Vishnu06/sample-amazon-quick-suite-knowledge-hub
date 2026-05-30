@@ -9,6 +9,7 @@ Automate daily reports using Quick Sight Flows to send insights via email or Sla
 ## What are Quick Sight Flows?
 
 Flows enable you to automate analytics workflows:
+
 - Schedule recurring reports
 - Query data from Spaces and Topics
 - Use AI agents to generate insights
@@ -81,6 +82,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 Replace `{tenant-id}` with your Directory (tenant) ID from Step 2.
 
 **Example:**
+
 ```
 https://login.microsoftonline.com/87654321-4321-4321-4321-cba987654321/oauth2/v2.0/token
 ```
@@ -102,16 +104,20 @@ Save this URL - you'll need it in the next part.
 Fill in the integration form:
 
 **Basic Information:**
+
 - **Name**: `Microsoft Outlook Integration`
 - **Description (Optional)**: `Send automated reports via email`
 
 **Connection type:**
+
 - Select **Public network**
 
 **Authentication method:**
+
 - Select **Service authentication** (for automated workflows)
 
 **Authentication settings:**
+
 - **Base URL**: `https://graph.microsoft.com/v1.0`
 - **Client ID**: Paste your Application (client) ID from Azure
 - **Client secret**: Paste your client secret value from Azure
@@ -166,6 +172,7 @@ Click **Generate**
 Quick Sight creates a flow with these steps:
 
 **Flow Steps:**
+
 1. **Enter Recipient Email Address** - Input step for email recipient
 2. **Query Yesterday's Bedrock Metrics** - Queries the Space
 3. **Analyze Bedrock Data** - Uses your chat agent for analysis
@@ -174,6 +181,7 @@ Quick Sight creates a flow with these steps:
 
 **Expected Errors:**
 You'll see error messages at the top:
+
 - "Action connector required" - Need to configure email integration
 - "Schedule creation failed" - Need to manually create schedule
 
@@ -221,6 +229,7 @@ Click **Save**
 Click on the **Send Daily Report Email** step.
 
 You'll see two errors that need to be fixed:
+
 - **Action connector required**
 - **Action required**
 
@@ -238,6 +247,7 @@ Send an email to Enter Recipient Email Address with the subject 'Daily GenAI Ope
 ```
 
 **Or use this simpler format:**
+
 - **To**: Reference the input → `Enter Recipient Email Address`
 - **Subject**: `Daily GenAI Operations Report - [Current Date]`
 - **Body**: Reference the agent output → `Generate Report Summary`
@@ -254,6 +264,7 @@ Now that the flow is configured, create the schedule:
 2. Configure schedule settings:
 
 **Set schedule:**
+
 - **Schedule name**: `Daily reports`
 - **Description**: `Weekday morning GenAI operations summary`
 - **Repeats**: Select **Custom**
@@ -265,10 +276,12 @@ Now that the flow is configured, create the schedule:
 3. Click **Next**
 
 **Inputs:**
+
 - If prompted for the email address input, enter the default recipient
 - Click **Next**
 
 **Review and Create:**
+
 - Review the schedule summary
 - Click **Create**
 
@@ -277,6 +290,7 @@ Now that the flow is configured, create the schedule:
 After creation, you'll see the schedule summary:
 
 **Schedule details:**
+
 - **Name**: Daily reports
 - **Frequency**: At 08:00 AM, only on Monday, Tuesday, Wednesday, Thursday, and Friday
 - **Status**: Active (toggle on/off)
@@ -293,6 +307,7 @@ Before waiting for the scheduled run, test manually:
 5. Check your email for the report
 
 **Testing Tips:**
+
 - Use your own email for testing
 - Verify all steps complete successfully
 - Check that the agent's analysis is relevant
@@ -341,6 +356,7 @@ Track your flow's performance over time:
 **Error:** "Unable to authenticate with provided credentials"
 
 **Solutions:**
+
 1. Verify the Client ID and Client secret are copied correctly (no extra spaces)
 2. Ensure the Token URL uses your correct tenant ID
 3. Confirm admin consent was granted for all API permissions
@@ -351,6 +367,7 @@ Track your flow's performance over time:
 **Error:** "Need admin approval"
 
 **Solution:** You must have Azure AD admin privileges to grant consent. Contact your IT administrator to:
+
 1. Grant admin consent for the API permissions
 2. Or assign you the "Cloud Application Administrator" role
 
@@ -359,18 +376,21 @@ Track your flow's performance over time:
 **Common mistake:** Using the wrong token URL format
 
 **Correct format:**
+
 ```
 https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ```
 
 **Incorrect formats:**
+
 - ❌ `https://login.microsoftonline.com/common/oauth2/v2.0/token`
 - ❌ `https://login.microsoft.com/{tenant-id}/oauth2/v2.0/token`
 - ❌ Missing `/v2.0/token` at the end
 
 ### "Action connector required" Error
 
-**Solution:** 
+**Solution:**
+
 1. Click on the **Send Daily Report Email** step
 2. Select your **Microsoft Outlook Integration** from the Connector dropdown
 3. Select **Send an email (V2)** as the Type
@@ -379,6 +399,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### "Schedule creation failed" Error
 
 **Solution:**
+
 1. Ensure all flow steps are configured and saved
 2. Fix any remaining errors in the flow
 3. Click **Create Schedule** again
@@ -387,6 +408,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### Email Not Received
 
 **Possible causes:**
+
 1. **Wrong email address**: Verify the recipient email in the input step
 2. **Integration not authenticated**: Re-authenticate the Outlook integration
 3. **Permissions issue**: Ensure the integration has Mail.Send permission in Azure
@@ -395,6 +417,7 @@ https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token
 ### Agent Response is Generic
 
 **Solution:**
+
 1. Edit the **Analyze Bedrock Data** step
 2. Make the prompt more specific with exact metrics needed
 3. Reference the data source explicitly: "Query Yesterday's Bedrock Metrics"
@@ -457,6 +480,7 @@ Automated by QuickSight Flows
 ### Enhance Your Flow
 
 Consider these improvements:
+
 1. **Add conditional logic**: Only send email if there are anomalies
 2. **Include visualizations**: Attach charts from the dashboard
 3. **Multiple recipients**: Add distribution list support
@@ -468,4 +492,3 @@ Consider these improvements:
 - [QuickSight Flows Documentation](https://docs.aws.amazon.com/quicksight/latest/user/flows.html)
 - [Microsoft Graph API Reference](https://docs.microsoft.com/en-us/graph/api/overview)
 - [Amazon Bedrock Logging](https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html)
-

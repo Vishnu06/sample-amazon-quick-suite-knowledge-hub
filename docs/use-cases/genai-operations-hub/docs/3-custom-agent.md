@@ -9,6 +9,7 @@ Build a custom AI chat agent connected to your Quick Sight Space for conversatio
 ## What is a Custom Agent?
 
 A custom agent is an AI-powered chat interface that can:
+
 - Answer natural language questions about your data
 - Reference dashboards and topics in your Space
 - Provide insights and recommendations
@@ -148,6 +149,7 @@ Are there any models with high max_tokens stop reasons?
 Use the preview panel to test your agent with these sample questions:
 
 #### Test Question 1: Overview
+
 ```text
 What are the key metrics in our GenAI operations?
 ```
@@ -155,6 +157,7 @@ What are the key metrics in our GenAI operations?
 **Expected:** The agent should reference specific metrics from your dashboard (invocation counts, latency, token usage).
 
 #### Test Question 2: Performance
+
 ```text
 Which Bedrock model has the best latency performance?
 ```
@@ -162,6 +165,7 @@ Which Bedrock model has the best latency performance?
 **Expected:** The agent should compare models and provide specific latency numbers.
 
 #### Test Question 3: Trends
+
 ```text
 How have invocations trended over time?
 ```
@@ -169,6 +173,7 @@ How have invocations trended over time?
 **Expected:** The agent should describe trends with specific dates and numbers.
 
 #### Test Question 4: Optimization
+
 ```text
 Are there any models with high max_tokens stop reasons?
 ```
@@ -176,6 +181,7 @@ Are there any models with high max_tokens stop reasons?
 **Expected:** The agent should identify models with token limit issues and suggest optimization.
 
 **Testing Tips:**
+
 - Ask follow-up questions to test conversation continuity
 - Try vague questions to see how the agent handles ambiguity
 - Test edge cases (e.g., "What about yesterday's data?")
@@ -212,6 +218,7 @@ Here are example conversations you can have with your agent:
 **You:** "Give me a summary of today's Bedrock activity"
 
 **Agent:** "Based on the GenAI Operations Dashboard:
+
 - Total invocations: 1,247
 - Most active model: Claude 3.5 Sonnet (68% of requests)
 - Average latency: 342ms
@@ -223,6 +230,7 @@ Here are example conversations you can have with your agent:
 **You:** "Which model should we use for low-latency applications?"
 
 **Agent:** "Based on the Model Performance Metrics:
+
 - Claude 3.5 Haiku has the lowest average latency at 187ms
 - Claude 3.5 Sonnet averages 342ms
 - For latency-sensitive applications, I recommend Claude 3.5 Haiku
@@ -233,6 +241,7 @@ Here are example conversations you can have with your agent:
 **You:** "Are there any concerning patterns in our stop reasons?"
 
 **Agent:** "Analyzing the Stop Reason Analysis:
+
 - 6% of requests hit max_tokens limit
 - This suggests prompts may need optimization
 - Recommendation: Review prompts for Claude 3 Opus (highest max_tokens rate at 12%)

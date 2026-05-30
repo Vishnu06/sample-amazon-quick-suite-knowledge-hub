@@ -13,26 +13,25 @@ Usage:
 
 import argparse
 import sys
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from dataclasses import dataclass
-from enum import Enum
-from typing import Iterator
+from enum import StrEnum
 
 import boto3
 from botocore.client import BaseClient
 from botocore.exceptions import BotoCoreError, ClientError
 
 
-class UserSource(str, Enum):
+class UserSource(StrEnum):
     IDC = "idc"
     LOCAL = "local"
 
 
-class StackOutput(str, Enum):
+class StackOutput(StrEnum):
     POOL_ID = "PoolId"
 
 
-class StackName(str, Enum):
+class StackName(StrEnum):
     COGNITO_PROXY = "QuickDesktopCognitoProxyStack"
 
 
@@ -56,7 +55,7 @@ class SyncUser:
     email: str
 
 
-class SyncStatus(str, Enum):
+class SyncStatus(StrEnum):
     CREATED = "CREATED"
     EXISTS = "EXISTS"
     SKIPPED = "SKIPPED"
@@ -95,14 +94,18 @@ class StackOutputResolver:
         stacks = resp.get("Stacks", [])
         if not stacks:
             raise StackNotFoundError(StackName.COGNITO_PROXY)
-        outputs = {o["OutputKey"]: o["OutputValue"] for o in stacks[0].get("Outputs", [])}
+        outputs = {
+            o["OutputKey"]: o["OutputValue"] for o in stacks[0].get("Outputs", [])
+        }
         if StackOutput.POOL_ID not in outputs:
             raise StackNotFoundError(StackName.COGNITO_PROXY)
         return StackOutputResponse(pool_id=outputs[StackOutput.POOL_ID])
 
 
 class IdcUserLister:
-    def __init__(self, sso_client: BaseClient, identitystore_client: BaseClient) -> None:
+    def __init__(
+        self, sso_client: BaseClient, identitystore_client: BaseClient
+    ) -> None:
         self._sso = sso_client
         self._ids = identitystore_client
 
@@ -133,7 +136,9 @@ class LocalUserLister:
 
     def list_users(self) -> Iterator[SyncUser]:
         paginator = self._qs.get_paginator("list_users")
-        for page in paginator.paginate(AwsAccountId=self._account_id, Namespace="default"):
+        for page in paginator.paginate(
+            AwsAccountId=self._account_id, Namespace="default"
+        ):
             for user in page["UserList"]:
                 if not user.get("Active", True):
                     continue
@@ -237,7 +242,9 @@ class UserSyncOrchestrator:
                 case SyncStatus.SKIPPED:
                     skipped += 1
                 case SyncStatus.CREATED:
-                    if not self._confirm(f"  Invite {result.user.username} ({result.user.email})?"):
+                    if not self._confirm(
+                        f"  Invite {result.user.username} ({result.user.email})?"
+                    ):
                         skipped += 1
                         continue
                     try:
@@ -248,7 +255,9 @@ class UserSyncOrchestrator:
                         print(f"    FAILED:  {result.user.username}: {e}")
                         failed += 1
                 case SyncStatus.EXISTS:
-                    if not self._confirm(f"  {result.user.username} exists. Resend invitation?"):
+                    if not self._confirm(
+                        f"  {result.user.username} exists. Resend invitation?"
+                    ):
                         skipped += 1
                         continue
                     try:
@@ -259,13 +268,21 @@ class UserSyncOrchestrator:
                         print(f"    FAILED:  {result.user.username}: {e}")
                         failed += 1
 
-        print(f"\nDone. Invited: {created}, Resent: {resent}, Skipped: {skipped}, Failed: {failed}")
-        return SyncResponse(created=created, resent=resent, skipped=skipped, failed=failed)
+        print(
+            f"\nDone. Invited: {created}, Resent: {resent}, Skipped: {skipped}, Failed: {failed}"
+        )
+        return SyncResponse(
+            created=created, resent=resent, skipped=skipped, failed=failed
+        )
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--source", type=UserSource, default=UserSource.IDC, choices=list(UserSource))
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    parser.add_argument(
+        "--source", type=UserSource, default=UserSource.IDC, choices=list(UserSource)
+    )
     args = parser.parse_args()
 
     session = boto3.Session()
@@ -275,7 +292,9 @@ if __name__ == "__main__":
     orchestrator = UserSyncOrchestrator(
         stack_resolver=StackOutputResolver(session.client("cloudformation")),
         syncer_factory=lambda pool_id: CognitoUserSyncer(cognito, pool_id),
-        idc_lister_factory=lambda: IdcUserLister(session.client("sso-admin"), session.client("identitystore")),
+        idc_lister_factory=lambda: IdcUserLister(
+            session.client("sso-admin"), session.client("identitystore")
+        ),
         local_lister_factory=lambda: LocalUserLister(
             session.client("quicksight"),
             sts.get_caller_identity()["Account"],

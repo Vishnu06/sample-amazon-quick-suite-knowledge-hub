@@ -4,7 +4,6 @@ The genesis of this project was wanting to perform CRUD operations against a S3 
 
 This is a secure gateway to Amazon Bedrock AgentCore that provides CRUD operations on S3 buckets through a Lambda function. The system uses JWT authentication with Amazon Cognito and exposes MCP (Model Context Protocol) actions for client interactions.
 
-
 ## Description
 
 This project creates a complete infrastructure for secure S3 operations through Amazon Bedrock AgentCore Gateway. It enables applications to perform Create, Read, Update, and Delete operations on S3 objects through a standardized MCP interface with OAuth 2.0 authentication.
@@ -30,7 +29,6 @@ This project creates a complete infrastructure for secure S3 operations through 
 
 ![AgentCore Gateway - Lambda - S3](gatewaymcp-s3-crud.png)
 
-
 ## Installation
 
 ### Prerequisites
@@ -47,12 +45,14 @@ This project creates a complete infrastructure for secure S3 operations through 
 ### Deployment Steps
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd bedrock-agent-gateway
    ```
 
 2. **Deploy the CloudFormation stack**
+
    ```bash
    aws cloudformation create-stack \
      --stack-name bedrock-agent-gateway \
@@ -62,6 +62,7 @@ This project creates a complete infrastructure for secure S3 operations through 
    ```
 
 3. **Monitor deployment progress**
+
    ```bash
    aws cloudformation wait stack-create-complete \
      --stack-name bedrock-agent-gateway \
@@ -69,6 +70,7 @@ This project creates a complete infrastructure for secure S3 operations through 
    ```
 
 4. **Retrieve deployment outputs**
+
    ```bash
    aws cloudformation describe-stacks \
      --stack-name bedrock-agent-gateway \
@@ -110,6 +112,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ### MCP Operations
 
 #### 1. Upload a Text File
+
 ```json
 {
   "key": "documents/readme.txt",
@@ -122,6 +125,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 #### 2. Upload a Binary File (PDF/Image)
+
 ```json
 {
   "key": "files/document.pdf",
@@ -135,6 +139,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 #### 3. Read a File
+
 ```json
 {
   "key": "documents/readme.txt"
@@ -142,6 +147,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 **Response for text files:**
+
 ```json
 {
   "success": true,
@@ -153,6 +159,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 **Response for binary files:**
+
 ```json
 {
   "success": true,
@@ -164,6 +171,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 #### 4. List Files
+
 ```json
 {
   "prefix": "documents/",
@@ -172,6 +180,7 @@ curl -X POST https://your-cognito-domain.auth.region.amazoncognito.com/oauth2/to
 ```
 
 #### 5. Delete a File
+
 ```json
 {
   "key": "documents/readme.txt",
@@ -205,8 +214,6 @@ aws lambda invoke \
   --region us-west-2 \
   response.json
 ```
-
-
 
 ## Monitoring and Logging
 
@@ -340,4 +347,3 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 - **Primary Developer**: David Girling
 - **AWS Services**: Amazon Bedrock AgentCore, AWS Lambda, Amazon S3, Amazon Cognito
 - **Protocol**: Model Context Protocol (MCP) specification
-

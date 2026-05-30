@@ -9,6 +9,7 @@ Set up a Quick Sight Space to organize your dashboard and enable AI-powered quer
 ## What is a Quick Sight Space?
 
 A Space is a collaborative workspace that brings together dashboards, topics, and AI capabilities. Spaces enable:
+
 - Centralized access to related analytics content
 - Natural language queries across multiple datasets
 - Team collaboration with granular permissions
@@ -57,9 +58,11 @@ You'll need your Space URL for the next task where we create a custom AI agent.
 
 1. While viewing your Space, copy the URL from your browser's address bar
 2. The format will be:
+
    ```
    https://<region>.quicksight.aws.amazon.com/sn/spaces/<space-id>
    ```
+
 3. Save this URL in a notes file or text editor
 
 **Important:** Keep this Space URL handy! You'll need the `<space-id>` portion when configuring your Amazon Q agent in Task 3.
@@ -81,6 +84,7 @@ Enable team collaboration by sharing the Space:
 4. Click **Share** to send invitations
 
 **Permission Guidelines:**
+
 - Grant **Viewer** access to stakeholders who need to monitor metrics
 - Grant **Contributor** access to analysts who will refine dashboards and topics
 - Grant **Owner** access sparingly to team leads responsible for Space governance

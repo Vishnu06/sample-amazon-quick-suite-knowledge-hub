@@ -7,7 +7,7 @@ description: "Amazon Redshift MCP integration for database operations with Amazo
 
 **Amazon Redshift Data Query MCP integration** with Amazon Quick. This solution creates an MCP integration that enables read-only access to Amazon Redshift clusters through Quick using MCP Actions with AWS LAB Redshift MCP Server.
 
-##  Architecture
+## Architecture
 
 ![Amazon Redshift Data Query MCP Architecture](./images/redshift-mcp-architecture.png)
 
@@ -19,7 +19,7 @@ description: "Amazon Redshift MCP integration for database operations with Amazo
 - **Quick Integration**: MCP Actions for conversational AI
 - **Amazon Redshift**: Cluster discovery and SQL query execution
 
-##  Purpose
+## Purpose
 
 This MCP integration enables:
 
@@ -28,7 +28,7 @@ This MCP integration enables:
 - **AgentCore Gateway**: Gateway with Lambda target and authentication
 - **Read-Only Operations**: Secure database discovery and query execution
 
-##  Project Structure
+## Project Structure
 
 ```
 redshift-data-query-mcp/
@@ -46,7 +46,7 @@ redshift-data-query-mcp/
  README.md                          # This file
 ```
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -85,6 +85,7 @@ cdk deploy --require-approval never
 4. Copy the required values for Quick integration
 
 **Option 2: CLI Commands**
+
 ```bash
 aws cloudformation describe-stacks --stack-name RedshiftAgentCoreStack --query 'Stacks[0].Outputs'
 ```
@@ -94,7 +95,8 @@ Key outputs for Quick Actions:
 - `GatewayUrl` - AgentCore Gateway endpoint
 - `ClientId` - OAuth2 client ID
 - `ClientSecret` - OAuth2 client secret
-##  Available Tools
+
+## Available Tools
 
 ### Redshift Tools (redshift_agentcore_lambda.py)
 
@@ -123,6 +125,7 @@ Key outputs for Quick Actions:
 
 **Purpose**: List schemas in a database
 **Input**:
+
 - `cluster_identifier` (required): Target cluster identifier
 - `schema_database_name` (required): Database name
 
@@ -132,6 +135,7 @@ Key outputs for Quick Actions:
 
 **Purpose**: List tables in a schema
 **Input**:
+
 - `cluster_identifier` (required): Target cluster identifier
 - `table_database_name` (required): Database name
 - `table_schema_name` (required): Schema name
@@ -142,6 +146,7 @@ Key outputs for Quick Actions:
 
 **Purpose**: List columns in a table
 **Input**:
+
 - `cluster_identifier` (required): Target cluster identifier
 - `column_database_name` (required): Database name
 - `column_schema_name` (required): Schema name
@@ -153,11 +158,13 @@ Key outputs for Quick Actions:
 
 **Purpose**: Execute SQL queries (read-only)
 **Input**:
+
 - `cluster_identifier` (required): Target cluster identifier
 - `database_name` (required): Database name
 - `sql` (required): SQL query string
 
 **Output**: Query results with columns and rows
+
 ## Quick Integration
 
 Complete guide to integrate Amazon Redshift with Amazon Quick using MCP Actions.
@@ -232,7 +239,7 @@ Fill in the MCP configuration:
 - Check Lambda timeout and memory settings
 - Review CORS configuration for Quick
 
-##  Documentation
+## Documentation
 
 - [CDK Deployment Guide](cdk/README.md) - Infrastructure details
 - [MCP Tool Definitions](tools/redshift_agentcore_tools.json) - API specifications
@@ -241,6 +248,7 @@ Fill in the MCP configuration:
 ## License
 
 This library is licensed under the MIT-0 License.
+
 - `CognitoTokenUrl` - OAuth2 token endpoint
 
 ### Configure MCP Action in Amazon Quick
@@ -278,6 +286,7 @@ Complete the MCP configuration:
 ### Usage in Amazon Quick
 
 Example queries:
+
 ```
 "List all available Redshift clusters"
 "Show me databases in cluster my-redshift-cluster"

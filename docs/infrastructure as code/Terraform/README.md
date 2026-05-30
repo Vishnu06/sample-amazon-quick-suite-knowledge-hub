@@ -20,16 +20,19 @@ This Terraform module sets up Amazon Quick with IAM Identity Center integration.
 ## Quick Start
 
 1. **Clone and navigate to the module:**
+
    ```bash
    cd terraform/quick-suite-bootstrap
    ```
 
 2. **Create your variables file:**
+
    ```bash
    cp terraform.tfvars.example terraform.tfvars
    ```
 
 3. **Edit `terraform.tfvars` with your values:**
+
    ```hcl
    aws_region                   = "us-east-1"
    quick_suite_account_name     = "MyQuickSuite"
@@ -38,16 +41,19 @@ This Terraform module sets up Amazon Quick with IAM Identity Center integration.
    ```
 
 4. **Initialize Terraform:**
+
    ```bash
    terraform init
    ```
 
 5. **Review the plan:**
+
    ```bash
    terraform plan
    ```
 
 6. **Apply the configuration:**
+
    ```bash
    terraform apply
    ```
@@ -110,16 +116,20 @@ terraform destroy
 ## Troubleshooting
 
 ### Lambda Build Fails
+
 Ensure Python 3.12 and pip are installed:
+
 ```bash
 python3 --version
 pip3 --version
 ```
 
 ### Permission Errors
+
 The Lambda function requires extensive permissions. Ensure your AWS credentials have sufficient privileges to create IAM roles and policies.
 
 ### Identity Center Issues
+
 If using an existing Identity Center, ensure the ARN is correct and your credentials have access to it.
 
 ## License

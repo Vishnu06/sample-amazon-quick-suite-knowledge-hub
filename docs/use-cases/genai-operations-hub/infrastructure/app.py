@@ -13,7 +13,7 @@ quicksight_stack = QuickSightStack(
     app,
     "GenAIQuickSightStack",
     database_name=base_stack.database_name,
-    workgroup_name=base_stack.workgroup_name
+    workgroup_name=base_stack.workgroup_name,
 )
 quicksight_stack.add_dependency(base_stack)
 
