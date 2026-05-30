@@ -13,7 +13,7 @@ Embed an Amazon Quick Chat Agent into Salesforce as a Lightning Web Component (L
 Salesforce User (logged in)
   → Lightning page loads LWC
   → LWC renders iframe with Quick Chat Agent embed URL
-  → User authenticates via Quick (IDC-backed)
+  → User authenticates via Quick (password or SSO)
   → Chat Agent is interactive inside Salesforce
 ```
 
@@ -21,7 +21,7 @@ Salesforce User (logged in)
 
 - AWS account with Amazon Quick Enterprise Edition
 - A Quick Chat Agent created and configured
-- IAM Identity Center with users provisioned in Quick
+- A Quick account with users provisioned (password-based or single sign-on)
 - Salesforce org with Lightning Experience enabled
 - Salesforce CLI (`sf`) installed (`brew install sf`)
 
@@ -121,9 +121,8 @@ salesforce-chat-embed/
 ## User Access
 
 Users accessing the Chat Agent in Salesforce must have:
-1. An **IAM Identity Center** account
-2. A **Quick** registered user (same email as IDC)
-3. Access to the Chat Agent's underlying topics/data in Quick
+1. A **Quick** account with a provisioned user (password-based or SSO)
+2. Access to the Chat Agent's underlying topics/data in Quick
 
 ## Production Considerations
 
