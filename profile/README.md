@@ -14,7 +14,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/Amazon-Quick?style=social)](https://github.com/Amazon-Quick)
 
-[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://github.com/aws-samples/sample-amazon-quick-starter-kit) · [Samples](https://github.com/Amazon-Quick/quick-web) · [Discussions](https://github.com/orgs/Amazon-Quick/discussions)
+[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://github.com/aws-samples/sample-amazon-quick-starter-kit) · [Samples](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub) · [Discussions](https://github.com/orgs/Amazon-Quick/discussions)
 
 </div>
 
@@ -32,7 +32,7 @@
 
 ### Community
 
-Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, MCP and A2A servers, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
+Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, custom MCP and A2A servers, custom connectors for Quick, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
 
 Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
 
@@ -43,7 +43,6 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 | | |
 |---|---|
 | **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment of Amazon Quick with IAM Identity Center, up and running in ~15 minutes |
-| **[Quick Admin](https://github.com/Amazon-Quick/quick-admin)** | Identity, governance, security, enterprise deployments, CI/CD, and IaC templates |
 | **[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | Official AWS documentation for Amazon Quick |
 | **[Try Amazon Quick](https://quick.aws.com)** | Sign up free, no AWS account required |
 
@@ -53,7 +52,7 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 
 | | |
 |---|---|
-| **[Agent Skills](https://github.com/Amazon-Quick/amazon-quick-skills)** | Packaged instructions that extend what Amazon Quick can do, invoked automatically or on demand across Desktop and Web |
+| **[Agent Skills](https://github.com/Amazon-Quick/Amazon-Quick-official-catalog/tree/main/skills)** | Packaged instructions that extend what Amazon Quick can do, invoked automatically or on demand across Desktop and Web |
 | **[Quick Web](https://github.com/Amazon-Quick/quick-web)** | Connector guides, flow templates, automate recipes, evals, observability, and embedded integration samples |
 | **[Quick Desktop](https://github.com/Amazon-Quick/quick-desktop)** | Samples and resources for the native Amazon Quick on Desktop application |
 | **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides with connectors, actions, MCP servers, and use cases |
