@@ -84,8 +84,4 @@ We welcome contributions of all kinds: connector guides, flow templates, automat
 
 All projects are MIT licensed.
 
----
-
-**[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | **[Community](https://community.amazonquicksight.com)** | **[GitHub Discussions](https://github.com/orgs/Amazon-Quick/discussions)**
-
 </div>
