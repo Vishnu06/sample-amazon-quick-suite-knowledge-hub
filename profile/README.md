@@ -9,7 +9,7 @@
 
   <h2>Amazon Quick changes how you work.</h2>
 
-  <p>Set it up in minutes and by the end of the day, you'll wonder how you ever worked without it. Agentic AI powered analytics, automation, and productivity for you and your entire organization.</p>
+  <p>Amazon Quick is an Agentic Builder workspace, powering Search, Analytics, and Automation to enhance productivity for you and your organization.</p>
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/Amazon-Quick?style=social)](https://github.com/Amazon-Quick)
@@ -40,11 +40,25 @@ Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/
 
 ### Get Started
 
+Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com) — no AWS account required.
+
+#### Sign up with your preferred account
+
+| Method | Description |
+|---|---|
+| **Email** | [Create an account](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with any email address |
+| **Google** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Google account |
+| **Apple** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Apple ID |
+| **GitHub** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your GitHub account |
+| **Amazon** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Amazon account |
+
+#### Already have an AWS account?
+
 | | |
 |---|---|
-| **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment of Amazon Quick with IAM Identity Center, up and running in ~15 minutes |
-| **[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | Official AWS documentation for Amazon Quick |
-| **[Try Amazon Quick](https://quick.aws.com)** | Sign up free, no AWS account required |
+| **[Sign up through AWS Console](https://docs.aws.amazon.com/quick/latest/userguide/signing-up.html)** | For enterprises with existing AWS accounts |
+| **[Pricing and availability](https://aws.amazon.com/quick/pricing/)** | Compare features available with each account type |
+| **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment with IAM Identity Center, up and running in ~15 minutes |
 
 ---
 
