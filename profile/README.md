@@ -46,11 +46,11 @@ Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com)
 
 | Method | Description |
 |---|---|
-| **Email** | [Create an account](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with any email address |
-| **Google** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Google account |
-| **Apple** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Apple ID |
-| **GitHub** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your GitHub account |
-| **Amazon** | [Sign in](https://docs.aws.amazon.com/quick/latest/userguide/standalone-signup.html) with your Amazon account |
+| **Email** | [Create an account](https://quick.aws.com/sn) with any email address |
+| **Google** | [Sign in](https://quick.aws.com/sn) with your Google account |
+| **Apple** | [Sign in](https://quick.aws.com/sn) with your Apple ID |
+| **GitHub** | [Sign in](https://quick.aws.com/sn) with your GitHub account |
+| **Amazon** | [Sign in](https://quick.aws.com/sn) with your Amazon account |
 
 #### Already have an AWS account?
 
