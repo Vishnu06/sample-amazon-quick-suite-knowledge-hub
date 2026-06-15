@@ -11,7 +11,7 @@
 
   <p>Set it up in minutes and by the end of the day, you'll wonder how you ever worked without it.</p>
 
-  <p>Amazon Quick is an Agentic Builder workspace, powering Search, Analytics, and Automation to enhance productivity for you and your organization.</p>
+  <p>Amazon Quick is an Agentic AI workspace, powering AI Search, Business Intelligence, and Automation to enhance productivity for you and your organization.</p>
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/Amazon-Quick?style=social)](https://github.com/Amazon-Quick)
