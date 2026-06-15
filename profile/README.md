@@ -14,7 +14,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/Amazon-Quick?style=social)](https://github.com/Amazon-Quick)
 
-[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://quick.aws.com) · [Samples](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub) · [Community](https://community.amazonquicksight.com)
+[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://quick.aws.com) · [Browse Catalog](https://github.com/Amazon-Quick/Amazon-Quick-official-catalog) · [Community](https://community.amazonquicksight.com)
 
 </div>
 
