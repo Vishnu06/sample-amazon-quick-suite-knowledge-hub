@@ -20,25 +20,6 @@
 
 ---
 
-### Surfaces
-
-| | |
-|---|---|
-| **[Amazon Quick](https://aws.amazon.com/quick/)** | Browser-based access with Flows, Automate, Spaces, Research, Apps, and embedded analytics |
-| **[Amazon Quick on Desktop](https://aws.amazon.com/quick/desktop/)** | Native desktop application with local file integration, meeting prep, and context-aware assistance |
-| **[Amazon Quick on Mobile](https://aws.amazon.com/quick/download/)** | On-the-go access to dashboards, alerts, and AI-powered insights on iOS and Android |
-| **[Extensions](https://aws.amazon.com/quick/download/)** | Browser extensions and IDE integrations |
-
----
-
-### Community
-
-Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, custom MCP and A2A servers, custom connectors for Quick, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
-
-Join the conversation in the [**Amazon Quick Community**](https://community.amazonquicksight.com) or in [**GitHub Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
-
----
-
 ### Get Started
 
 Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com) — no AWS account required.
@@ -63,6 +44,17 @@ Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com)
 
 ---
 
+### Surfaces
+
+| | |
+|---|---|
+| **[Amazon Quick](https://aws.amazon.com/quick/)** | Browser-based access with Flows, Automate, Spaces, Research, Apps, and embedded analytics |
+| **[Amazon Quick on Desktop](https://aws.amazon.com/quick/desktop/)** | Native desktop application with local file integration, meeting prep, and context-aware assistance |
+| **[Amazon Quick on Mobile](https://aws.amazon.com/quick/download/)** | On-the-go access to dashboards, alerts, and AI-powered insights on iOS and Android |
+| **[Extensions](https://aws.amazon.com/quick/download/)** | Browser extensions and IDE integrations |
+
+---
+
 ### Samples
 
 | | |
@@ -71,6 +63,14 @@ Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com)
 | **[Quick Web](https://github.com/Amazon-Quick/quick-web)** | Connector guides, flow templates, automate recipes, evals, observability, and embedded integration samples |
 | **[Quick Desktop](https://github.com/Amazon-Quick/quick-desktop)** | Samples and resources for the native Amazon Quick on Desktop application |
 | **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides with connectors, actions, MCP servers, and use cases |
+
+---
+
+### Community
+
+Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, custom MCP and A2A servers, custom connectors for Quick, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
+
+Join the conversation in the [**Amazon Quick Community**](https://community.amazonquicksight.com) or in [**GitHub Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
 
 ---
 
