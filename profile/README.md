@@ -14,7 +14,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/Amazon-Quick?style=social)](https://github.com/Amazon-Quick)
 
-[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://github.com/aws-samples/sample-amazon-quick-starter-kit) · [Samples](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub) · [Discussions](https://github.com/orgs/Amazon-Quick/discussions)
+[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/) · [Quick Start](https://quick.aws.com) · [Samples](https://github.com/aws-samples/sample-amazon-quick-suite-knowledge-hub) · [Community](https://community.amazonquicksight.com)
 
 </div>
 
@@ -26,7 +26,8 @@
 |---|---|
 | **[Amazon Quick](https://aws.amazon.com/quick/)** | Browser-based access with Flows, Automate, Spaces, Research, Apps, and embedded analytics |
 | **[Amazon Quick on Desktop](https://aws.amazon.com/quick/desktop/)** | Native desktop application with local file integration, meeting prep, and context-aware assistance |
-| **[Amazon Quick on Mobile](https://community.amazonquicksight.com/t/amazon-quick-suite-mobile-is-now-available-on-ios-and-android/50765)** | On-the-go access to dashboards, alerts, and AI-powered insights on iOS and Android |
+| **[Amazon Quick on Mobile](https://aws.amazon.com/quick/download/)** | On-the-go access to dashboards, alerts, and AI-powered insights on iOS and Android |
+| **[Extensions](https://aws.amazon.com/quick/download/)** | Browser extensions and IDE integrations |
 
 ---
 
@@ -34,7 +35,7 @@
 
 Amazon Quick is built with the open-source community in mind. The community contributes Agent Skills, custom MCP and A2A servers, custom connectors for Quick, API connector guides, prompt recipes, Amazon Quick Flow blueprints, Quick Automate recipes, and third-party integration samples.
 
-Join the conversation in [**Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
+Join the conversation in the [**Amazon Quick Community**](https://community.amazonquicksight.com) or in [**GitHub Discussions**](https://github.com/orgs/Amazon-Quick/discussions) to ask questions, share what you've built, and suggest new features.
 
 ---
 
@@ -58,7 +59,7 @@ Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com)
 |---|---|
 | **[Sign up through AWS Console](https://docs.aws.amazon.com/quick/latest/userguide/signing-up.html)** | For enterprises with existing AWS accounts |
 | **[Pricing and availability](https://aws.amazon.com/quick/pricing/)** | Compare features available with each account type |
-| **[Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | Automated CDK deployment with IAM Identity Center, up and running in ~15 minutes |
+| **[Enterprise Starter Kit](https://github.com/aws-samples/sample-amazon-quick-starter-kit)** | For enterprises with an AWS account. Automated CDK deployment of Amazon Quick with IAM Identity Center, up and running in ~15 minutes |
 
 ---
 
@@ -81,12 +82,12 @@ We welcome contributions of all kinds: connector guides, flow templates, automat
 
 <div align="center">
 
-**[Amazon Quick](https://aws.amazon.com/quick/)** · **[Amazon Quick on Desktop](https://aws.amazon.com/quick/desktop/)** · **[Amazon Quick on Mobile](https://community.amazonquicksight.com/t/amazon-quick-suite-mobile-is-now-available-on-ios-and-android/50765)** · **[Docs](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** · **[Discussions](https://github.com/orgs/Amazon-Quick/discussions)**
+**[Amazon Quick](https://aws.amazon.com/quick/)** · **[Amazon Quick on Desktop](https://aws.amazon.com/quick/desktop/)** · **[Amazon Quick on Mobile](https://aws.amazon.com/quick/download/)** · **[Docs](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** · **[Community](https://community.amazonquicksight.com)**
 
 All projects are MIT licensed.
 
 ---
 
-**[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | **[Discussions](https://github.com/orgs/Amazon-Quick/discussions)**
+**[Documentation](https://docs.aws.amazon.com/quicksuite/latest/userguide/)** | **[Community](https://community.amazonquicksight.com)** | **[GitHub Discussions](https://github.com/orgs/Amazon-Quick/discussions)**
 
 </div>
