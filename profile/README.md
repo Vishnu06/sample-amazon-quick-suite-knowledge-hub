@@ -55,14 +55,12 @@ Amazon Quick is available directly at [**quick.aws.com**](https://quick.aws.com)
 
 ---
 
-### Samples
+### Official Catalog
 
 | | |
 |---|---|
 | **[Agent Skills](https://github.com/Amazon-Quick/Amazon-Quick-official-catalog/tree/main/skills)** | Packaged instructions that extend what Amazon Quick can do, invoked automatically or on demand across Desktop and Web |
-| **[Quick Web](https://github.com/Amazon-Quick/quick-web)** | Connector guides, flow templates, automate recipes, evals, observability, and embedded integration samples |
-| **[Quick Desktop](https://github.com/Amazon-Quick/quick-desktop)** | Samples and resources for the native Amazon Quick on Desktop application |
-| **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Community-contributed integration guides with connectors, actions, MCP servers, and use cases |
+| **[Knowledge Hub](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/)** | Samples contributed by the AWS team covering integration guides with connectors, actions, MCP servers, and use cases |
 
 ---
 
