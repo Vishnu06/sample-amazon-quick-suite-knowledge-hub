@@ -1,0 +1,19 @@
+term,definition,formula,example,category
+Revenue,Total income generated from sales of products and services before any deductions,Sum of all product and service sales,"$2.45M in June 2024 from Enterprise Software, Professional Services, Cloud Subscriptions, and Hardware",Financial Metrics
+Gross Profit,Revenue minus cost of goods sold (COGS),Revenue - COGS,"$2.45M revenue - $1.79M COGS = $660K gross profit in June 2024",Financial Metrics
+Net Profit,Revenue minus all expenses including operating costs and taxes,Revenue - Total Expenses,"$2.45M revenue - $1.79M expenses = $660K net profit",Financial Metrics
+Profit Margin,Percentage of revenue retained as profit after expenses,(Net Profit / Revenue) × 100,"($660K / $2.45M) × 100 = 26.9% margin in June 2024",Financial Metrics
+Operating Expenses,Day-to-day costs of running the business excluding COGS,Sum of Salaries + Marketing + Operations + G&A + R&D,"$1.79M in June 2024 across all departments",Financial Metrics
+Budget Variance,Difference between budgeted and actual spending,Actual - Budget,"Engineering Q3 2024: $1.95M actual vs $1.8M budget = -$150K variance (over budget)",Financial Metrics
+Revenue Growth,Percentage change in revenue between two periods,((Current - Prior) / Prior) × 100,"Q4 2024 vs Q3 2024: ($7.44M - $6.6M) / $6.6M = 12.7% growth",Financial Metrics
+YoY Growth,Year-over-year revenue comparison,((Current Year - Prior Year) / Prior Year) × 100,"Q1 2025 vs Q1 2024: ($7.91M - $5.87M) / $5.87M = 34.8% YoY growth",Financial Metrics
+EBITDA,Earnings before interest taxes depreciation and amortization,Net Income + Interest + Taxes + Depreciation + Amortization,Approximately 28-32% of revenue for AnyCompany in 2024,Financial Metrics
+ARR,Annual Recurring Revenue - annualized value of subscription contracts,Monthly Recurring Revenue × 12,"Cloud Subscriptions ARR: ~$3.0M based on Q4 2024 run rate",Financial Metrics
+CAC,Customer Acquisition Cost - cost to acquire a new customer,Total Sales & Marketing Spend / New Customers Acquired,Tracked quarterly by the Sales and Marketing teams,Financial Metrics
+LTV,Customer Lifetime Value - total revenue expected from a customer,Average Revenue per Customer × Average Customer Lifespan,Enterprise customers average 4.2 year lifespan at AnyCompany,Financial Metrics
+Burn Rate,Rate at which the company spends cash reserves,Monthly Operating Expenses,Not applicable - AnyCompany is profitable,Financial Metrics
+Working Capital,Short-term financial health measure,Current Assets - Current Liabilities,Reviewed monthly by the CFO and Finance team,Financial Metrics
+CapEx,Capital Expenditure - spending on long-term assets,Purchases of property plant and equipment,Hardware and infrastructure investments tracked separately from OpEx,Financial Metrics
+OpEx,Operating Expenditure - day-to-day business costs,All non-capital operating expenses,Salaries Marketing Operations G&A and R&D combined,Financial Metrics
+Headcount Cost,Total personnel-related expenses,Salaries + Benefits + Payroll Taxes,"Engineering $1.95M, Sales $1.12M in Q3 2024",Financial Metrics
+Software Licenses,Costs for third-party software tools and platforms,Sum of all software subscription and license fees,"~$45K/month in software licenses per accounting policy",Financial Metrics

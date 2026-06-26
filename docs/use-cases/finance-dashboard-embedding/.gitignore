@@ -1,0 +1,7 @@
+node_modules/
+frontend/build/
+infrastructure/cdk.out/
+backend/lambda-tte/lambda.zip
+.env
+*.zip
+node_modules

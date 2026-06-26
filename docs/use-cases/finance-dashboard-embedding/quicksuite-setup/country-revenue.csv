@@ -1,0 +1,49 @@
+country,region,quarter,year,revenue,revenue_prior_quarter,growth_pct,notes
+United States,North America,Q1,2024,2520000,,,
+United States,North America,Q2,2024,2780000,2520000,10.3,
+United States,North America,Q3,2024,2650000,2780000,-4.7,Delayed enterprise renewals - 2 large accounts pushed to Q4
+United States,North America,Q4,2024,3020000,2650000,14.0,
+Canada,North America,Q1,2024,330000,,,
+Canada,North America,Q2,2024,310000,330000,-6.1,
+Canada,North America,Q3,2024,330000,310000,6.5,
+Canada,North America,Q4,2024,330000,330000,0.0,
+United Kingdom,EMEA,Q1,2024,580000,,,
+United Kingdom,EMEA,Q2,2024,580000,580000,0.0,
+United Kingdom,EMEA,Q3,2024,520000,580000,-10.3,Budget freeze at key financial services client
+United Kingdom,EMEA,Q4,2024,610000,520000,17.3,
+Germany,EMEA,Q1,2024,490000,,,
+Germany,EMEA,Q2,2024,510000,490000,4.1,
+Germany,EMEA,Q3,2024,480000,510000,-5.9,
+Germany,EMEA,Q4,2024,530000,480000,10.4,
+France,EMEA,Q1,2024,320000,,,
+France,EMEA,Q2,2024,340000,320000,6.3,
+France,EMEA,Q3,2024,320000,340000,-5.9,
+France,EMEA,Q4,2024,360000,320000,12.5,
+Netherlands,EMEA,Q1,2024,230000,,,
+Netherlands,EMEA,Q2,2024,320000,230000,39.1,New partner channel launched
+Netherlands,EMEA,Q3,2024,260000,320000,-18.8,Partner ramp slower than expected
+Netherlands,EMEA,Q4,2024,320000,260000,23.1,
+Japan,APAC,Q1,2024,360000,,,
+Japan,APAC,Q2,2024,400000,360000,11.1,
+Japan,APAC,Q3,2024,380000,400000,-5.0,
+Japan,APAC,Q4,2024,420000,380000,10.5,
+Australia,APAC,Q1,2024,250000,,,
+Australia,APAC,Q2,2024,270000,250000,8.0,
+Australia,APAC,Q3,2024,290000,270000,7.4,Consistent growth - government sector expansion
+Australia,APAC,Q4,2024,320000,290000,10.3,
+India,APAC,Q1,2024,180000,,,
+India,APAC,Q2,2024,210000,180000,16.7,
+India,APAC,Q3,2024,240000,210000,14.3,Fastest growing market - new SI partnerships
+India,APAC,Q4,2024,310000,240000,29.2,
+Singapore,APAC,Q1,2024,90000,,,
+Singapore,APAC,Q2,2024,110000,90000,22.2,
+Singapore,APAC,Q3,2024,130000,110000,18.2,Regional HQ expansion driving adoption
+Singapore,APAC,Q4,2024,160000,130000,23.1,Highest growth rate in APAC
+Brazil,LATAM,Q1,2024,250000,,,
+Brazil,LATAM,Q2,2024,270000,250000,8.0,
+Brazil,LATAM,Q3,2024,240000,270000,-11.1,Currency headwinds and macro uncertainty
+Brazil,LATAM,Q4,2024,280000,240000,16.7,
+Mexico,LATAM,Q1,2024,170000,,,
+Mexico,LATAM,Q2,2024,180000,170000,5.9,
+Mexico,LATAM,Q3,2024,160000,180000,-11.1,
+Mexico,LATAM,Q4,2024,190000,160000,18.8,
