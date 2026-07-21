@@ -12,10 +12,10 @@ Usage:
     python generate_employee_data.py [--output-dir ../datasets] [--rows 5000]
 """
 
-import csv
-import random
 import argparse
+import csv
 import os
+import random
 from datetime import datetime, timedelta
 
 # Configuration
@@ -259,7 +259,7 @@ def main():
     # Summary
     active_count = sum(1 for e in employees if e["Active Employee Flag"] == "Yes")
     high_attrition = sum(1 for e in employees if e["Attrition Flag"] == "High")
-    print(f"\n--- Summary ---")
+    print("\n--- Summary ---")
     print(f"Total employees: {len(employees)}")
     print(f"Active employees: {active_count}")
     print(f"Inactive employees: {len(employees) - active_count}")

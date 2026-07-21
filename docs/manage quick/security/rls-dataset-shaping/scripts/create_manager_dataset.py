@@ -21,7 +21,7 @@ OUTPUT_FILE = os.path.join(DATASETS_DIR, "employee_data_manager.csv")
 
 
 def main():
-    with open(INPUT_FILE, "r", newline="", encoding="utf-8") as infile:
+    with open(INPUT_FILE, newline="", encoding="utf-8") as infile:
         reader = csv.DictReader(infile)
         fieldnames = [f for f in reader.fieldnames if f not in SENSITIVE_COLUMNS]
 
