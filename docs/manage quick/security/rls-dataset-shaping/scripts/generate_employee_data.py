@@ -22,16 +22,52 @@ from datetime import datetime, timedelta
 DEPARTMENTS = ["Sales", "Engineering", "Operations", "Finance", "HR"]
 LOCATIONS = ["New York", "San Francisco", "Chicago", "Austin", "Remote"]
 JOB_ROLES = {
-    "Sales": ["Account Manager", "Sales Manager", "Sales Director", "Business Development", "Sales Enterprise Rep"],
-    "Engineering": ["Software Engineer", "DevOps Engineer", "Architecture Lead", "Technical Lead", "Data Scientist"],
-    "Operations": ["Operations Manager", "Project Manager", "Supply Chain Analyst", "Logistics Coordinator", "Process Engineer"],
-    "Finance": ["Accountant", "Financial Analyst", "Controller", "Treasury Analyst", "Finance Manager"],
-    "HR": ["HR Manager", "Talent Acquisition", "HR Director", "HR Business Partner", "Compensation Analyst"],
+    "Sales": [
+        "Account Manager",
+        "Sales Manager",
+        "Sales Director",
+        "Business Development",
+        "Sales Enterprise Rep",
+    ],
+    "Engineering": [
+        "Software Engineer",
+        "DevOps Engineer",
+        "Architecture Lead",
+        "Technical Lead",
+        "Data Scientist",
+    ],
+    "Operations": [
+        "Operations Manager",
+        "Project Manager",
+        "Supply Chain Analyst",
+        "Logistics Coordinator",
+        "Process Engineer",
+    ],
+    "Finance": [
+        "Accountant",
+        "Financial Analyst",
+        "Controller",
+        "Treasury Analyst",
+        "Finance Manager",
+    ],
+    "HR": [
+        "HR Manager",
+        "Talent Acquisition",
+        "HR Director",
+        "HR Business Partner",
+        "Compensation Analyst",
+    ],
 }
 POSITION_LEVELS = ["L1", "L2", "L3", "L4", "L5", "L6", "L7"]
 GENDERS = ["Male", "Female", "Non-Binary"]
-TERMINATION_REASONS = ["Voluntary - Better Opportunity", "Voluntary - Relocation", "Voluntary - Career Change",
-                       "Involuntary - Performance", "Involuntary - Restructuring", "Retirement"]
+TERMINATION_REASONS = [
+    "Voluntary - Better Opportunity",
+    "Voluntary - Relocation",
+    "Voluntary - Career Change",
+    "Involuntary - Performance",
+    "Involuntary - Restructuring",
+    "Retirement",
+]
 
 
 def generate_employee_id(index):
@@ -54,9 +90,7 @@ def generate_employees(num_rows=5000, seed=42):
         department = random.choice(DEPARTMENTS)
         job_role = random.choice(JOB_ROLES[department])
         position_level = random.choices(
-            POSITION_LEVELS,
-            weights=[5, 15, 30, 25, 15, 7, 3],
-            k=1
+            POSITION_LEVELS, weights=[5, 15, 30, 25, 15, 7, 3], k=1
         )[0]
         location = random.choice(LOCATIONS)
         age = random.randint(22, 62)
@@ -67,15 +101,21 @@ def generate_employees(num_rows=5000, seed=42):
 
         # Salary based on position level
         level_salary_ranges = {
-            "L1": (55000, 75000), "L2": (70000, 95000), "L3": (85000, 125000),
-            "L4": (110000, 155000), "L5": (140000, 185000), "L6": (170000, 210000),
+            "L1": (55000, 75000),
+            "L2": (70000, 95000),
+            "L3": (85000, 125000),
+            "L4": (110000, 155000),
+            "L5": (140000, 185000),
+            "L6": (170000, 210000),
             "L7": (195000, 220000),
         }
         salary_range = level_salary_ranges[position_level]
         annual_salary = random.randint(salary_range[0], salary_range[1])
         bonus_percent = round(random.uniform(5, 25), 1)
 
-        performance_rating = random.choices([1, 2, 3, 4, 5], weights=[3, 10, 35, 35, 17], k=1)[0]
+        performance_rating = random.choices(
+            [1, 2, 3, 4, 5], weights=[3, 10, 35, 35, 17], k=1
+        )[0]
         productivity_index = round(random.uniform(40, 100), 1)
         quality_score = round(random.uniform(50, 100), 1)
         engagement_score = random.randint(30, 100)
@@ -100,7 +140,9 @@ def generate_employees(num_rows=5000, seed=42):
         if years_in_role > 5 and promoted_last_3 == "No":
             attrition_factors += 1
 
-        attrition_flag = "High" if attrition_factors >= 2 or random.random() < 0.15 else "Low"
+        attrition_flag = (
+            "High" if attrition_factors >= 2 or random.random() < 0.15 else "Low"
+        )
 
         # Termination info (only for inactive employees ~10%)
         is_active = random.choices([True, False], weights=[90, 10], k=1)[0]
@@ -117,11 +159,15 @@ def generate_employees(num_rows=5000, seed=42):
             manager_id = generate_employee_id(random.randint(1, min(i, num_rows)))
 
         tenure_bucket = (
-            "0-1 years" if years_at_company <= 1 else
-            "1-3 years" if years_at_company <= 3 else
-            "3-5 years" if years_at_company <= 5 else
-            "5-10 years" if years_at_company <= 10 else
-            "10+ years"
+            "0-1 years"
+            if years_at_company <= 1
+            else "1-3 years"
+            if years_at_company <= 3
+            else "3-5 years"
+            if years_at_company <= 5
+            else "5-10 years"
+            if years_at_company <= 10
+            else "10+ years"
         )
 
         employee = {
@@ -164,7 +210,12 @@ def generate_employees(num_rows=5000, seed=42):
 
 def create_manager_dataset(employees):
     """Remove sensitive columns: Annual Salary, Bonus Percent, Termination Date, Termination Reason."""
-    sensitive_columns = ["Annual Salary", "Bonus Percent", "Termination Date", "Termination Reason"]
+    sensitive_columns = [
+        "Annual Salary",
+        "Bonus Percent",
+        "Termination Date",
+        "Termination Reason",
+    ]
     manager_data = []
     for emp in employees:
         row = {k: v for k, v in emp.items() if k not in sensitive_columns}
@@ -178,7 +229,12 @@ def create_aggregated_dataset(employees):
     for emp in employees:
         key = (emp["Department"], emp["Location"])
         if key not in aggregation:
-            aggregation[key] = {"count": 0, "engagement_sum": 0, "satisfaction_sum": 0, "training_sum": 0}
+            aggregation[key] = {
+                "count": 0,
+                "engagement_sum": 0,
+                "satisfaction_sum": 0,
+                "training_sum": 0,
+            }
         aggregation[key]["count"] += 1
         aggregation[key]["engagement_sum"] += emp["Engagement Score"]
         aggregation[key]["satisfaction_sum"] += emp["Satisfaction Score"]
@@ -186,14 +242,20 @@ def create_aggregated_dataset(employees):
 
     aggregated = []
     for (dept, loc), data in sorted(aggregation.items()):
-        aggregated.append({
-            "Department": dept,
-            "Location": loc,
-            "Employee Count": data["count"],
-            "Avg Engagement Score": round(data["engagement_sum"] / data["count"], 1),
-            "Avg Satisfaction Score": round(data["satisfaction_sum"] / data["count"], 1),
-            "Avg Training Hours": round(data["training_sum"] / data["count"], 1),
-        })
+        aggregated.append(
+            {
+                "Department": dept,
+                "Location": loc,
+                "Employee Count": data["count"],
+                "Avg Engagement Score": round(
+                    data["engagement_sum"] / data["count"], 1
+                ),
+                "Avg Satisfaction Score": round(
+                    data["satisfaction_sum"] / data["count"], 1
+                ),
+                "Avg Training Hours": round(data["training_sum"] / data["count"], 1),
+            }
+        )
     return aggregated
 
 
@@ -225,13 +287,23 @@ def write_csv(filepath, data, fieldnames=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate synthetic employee data for Amazon Quick Security Blog")
-    parser.add_argument("--output-dir", default="../datasets", help="Output directory for CSV files")
-    parser.add_argument("--rows", type=int, default=5000, help="Number of employee rows to generate")
-    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
+    parser = argparse.ArgumentParser(
+        description="Generate synthetic employee data for Amazon Quick Security Blog"
+    )
+    parser.add_argument(
+        "--output-dir", default="../datasets", help="Output directory for CSV files"
+    )
+    parser.add_argument(
+        "--rows", type=int, default=5000, help="Number of employee rows to generate"
+    )
+    parser.add_argument(
+        "--seed", type=int, default=42, help="Random seed for reproducibility"
+    )
     args = parser.parse_args()
 
-    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.output_dir)
+    output_dir = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), args.output_dir
+    )
     os.makedirs(output_dir, exist_ok=True)
 
     print(f"Generating {args.rows} employee records (seed={args.seed})...")
@@ -263,7 +335,9 @@ def main():
     print(f"Total employees: {len(employees)}")
     print(f"Active employees: {active_count}")
     print(f"Inactive employees: {len(employees) - active_count}")
-    print(f"High attrition risk: {high_attrition} ({high_attrition/len(employees)*100:.1f}%)")
+    print(
+        f"High attrition risk: {high_attrition} ({high_attrition / len(employees) * 100:.1f}%)"
+    )
     print(f"Departments: {', '.join(DEPARTMENTS)}")
     print(f"Locations: {', '.join(LOCATIONS)}")
     print(f"\nAll files saved to: {output_dir}")

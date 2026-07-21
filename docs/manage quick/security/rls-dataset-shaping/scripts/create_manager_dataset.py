@@ -14,7 +14,12 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASETS_DIR = os.path.join(SCRIPT_DIR, "..", "datasets")
 
-SENSITIVE_COLUMNS = ["Annual Salary", "Bonus Percent", "Termination Date", "Termination Reason"]
+SENSITIVE_COLUMNS = [
+    "Annual Salary",
+    "Bonus Percent",
+    "Termination Date",
+    "Termination Reason",
+]
 
 INPUT_FILE = os.path.join(DATASETS_DIR, "employee_data.csv")
 OUTPUT_FILE = os.path.join(DATASETS_DIR, "employee_data_manager.csv")
@@ -30,7 +35,9 @@ def main():
             writer.writeheader()
             count = 0
             for row in reader:
-                filtered_row = {k: v for k, v in row.items() if k not in SENSITIVE_COLUMNS}
+                filtered_row = {
+                    k: v for k, v in row.items() if k not in SENSITIVE_COLUMNS
+                }
                 writer.writerow(filtered_row)
                 count += 1
 
