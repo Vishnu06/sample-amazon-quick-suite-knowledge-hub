@@ -1,0 +1,22 @@
+{
+  "name": "sample-amazon-quick-custom-domain",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "format": "prettier --write README.md 'docs/**/*.md'",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "aws-cdk": "2.1135.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.23.0",
+    "typescript": "~5.7.2"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.263.0",
+    "constructs": "^10.5.0"
+  }
+}

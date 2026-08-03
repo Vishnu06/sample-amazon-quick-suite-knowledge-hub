@@ -32,6 +32,7 @@ exclude_docs: |
   amazon-quick-on-desktop/scripts/
   integration/actions/MCP/*/cdk/
   integration/actions/MCP/*/tools/
+  infrastructure as code/quick-custom-domain-redirect/lib/
   !use-cases/*/images/
   !use-cases/*/README.md
   !use-cases/*/LICENSE
@@ -53,7 +54,11 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
@@ -66,6 +71,7 @@ nav:
   - Home: index.md
   - Infrastructure as a Code:
     - Terraform: infrastructure as code/Terraform/README.md
+    - Quick Custom Domain Redirect: infrastructure as code/quick-custom-domain-redirect/README.md
   - Manage Quick:
     - Observability: manage quick/observability-agent/README.md
   - Amazon Quick on desktop:
