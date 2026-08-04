@@ -29,7 +29,7 @@ The [Integration](https://aws-samples.github.io/sample-amazon-quick-suite-knowle
 
 The [Manage Quick](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/manage-quick/) section covers identity configuration, observability (CloudWatch-based monitoring via MCP), customization, and security guardrails.
 
-The [Infrastructure as Code](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/infrastructure-as-code/) section provides a Terraform module for bootstrapping Amazon Quick with AWS IAM Identity Center.
+The [Infrastructure as Code](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/infrastructure-as-code/) section provides a Terraform module for bootstrapping Amazon Quick with AWS IAM Identity Center, and a CDK app that points a custom domain at your Quick sign-in URL.
 
 The [Amazon Quick on desktop](https://aws-samples.github.io/sample-amazon-quick-suite-knowledge-hub/amazon-quick-on-desktop/) section provides a CDK stack that deploys Amazon Cognito as an OpenID Connect (OIDC) provider for the desktop application.
 

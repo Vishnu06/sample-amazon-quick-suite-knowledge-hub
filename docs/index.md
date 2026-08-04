@@ -12,7 +12,7 @@ These features are tied together by shared capabilities. You build [chat agents]
 
 The [integrations section](integration/actions/asana-action-setup-guide/README.md) has step-by-step OAuth and connector setup for each supported third-party service. Most guides follow the same pattern: register an OAuth app on the provider side, configure the redirect URI and scopes, then create the action connector in the Amazon Quick console. The MCP implementations are complete CDK stacks you can deploy directly.
 
-The [Terraform module](infrastructure as code/Terraform/README.md) bootstraps an Amazon Quick account with AWS IAM Identity Center from scratch, handling the account subscription, admin user, group membership, and IAM roles in a single `terraform apply`.
+The [infrastructure as code section](infrastructure as code/Terraform/README.md) covers deployable building blocks for running Quick. The [Terraform module](infrastructure as code/Terraform/README.md) bootstraps an Amazon Quick account with AWS IAM Identity Center from scratch, handling the account subscription, admin user, group membership, and IAM roles in a single `terraform apply`. The [custom domain redirect](infrastructure as code/quick-custom-domain-redirect/README.md) is a CDK app that points a domain you own at your Quick sign-in URL using a CloudFront Function, an ACM certificate, and Route 53 alias records.
 
 The [management section](manage quick/Identity.md) covers identity configuration, security guardrails, customization options, and a CloudWatch-based observability MCP that exposes chat logs, feedback, agent hours, Quick Sight metrics, and CloudTrail audit data through natural language queries in Quick itself.
 
