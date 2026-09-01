@@ -160,6 +160,7 @@ Navigate to **AWS CloudTrail > Event history** and verify events are captured wi
 
 For automated setup of groups and S3 resources:
 
+<!-- markdownlint-disable MD046 -->
 === "Shell Script"
 
     ```bash
@@ -181,6 +182,7 @@ For automated setup of groups and S3 resources:
             S3BucketName=my-quicksight-datasets \
             HRAdminUsername="Admin/hr-admin-Isengard"
     ```
+<!-- markdownlint-enable MD046 -->
 
 ## Regenerating Datasets
 
